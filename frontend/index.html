@@ -317,10 +317,55 @@ document.addEventListener('DOMContentLoaded',()=>{renderBriefs();runCommand()});
   function field(el,label,value){const p=e('p');const b=e('b',label+': ');p.append(b,document.createTextNode(value||'Not reported'));el.appendChild(p)}
   function fail(target,message){clear(target);target.appendChild(e('p',message));}
   function addSrc(el,id){const x=graph.sources[id];if(!x)return;const d=e('div');const a=e('a',id+' — '+x.title);a.href=x.url;a.target='_blank';a.rel='noopener noreferrer';d.appendChild(a);d.appendChild(e('span',' · '+x.kind+' ('+x.year+')'));el.appendChild(d)}
-  function renderDiagram(claim){const svg=by('graphDiagram');while(svg.firstChild)svg.removeChild(svg.firstChild);const labels=['Intervention','Disease','Mechanism','Biomarker','Evidence'];const values=[claim.intervention,claim.disease,claim.mechanism,claim.biomarker,claim.sources.length+' curated source(s)'];const NS='http://www.w3.org/2000/svg';function n(type,attrs,txt){const x=document.createElementNS(NS,type);Object.entries(attrs).forEach(([k,v])=>x.setAttribute(k,v));if(txt)x.textContent=txt;svg.appendChild(x);return x;};for(let i=0;i<5;i++){let x=12+i*168;if(i<4)n('line',{x1:x+150,y1:85,x2:x+172,y2:85,stroke:'#5096a4','stroke-width':2});n('rect',{x,y:38,width:151,height:96,rx:12,fill:i===4?'#edf8ef':'#edf5f9',stroke:'#b9d3dc'});n('text',{x:x+10,y:61,'font-size':12,'font-weight':700,fill:'#185968'},labels[i]);const text=values[i].length>55?values[i].slice(0,52)+'…':values[i];const chunks=text.match(/.{1,23}(?:\s|$)|.{1,23}/g)||[text];chunks.slice(0,3).forEach((line,j)=>n('text',{x:x+10,y:81+j*15,'font-size':10,fill:'#334d60'},line.trim()));}}
+  function renderDiagram(claim){
+    const svg=by('graphDiagram'),NS='http://www.w3.org/2000/svg';clear(svg);
+    svg.setAttribute('viewBox','0 0 1100 325');svg.setAttribute('style','min-width:570px;width:100%;display:block;min-height:230px');
+    const add=(tag,attrs,text)=>{const el=document.createElementNS(NS,tag);for(const[k,v]of Object.entries(attrs||{}))el.setAttribute(k,v);if(text!=null)el.textContent=String(text);svg.appendChild(el);return el};
+    add('rect',{x:0,y:0,width:1100,height:325,rx:18,fill:'#0b2031'});
+    for(let i=0;i<=22;i++)add('line',{x1:i*50,y1:0,x2:i*50,y2:325,stroke:'#79b1bd','stroke-opacity':'.06'});
+    for(let j=0;j<=7;j++)add('line',{x1:0,y1:j*45,x2:1100,y2:j*45,stroke:'#79b1bd','stroke-opacity':'.06'});
+    add('text',{x:40,y:40,fill:'#99dcd5','font-size':15,'font-weight':750,'letter-spacing':'1.3'},'CURATED BIOLOGICAL RELATIONSHIPS');
+    const labels=['THERAPEUTIC INTERVENTION','DISEASE / INDICATION','MECHANISM','BIOMARKER','SOURCE EVIDENCE'];
+    const values=[claim.intervention,claim.disease,claim.mechanism,claim.biomarker,(claim.sources||[]).length+' linked publication(s)'];
+    const colors=['#66dfd4','#80bbf5','#c19af3','#eac08a','#a7da9d'];
+    const wrap=(value,limit)=>{const words=String(value).split(/\s+/);let lines=[],line='';for(const word of words){if((line+' '+word).trim().length>limit&&line){lines.push(line);line=word}else line+=(line?' ':'')+word}if(line)lines.push(line);return lines.slice(0,5)};
+    for(let i=0;i<5;i++){
+      const x=40+i*215,y=104,w=192,h=158;
+      if(i<4){add('path',{d:'M '+(x+w+1)+' 180 L '+(x+212)+' 180',stroke:colors[i],'stroke-width':2,'stroke-opacity':'.75',fill:'none'});add('path',{d:'M '+(x+204)+' 175 L '+(x+212)+' 180 L '+(x+204)+' 185',stroke:colors[i],fill:'none','stroke-width':2})}
+      add('rect',{x,y,width:w,height:h,rx:15,fill:'#17384b',stroke:colors[i],'stroke-width':2,'stroke-opacity':'.85'});
+      add('circle',{cx:x+23,cy:y+24,r:12,fill:colors[i]});
+      add('text',{x:x+23,y:y+28,'text-anchor':'middle',fill:'#0b2031','font-size':12,'font-weight':900},i+1);
+      add('text',{x:x+42,y:y+28,fill:colors[i],'font-size':10,'font-weight':750},labels[i]);
+      wrap(values[i],23).forEach((line,j)=>add('text',{x:x+14,y:y+64+j*18,fill:'#e3f4f5','font-size':13,'font-weight':j===0?750:450},line));
+    }
+    add('text',{x:40,y:294,fill:'#afc9d0','font-size':12},'Selected claim: '+String(claim.title||claim.id).slice(0,116));
+  }
   function detail(){if(!graph)return;const c=graph.claims.find(x=>x.id===by('graphClaim').value);const target=by('graphDetail');clear(target);if(!c)return;target.appendChild(e('h3',c.title));field(target,'Research domain',c.area);field(target,'Intervention',c.intervention);field(target,'Disease',c.disease);field(target,'Mechanistic claim',c.mechanism);field(target,'Biomarker',c.biomarker);field(target,'Outcome interpretation',c.outcome);field(target,'Evidence tier',c.grade.replaceAll('_',' '));field(target,'Major limitations',c.limitations);field(target,'IP note',c.novelty);target.appendChild(e('h4','Linked sources'));if(!c.sources.length)target.appendChild(e('p','No verifying source attached; hypothesis only.'));c.sources.forEach(id=>addSrc(target,id));renderDiagram(c)}
   function save(name,doc){const a=document.createElement('a');const u=URL.createObjectURL(new Blob([JSON.stringify(doc,null,2)],{type:'application/json'}));a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),1200)}
-  async function refresh(){const target=by('graphDetail');try{const area=encodeURIComponent(by('graphArea').value);const r=await fetch('/api/knowledge/graph?area='+area);if(!r.ok)throw new Error('HTTP '+r.status);graph=await r.json();const dropdown=by('graphClaim');clear(dropdown);graph.claims.forEach(c=>{const o=e('option',c.title);o.value=c.id;dropdown.appendChild(o)});clear(by('graphSummary'));for(const [num,name] of [[graph.claims.length,'Curated claims'],[Object.keys(graph.sources).length,'Linked sources'],[graph.edges.length,'Graph relationships']])by('graphSummary').appendChild(e('span',num+' '+name)).className='pill';detail()}catch(ex){fail(target,'Cannot load graph API. Start the Windows launcher and refresh. '+ex.message)}}
+  async function refresh(){const target=by('graphDetail');try{
+    const selected=by('graphClaim').value,area=by('graphArea').value;
+    let graphData=null;
+    try{const r=await fetch('/api/knowledge/graph?area='+encodeURIComponent(area),{cache:'no-store'});if(r.ok)graphData=await r.json()}catch(_error){}
+    if(!graphData||!Array.isArray(graphData.claims)){
+      const r=await fetch('/pathway_snapshot.json');if(!r.ok)throw Error('Curated pathway data is unavailable');
+      const snapshot=await r.json();
+      const claims=(snapshot.overview?.claims||[]).filter(c=>area==='All'||c.area===area);
+      const sources={};const edges=[];
+      for(const claim of claims){
+        for(const source of claim.curated_sources||[]){sources[source.id]={title:source.title,year:source.year,kind:source.kind,url:source.url}}
+        for(const sourceId of claim.sources||[])edges.push({source:claim.id,target:sourceId,relation:'supported_by'});
+      }
+      graphData={claims,sources,edges,static_snapshot:true};
+    }
+    graph=graphData;
+    const dropdown=by('graphClaim');clear(dropdown);
+    for(const c of graph.claims){const o=e('option',c.title);o.value=c.id;dropdown.appendChild(o)}
+    if(graph.claims.some(c=>c.id===selected))dropdown.value=selected;
+    clear(by('graphSummary'));
+    for(const [num,name] of [[graph.claims.length,'Curated claims'],[Object.keys(graph.sources).length,'Linked sources'],[graph.edges.length,'Evidence links']])by('graphSummary').appendChild(e('span',num+' '+name)).className='pill';
+    if(!graph.claims.length){clear(by('graphDiagram'));fail(target,'No curated claims in this category.');return}
+    detail();
+  }catch(ex){fail(target,'Could not display the knowledge graph: '+ex.message)}}
   async function check(){const q=by('graphQuery').value.trim();if(q.length<3){fail(by('graphResults'),'Enter a question containing at least 3 characters.');return}const out=by('graphResults');out.textContent='Checking curated evidence…';try{const r=await fetch('/api/knowledge/check',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({query:q,area:by('graphArea').value})});if(!r.ok)throw new Error('HTTP '+r.status);const d=await r.json();lastCheck=d;clear(out);field(out,'Method',d.method);field(out,'Contradiction status',d.contradiction_status+' — '+d.contradiction_note);out.appendChild(e('h4','Matched claims'));if(!d.matched.length)out.appendChild(e('p','No matching curated claims.'));d.matched.forEach(item=>{const wrap=e('div');wrap.style.borderTop='1px solid #dce8ee';wrap.style.padding='10px 0';wrap.appendChild(e('b',item.claim.title));field(wrap,'Evidence tier',item.claim.grade.replaceAll('_',' '));field(wrap,'Interpretation',item.claim.outcome);field(wrap,'Caveat',item.claim.limitations);field(wrap,'Matched terms',item.matching_terms.join(', '));out.appendChild(wrap)});out.appendChild(e('h4','Evidence flags'));if(d.flags.length)d.flags.forEach(t=>out.appendChild(e('p','• '+t)));else out.appendChild(e('p','No additional rule-based flags. This is not a confirmation of safety or efficacy.'))}catch(ex){fail(out,'Evidence check unavailable: '+ex.message)}}
   document.addEventListener('DOMContentLoaded',()=>{const selector=by('workspaceSelect');if(!selector)return;by('graphArea').addEventListener('change',refresh);by('graphReload').addEventListener('click',refresh);by('graphClaim').addEventListener('change',detail);by('graphCheck').addEventListener('click',check);by('graphExport').addEventListener('click',()=>{if(graph)save('bti_curated_knowledge_graph_v1_2.json',graph)});by('graphReport').addEventListener('click',()=>{if(lastCheck)save('bti_evidence_check_v1_2.json',lastCheck);else notify('Run an evidence check first.','warning')});refresh()});
 })();
