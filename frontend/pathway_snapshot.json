@@ -1,0 +1,1080 @@
+{
+  "overview": {
+    "areas": [
+      "All",
+      "Oncology",
+      "Cardiometabolic",
+      "Microbiome"
+    ],
+    "claims": [
+      {
+        "id": "BCG_NMIBC",
+        "area": "Oncology",
+        "title": "Intravesical BCG in non-muscle-invasive bladder cancer",
+        "intervention": "Intravesical BCG",
+        "disease": "Non-muscle-invasive bladder cancer",
+        "mechanism": "Local innate and adaptive immune activation",
+        "biomarker": "Urinary cytokines and immune infiltration (research biomarkers)",
+        "outcome": "Established clinical treatment role in selected NMIBC settings",
+        "grade": "established_indication",
+        "relation": "clinical_use",
+        "sources": [
+          "FDA_ANKTIVA",
+          "PMID_40111053"
+        ],
+        "limitations": "Established use is indication-specific. Multiple immune mechanisms are implicated; no single fully proven pathway explains all responses.",
+        "novelty": "Historical therapeutic precedent; no inferred patent clearance",
+        "evidence_label": "Established clinical use",
+        "curated_sources": [
+          {
+            "id": "FDA_ANKTIVA",
+            "title": "FDA: Expanded Anktiva use with BCG for BCG-unresponsive NMIBC",
+            "kind": "regulatory",
+            "year": 2026,
+            "url": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-treatment-certain-people-bcg-unresponsive-bladder-cancer",
+            "note": "Confirms BCG-based therapeutic context; not an approval of BCG for all tumor types."
+          },
+          {
+            "id": "PMID_40111053",
+            "title": "BCG therapy in bladder cancer and tumor microenvironment interactions",
+            "kind": "review",
+            "year": 2025,
+            "url": "https://pubmed.ncbi.nlm.nih.gov/40111053/",
+            "note": "Review; does not independently establish one causal mechanism."
+          }
+        ]
+      },
+      {
+        "id": "MICROBIOTA_CDI_REBYOTA",
+        "area": "Microbiome",
+        "title": "Microbiota restoration for recurrent CDI: REBYOTA",
+        "intervention": "Fecal microbiota, live-jslm (REBYOTA)",
+        "disease": "Recurrent C. difficile infection",
+        "mechanism": "Microbiome ecological restoration (precise causal pathways not completely resolved)",
+        "biomarker": "Microbial community composition (research)",
+        "outcome": "FDA-approved prevention of recurrence following antibacterial treatment in indicated adults",
+        "grade": "approved_indication",
+        "relation": "regulatory",
+        "sources": [
+          "FDA_REBYOTA"
+        ],
+        "limitations": "FDA indication does not extend to oncology or cardiometabolic diseases.",
+        "novelty": "Approval does not imply platform FTO",
+        "evidence_label": "Regulatory indication",
+        "curated_sources": [
+          {
+            "id": "FDA_REBYOTA",
+            "title": "FDA REBYOTA approval and indication",
+            "kind": "regulatory",
+            "year": 2022,
+            "url": "https://www.fda.gov/vaccines-blood-biologics/vaccines/rebyota",
+            "note": "Labeled indication only."
+          }
+        ]
+      },
+      {
+        "id": "MICROBIOTA_CDI_VOWST",
+        "area": "Microbiome",
+        "title": "Microbiota restoration for recurrent CDI: VOWST",
+        "intervention": "Fecal microbiota spores, live-brpk (VOWST)",
+        "disease": "Recurrent C. difficile infection",
+        "mechanism": "Microbial community reconstitution (mechanistic details still under study)",
+        "biomarker": "Microbial community composition (research)",
+        "outcome": "FDA-approved prevention of recurrence following antibacterial treatment in indicated adults",
+        "grade": "approved_indication",
+        "relation": "regulatory",
+        "sources": [
+          "FDA_VOWST"
+        ],
+        "limitations": "Not an approved treatment for cancer, obesity, diabetes, or CVD.",
+        "novelty": "Approval does not imply platform FTO",
+        "evidence_label": "Regulatory indication",
+        "curated_sources": [
+          {
+            "id": "FDA_VOWST",
+            "title": "FDA VOWST approval and indication",
+            "kind": "regulatory",
+            "year": 2023,
+            "url": "https://www.fda.gov/vaccines-blood-biologics/vowst",
+            "note": "Labeled indication only."
+          }
+        ]
+      },
+      {
+        "id": "PD1_MELANOMA_ASSOC",
+        "area": "Oncology",
+        "title": "Gut microbiome features and anti-PD-1 response in melanoma",
+        "intervention": "Observed gut microbial community patterns",
+        "disease": "Melanoma receiving anti-PD-1 therapy",
+        "mechanism": "Association with systemic and antitumor immune phenotypes",
+        "biomarker": "Gut microbial diversity and microbial taxa (research)",
+        "outcome": "Observed association with treatment response, not established therapeutic benefit from intervention",
+        "grade": "human_association",
+        "relation": "association",
+        "sources": [
+          "PMID_29097493"
+        ],
+        "limitations": "Observational clinical findings plus preclinical transfer experiments do not establish a clinically effective bacterial product.",
+        "novelty": "Association is not a patentability finding",
+        "evidence_label": "Human association",
+        "curated_sources": [
+          {
+            "id": "PMID_29097493",
+            "title": "Gopalakrishnan et al. Gut microbiome and anti-PD-1 response",
+            "kind": "observational",
+            "year": 2018,
+            "url": "https://pubmed.ncbi.nlm.nih.gov/29097493/",
+            "note": "Human association plus preclinical evidence; observational claims not causation."
+          }
+        ]
+      },
+      {
+        "id": "FMT_PD1_EARLY",
+        "area": "Oncology",
+        "title": "Microbiota transfer in anti-PD-1-resistant melanoma",
+        "intervention": "Fecal microbiota transfer combined with checkpoint therapy",
+        "disease": "Anti-PD-1-resistant melanoma",
+        "mechanism": "Hypothesized immune microenvironment modulation",
+        "biomarker": "Gut community changes and tumor immune features (investigational)",
+        "outcome": "Early clinical signal reported in a subset, not approved for melanoma",
+        "grade": "early_clinical",
+        "relation": "exploratory_intervention",
+        "sources": [
+          "PMID_33542131"
+        ],
+        "limitations": "Small exploratory human study; lacks broad confirmatory evidence and commercial treatment approval.",
+        "novelty": "Requires independent method and claims review",
+        "evidence_label": "Exploratory human clinical",
+        "curated_sources": [
+          {
+            "id": "PMID_33542131",
+            "title": "Davar et al. Microbiota transfer and anti-PD-1 resistance",
+            "kind": "early_trial",
+            "year": 2021,
+            "url": "https://pubmed.ncbi.nlm.nih.gov/33542131/",
+            "note": "Small exploratory human study."
+          }
+        ]
+      },
+      {
+        "id": "VE303_RCDI",
+        "area": "Microbiome",
+        "title": "Defined bacterial consortium VE303 for recurrent CDI",
+        "intervention": "VE303 defined bacterial consortium",
+        "disease": "Recurrent C. difficile infection",
+        "mechanism": "Hypothesized restoration of colonization resistance and metabolic functions",
+        "biomarker": "Consortium engraftment and microbial metabolites (research)",
+        "outcome": "Randomized phase 2 evidence; not proof of market approval",
+        "grade": "randomized_phase2",
+        "relation": "exploratory_intervention",
+        "sources": [
+          "PMID_37060545",
+          "PMID_39747680"
+        ],
+        "limitations": "Indication- and formulation-specific; larger trial validation and current development status require confirmation.",
+        "novelty": "Defined-consortium IP needs separate claim/jurisdiction review",
+        "evidence_label": "Randomized phase 2",
+        "curated_sources": [
+          {
+            "id": "PMID_37060545",
+            "title": "VE303 randomized phase 2 trial for recurrent CDI",
+            "kind": "randomized_phase2",
+            "year": 2023,
+            "url": "https://pubmed.ncbi.nlm.nih.gov/37060545/",
+            "note": "Indication-specific randomized evidence; no market approval implied."
+          },
+          {
+            "id": "PMID_39747680",
+            "title": "VE303 multi-omic mechanistic analysis",
+            "kind": "mechanistic",
+            "year": 2025,
+            "url": "https://pubmed.ncbi.nlm.nih.gov/39747680/",
+            "note": "Supports mechanistic characterization, not independent clinical approval."
+          }
+        ]
+      },
+      {
+        "id": "METFORMIN_GUT",
+        "area": "Cardiometabolic",
+        "title": "Metformin–microbiome interactions in type 2 diabetes",
+        "intervention": "Metformin exposure (not a bacterial therapeutic)",
+        "disease": "Type 2 diabetes",
+        "mechanism": "Microbiome composition and functional changes associated with metformin effect",
+        "biomarker": "Metagenomic microbial features and glycemic parameters (research)",
+        "outcome": "Mechanistic relationship reported; no bacterial product efficacy established",
+        "grade": "mechanistic_human",
+        "relation": "mechanistic_association",
+        "sources": [
+          "DOI_NM4345"
+        ],
+        "limitations": "The study investigates effects associated with a conventional drug; no approved bacteria-based diabetes treatment is established by this paper.",
+        "novelty": "No patent inference from mechanistic association",
+        "evidence_label": "Mechanistic human study",
+        "curated_sources": [
+          {
+            "id": "DOI_NM4345",
+            "title": "Wu et al. Metformin alters the gut microbiome of individuals with treatment-naive T2D",
+            "kind": "mechanistic",
+            "year": 2017,
+            "url": "https://www.nature.com/articles/nm.4345",
+            "note": "Metformin study; not a bacterial therapeutic trial."
+          }
+        ]
+      },
+      {
+        "id": "TMAO_CVD_HYPOTHESIS",
+        "area": "Cardiometabolic",
+        "title": "Microbial metabolite TMAO and cardiovascular disease hypothesis",
+        "intervention": "Potential microbiome-metabolite modulation (hypothetical)",
+        "disease": "Atherosclerotic cardiovascular disease",
+        "mechanism": "Putative microbial metabolite–host cardiovascular signaling",
+        "biomarker": "Plasma TMAO (investigational)",
+        "outcome": "No bacterial treatment cardiovascular-event benefit established in this curated set",
+        "grade": "hypothesis",
+        "relation": "proposed_mechanism",
+        "sources": [],
+        "limitations": "This is a research hypothesis only; source-level verification and interventional outcome evidence required before asserting benefit.",
+        "novelty": "No FTO conclusion",
+        "evidence_label": "Unverified hypothesis",
+        "curated_sources": []
+      },
+      {
+        "id": "SCFA_METABOLIC_HYPOTHESIS",
+        "area": "Cardiometabolic",
+        "title": "Short-chain fatty acids in metabolic inflammation",
+        "intervention": "Potential modulation of microbiome metabolic products (hypothetical)",
+        "disease": "Obesity and insulin resistance",
+        "mechanism": "Possible gut–immune–metabolic signaling",
+        "biomarker": "Fecal or circulating SCFA levels (exploratory)",
+        "outcome": "No validated bacterial product for clinical metabolic outcomes established here",
+        "grade": "hypothesis",
+        "relation": "proposed_mechanism",
+        "sources": [],
+        "limitations": "Plausible mechanisms alone do not prove clinical effect; intervention, dosing, safety and endpoints unestablished.",
+        "novelty": "No FTO conclusion",
+        "evidence_label": "Unverified hypothesis",
+        "curated_sources": []
+      }
+    ],
+    "counts": {
+      "curated_claims": 9,
+      "curated_source_records": 9
+    },
+    "disclaimer": "Static curated evidence snapshot; no live trial or publication updates without the backend."
+  },
+  "details": {
+    "BCG_NMIBC": {
+      "claim": {
+        "id": "BCG_NMIBC",
+        "area": "Oncology",
+        "title": "Intravesical BCG in non-muscle-invasive bladder cancer",
+        "intervention": "Intravesical BCG",
+        "disease": "Non-muscle-invasive bladder cancer",
+        "mechanism": "Local innate and adaptive immune activation",
+        "biomarker": "Urinary cytokines and immune infiltration (research biomarkers)",
+        "outcome": "Established clinical treatment role in selected NMIBC settings",
+        "grade": "established_indication",
+        "relation": "clinical_use",
+        "sources": [
+          "FDA_ANKTIVA",
+          "PMID_40111053"
+        ],
+        "limitations": "Established use is indication-specific. Multiple immune mechanisms are implicated; no single fully proven pathway explains all responses.",
+        "novelty": "Historical therapeutic precedent; no inferred patent clearance",
+        "evidence_label": "Established clinical use",
+        "curated_sources": [
+          {
+            "id": "FDA_ANKTIVA",
+            "title": "FDA: Expanded Anktiva use with BCG for BCG-unresponsive NMIBC",
+            "kind": "regulatory",
+            "year": 2026,
+            "url": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-treatment-certain-people-bcg-unresponsive-bladder-cancer",
+            "note": "Confirms BCG-based therapeutic context; not an approval of BCG for all tumor types."
+          },
+          {
+            "id": "PMID_40111053",
+            "title": "BCG therapy in bladder cancer and tumor microenvironment interactions",
+            "kind": "review",
+            "year": 2025,
+            "url": "https://pubmed.ncbi.nlm.nih.gov/40111053/",
+            "note": "Review; does not independently establish one causal mechanism."
+          }
+        ]
+      },
+      "pathway": [
+        {
+          "id": "therapy",
+          "kind": "Intervention",
+          "label": "Intravesical BCG",
+          "description": "Therapeutic intervention or observational exposure; efficacy not automatically established."
+        },
+        {
+          "id": "molecular",
+          "kind": "Mechanism",
+          "label": "Local innate and adaptive immune activation",
+          "description": "Mechanism or hypothesis at the stated evidence tier; clinical causality may be incomplete."
+        },
+        {
+          "id": "marker",
+          "kind": "Biomarker",
+          "label": "Urinary cytokines and immune infiltration (research biomarkers)",
+          "description": "Research biomarker; clinical validity not implied."
+        },
+        {
+          "id": "outcome",
+          "kind": "Clinical interpretation",
+          "label": "Established clinical treatment role in selected NMIBC settings",
+          "description": "Evidence-qualified, indication-specific clinical interpretation."
+        }
+      ],
+      "curated_sources": [
+        {
+          "id": "FDA_ANKTIVA",
+          "title": "FDA: Expanded Anktiva use with BCG for BCG-unresponsive NMIBC",
+          "kind": "regulatory",
+          "year": 2026,
+          "url": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-treatment-certain-people-bcg-unresponsive-bladder-cancer",
+          "note": "Confirms BCG-based therapeutic context; not an approval of BCG for all tumor types."
+        },
+        {
+          "id": "PMID_40111053",
+          "title": "BCG therapy in bladder cancer and tumor microenvironment interactions",
+          "kind": "review",
+          "year": 2025,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40111053/",
+          "note": "Review; does not independently establish one causal mechanism."
+        }
+      ],
+      "discovery_leads": [],
+      "discovery_total_matching": 0,
+      "comparators": [
+        {
+          "name": "Indaptus Therapeutics",
+          "approach": "Killed bacterial immune stimulant",
+          "status": "Development status requires review",
+          "url": "https://www.sec.gov/edgar/search/"
+        },
+        {
+          "name": "Actym Therapeutics",
+          "approach": "Investigational engineered bacterial delivery",
+          "status": "Investigational",
+          "url": "https://clinicaltrials.gov/search?term=Actym"
+        },
+        {
+          "name": "Prokarium",
+          "approach": "Investigational microbial immunotherapy",
+          "status": "Investigational",
+          "url": "https://clinicaltrials.gov/search?term=Prokarium"
+        }
+      ],
+      "patent_lead": {
+        "alternate_url": "https://patents.google.com/?q=%22Intravesical%20BCG%22%20Non-muscle-invasive%20bladder%20cancer",
+        "status": "Public patent search lead only; no claim, ownership, jurisdiction or freedom-to-operate review."
+      },
+      "warnings": [
+        "Conceptual pathway arrows do not establish proven molecular causality.",
+        "This is a static curated evidence snapshot; live trial discovery requires the backend.",
+        "Patent search links are unreviewed leads and not FTO conclusions."
+      ]
+    },
+    "MICROBIOTA_CDI_REBYOTA": {
+      "claim": {
+        "id": "MICROBIOTA_CDI_REBYOTA",
+        "area": "Microbiome",
+        "title": "Microbiota restoration for recurrent CDI: REBYOTA",
+        "intervention": "Fecal microbiota, live-jslm (REBYOTA)",
+        "disease": "Recurrent C. difficile infection",
+        "mechanism": "Microbiome ecological restoration (precise causal pathways not completely resolved)",
+        "biomarker": "Microbial community composition (research)",
+        "outcome": "FDA-approved prevention of recurrence following antibacterial treatment in indicated adults",
+        "grade": "approved_indication",
+        "relation": "regulatory",
+        "sources": [
+          "FDA_REBYOTA"
+        ],
+        "limitations": "FDA indication does not extend to oncology or cardiometabolic diseases.",
+        "novelty": "Approval does not imply platform FTO",
+        "evidence_label": "Regulatory indication",
+        "curated_sources": [
+          {
+            "id": "FDA_REBYOTA",
+            "title": "FDA REBYOTA approval and indication",
+            "kind": "regulatory",
+            "year": 2022,
+            "url": "https://www.fda.gov/vaccines-blood-biologics/vaccines/rebyota",
+            "note": "Labeled indication only."
+          }
+        ]
+      },
+      "pathway": [
+        {
+          "id": "therapy",
+          "kind": "Intervention",
+          "label": "Fecal microbiota, live-jslm (REBYOTA)",
+          "description": "Therapeutic intervention or observational exposure; efficacy not automatically established."
+        },
+        {
+          "id": "molecular",
+          "kind": "Mechanism",
+          "label": "Microbiome ecological restoration (precise causal pathways not completely resolved)",
+          "description": "Mechanism or hypothesis at the stated evidence tier; clinical causality may be incomplete."
+        },
+        {
+          "id": "marker",
+          "kind": "Biomarker",
+          "label": "Microbial community composition (research)",
+          "description": "Research biomarker; clinical validity not implied."
+        },
+        {
+          "id": "outcome",
+          "kind": "Clinical interpretation",
+          "label": "FDA-approved prevention of recurrence following antibacterial treatment in indicated adults",
+          "description": "Evidence-qualified, indication-specific clinical interpretation."
+        }
+      ],
+      "curated_sources": [
+        {
+          "id": "FDA_REBYOTA",
+          "title": "FDA REBYOTA approval and indication",
+          "kind": "regulatory",
+          "year": 2022,
+          "url": "https://www.fda.gov/vaccines-blood-biologics/vaccines/rebyota",
+          "note": "Labeled indication only."
+        }
+      ],
+      "discovery_leads": [],
+      "discovery_total_matching": 0,
+      "comparators": [
+        {
+          "name": "Vedanta Biosciences",
+          "approach": "Defined microbial communities",
+          "status": "Investigational",
+          "url": "https://clinicaltrials.gov/search?term=VE303"
+        },
+        {
+          "name": "MaaT Pharma",
+          "approach": "Microbiome ecosystem therapeutics",
+          "status": "Development and regulatory status require verification",
+          "url": "https://clinicaltrials.gov/search?term=MaaT+Pharma"
+        }
+      ],
+      "patent_lead": {
+        "alternate_url": "https://patents.google.com/?q=%22Fecal%20microbiota%2C%20live-jslm%20(REBYOTA)%22%20Recurrent%20C.%20difficile%20infection",
+        "status": "Public patent search lead only; no claim, ownership, jurisdiction or freedom-to-operate review."
+      },
+      "warnings": [
+        "Conceptual pathway arrows do not establish proven molecular causality.",
+        "This is a static curated evidence snapshot; live trial discovery requires the backend.",
+        "Patent search links are unreviewed leads and not FTO conclusions."
+      ]
+    },
+    "MICROBIOTA_CDI_VOWST": {
+      "claim": {
+        "id": "MICROBIOTA_CDI_VOWST",
+        "area": "Microbiome",
+        "title": "Microbiota restoration for recurrent CDI: VOWST",
+        "intervention": "Fecal microbiota spores, live-brpk (VOWST)",
+        "disease": "Recurrent C. difficile infection",
+        "mechanism": "Microbial community reconstitution (mechanistic details still under study)",
+        "biomarker": "Microbial community composition (research)",
+        "outcome": "FDA-approved prevention of recurrence following antibacterial treatment in indicated adults",
+        "grade": "approved_indication",
+        "relation": "regulatory",
+        "sources": [
+          "FDA_VOWST"
+        ],
+        "limitations": "Not an approved treatment for cancer, obesity, diabetes, or CVD.",
+        "novelty": "Approval does not imply platform FTO",
+        "evidence_label": "Regulatory indication",
+        "curated_sources": [
+          {
+            "id": "FDA_VOWST",
+            "title": "FDA VOWST approval and indication",
+            "kind": "regulatory",
+            "year": 2023,
+            "url": "https://www.fda.gov/vaccines-blood-biologics/vowst",
+            "note": "Labeled indication only."
+          }
+        ]
+      },
+      "pathway": [
+        {
+          "id": "therapy",
+          "kind": "Intervention",
+          "label": "Fecal microbiota spores, live-brpk (VOWST)",
+          "description": "Therapeutic intervention or observational exposure; efficacy not automatically established."
+        },
+        {
+          "id": "molecular",
+          "kind": "Mechanism",
+          "label": "Microbial community reconstitution (mechanistic details still under study)",
+          "description": "Mechanism or hypothesis at the stated evidence tier; clinical causality may be incomplete."
+        },
+        {
+          "id": "marker",
+          "kind": "Biomarker",
+          "label": "Microbial community composition (research)",
+          "description": "Research biomarker; clinical validity not implied."
+        },
+        {
+          "id": "outcome",
+          "kind": "Clinical interpretation",
+          "label": "FDA-approved prevention of recurrence following antibacterial treatment in indicated adults",
+          "description": "Evidence-qualified, indication-specific clinical interpretation."
+        }
+      ],
+      "curated_sources": [
+        {
+          "id": "FDA_VOWST",
+          "title": "FDA VOWST approval and indication",
+          "kind": "regulatory",
+          "year": 2023,
+          "url": "https://www.fda.gov/vaccines-blood-biologics/vowst",
+          "note": "Labeled indication only."
+        }
+      ],
+      "discovery_leads": [],
+      "discovery_total_matching": 0,
+      "comparators": [
+        {
+          "name": "Vedanta Biosciences",
+          "approach": "Defined microbial communities",
+          "status": "Investigational",
+          "url": "https://clinicaltrials.gov/search?term=VE303"
+        },
+        {
+          "name": "MaaT Pharma",
+          "approach": "Microbiome ecosystem therapeutics",
+          "status": "Development and regulatory status require verification",
+          "url": "https://clinicaltrials.gov/search?term=MaaT+Pharma"
+        }
+      ],
+      "patent_lead": {
+        "alternate_url": "https://patents.google.com/?q=%22Fecal%20microbiota%20spores%2C%20live-brpk%20(VOWST)%22%20Recurrent%20C.%20difficile%20infection",
+        "status": "Public patent search lead only; no claim, ownership, jurisdiction or freedom-to-operate review."
+      },
+      "warnings": [
+        "Conceptual pathway arrows do not establish proven molecular causality.",
+        "This is a static curated evidence snapshot; live trial discovery requires the backend.",
+        "Patent search links are unreviewed leads and not FTO conclusions."
+      ]
+    },
+    "PD1_MELANOMA_ASSOC": {
+      "claim": {
+        "id": "PD1_MELANOMA_ASSOC",
+        "area": "Oncology",
+        "title": "Gut microbiome features and anti-PD-1 response in melanoma",
+        "intervention": "Observed gut microbial community patterns",
+        "disease": "Melanoma receiving anti-PD-1 therapy",
+        "mechanism": "Association with systemic and antitumor immune phenotypes",
+        "biomarker": "Gut microbial diversity and microbial taxa (research)",
+        "outcome": "Observed association with treatment response, not established therapeutic benefit from intervention",
+        "grade": "human_association",
+        "relation": "association",
+        "sources": [
+          "PMID_29097493"
+        ],
+        "limitations": "Observational clinical findings plus preclinical transfer experiments do not establish a clinically effective bacterial product.",
+        "novelty": "Association is not a patentability finding",
+        "evidence_label": "Human association",
+        "curated_sources": [
+          {
+            "id": "PMID_29097493",
+            "title": "Gopalakrishnan et al. Gut microbiome and anti-PD-1 response",
+            "kind": "observational",
+            "year": 2018,
+            "url": "https://pubmed.ncbi.nlm.nih.gov/29097493/",
+            "note": "Human association plus preclinical evidence; observational claims not causation."
+          }
+        ]
+      },
+      "pathway": [
+        {
+          "id": "therapy",
+          "kind": "Intervention",
+          "label": "Observed gut microbial community patterns",
+          "description": "Therapeutic intervention or observational exposure; efficacy not automatically established."
+        },
+        {
+          "id": "molecular",
+          "kind": "Mechanism",
+          "label": "Association with systemic and antitumor immune phenotypes",
+          "description": "Mechanism or hypothesis at the stated evidence tier; clinical causality may be incomplete."
+        },
+        {
+          "id": "marker",
+          "kind": "Biomarker",
+          "label": "Gut microbial diversity and microbial taxa (research)",
+          "description": "Research biomarker; clinical validity not implied."
+        },
+        {
+          "id": "outcome",
+          "kind": "Clinical interpretation",
+          "label": "Observed association with treatment response, not established therapeutic benefit from intervention",
+          "description": "Evidence-qualified, indication-specific clinical interpretation."
+        }
+      ],
+      "curated_sources": [
+        {
+          "id": "PMID_29097493",
+          "title": "Gopalakrishnan et al. Gut microbiome and anti-PD-1 response",
+          "kind": "observational",
+          "year": 2018,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29097493/",
+          "note": "Human association plus preclinical evidence; observational claims not causation."
+        }
+      ],
+      "discovery_leads": [],
+      "discovery_total_matching": 0,
+      "comparators": [
+        {
+          "name": "Indaptus Therapeutics",
+          "approach": "Killed bacterial immune stimulant",
+          "status": "Development status requires review",
+          "url": "https://www.sec.gov/edgar/search/"
+        },
+        {
+          "name": "Actym Therapeutics",
+          "approach": "Investigational engineered bacterial delivery",
+          "status": "Investigational",
+          "url": "https://clinicaltrials.gov/search?term=Actym"
+        },
+        {
+          "name": "Prokarium",
+          "approach": "Investigational microbial immunotherapy",
+          "status": "Investigational",
+          "url": "https://clinicaltrials.gov/search?term=Prokarium"
+        }
+      ],
+      "patent_lead": {
+        "alternate_url": "https://patents.google.com/?q=%22Observed%20gut%20microbial%20community%20patterns%22%20Melanoma%20receiving%20anti-PD-1%20therapy",
+        "status": "Public patent search lead only; no claim, ownership, jurisdiction or freedom-to-operate review."
+      },
+      "warnings": [
+        "Conceptual pathway arrows do not establish proven molecular causality.",
+        "This is a static curated evidence snapshot; live trial discovery requires the backend.",
+        "Patent search links are unreviewed leads and not FTO conclusions."
+      ]
+    },
+    "FMT_PD1_EARLY": {
+      "claim": {
+        "id": "FMT_PD1_EARLY",
+        "area": "Oncology",
+        "title": "Microbiota transfer in anti-PD-1-resistant melanoma",
+        "intervention": "Fecal microbiota transfer combined with checkpoint therapy",
+        "disease": "Anti-PD-1-resistant melanoma",
+        "mechanism": "Hypothesized immune microenvironment modulation",
+        "biomarker": "Gut community changes and tumor immune features (investigational)",
+        "outcome": "Early clinical signal reported in a subset, not approved for melanoma",
+        "grade": "early_clinical",
+        "relation": "exploratory_intervention",
+        "sources": [
+          "PMID_33542131"
+        ],
+        "limitations": "Small exploratory human study; lacks broad confirmatory evidence and commercial treatment approval.",
+        "novelty": "Requires independent method and claims review",
+        "evidence_label": "Exploratory human clinical",
+        "curated_sources": [
+          {
+            "id": "PMID_33542131",
+            "title": "Davar et al. Microbiota transfer and anti-PD-1 resistance",
+            "kind": "early_trial",
+            "year": 2021,
+            "url": "https://pubmed.ncbi.nlm.nih.gov/33542131/",
+            "note": "Small exploratory human study."
+          }
+        ]
+      },
+      "pathway": [
+        {
+          "id": "therapy",
+          "kind": "Intervention",
+          "label": "Fecal microbiota transfer combined with checkpoint therapy",
+          "description": "Therapeutic intervention or observational exposure; efficacy not automatically established."
+        },
+        {
+          "id": "molecular",
+          "kind": "Mechanism",
+          "label": "Hypothesized immune microenvironment modulation",
+          "description": "Mechanism or hypothesis at the stated evidence tier; clinical causality may be incomplete."
+        },
+        {
+          "id": "marker",
+          "kind": "Biomarker",
+          "label": "Gut community changes and tumor immune features (investigational)",
+          "description": "Research biomarker; clinical validity not implied."
+        },
+        {
+          "id": "outcome",
+          "kind": "Clinical interpretation",
+          "label": "Early clinical signal reported in a subset, not approved for melanoma",
+          "description": "Evidence-qualified, indication-specific clinical interpretation."
+        }
+      ],
+      "curated_sources": [
+        {
+          "id": "PMID_33542131",
+          "title": "Davar et al. Microbiota transfer and anti-PD-1 resistance",
+          "kind": "early_trial",
+          "year": 2021,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33542131/",
+          "note": "Small exploratory human study."
+        }
+      ],
+      "discovery_leads": [],
+      "discovery_total_matching": 0,
+      "comparators": [
+        {
+          "name": "Indaptus Therapeutics",
+          "approach": "Killed bacterial immune stimulant",
+          "status": "Development status requires review",
+          "url": "https://www.sec.gov/edgar/search/"
+        },
+        {
+          "name": "Actym Therapeutics",
+          "approach": "Investigational engineered bacterial delivery",
+          "status": "Investigational",
+          "url": "https://clinicaltrials.gov/search?term=Actym"
+        },
+        {
+          "name": "Prokarium",
+          "approach": "Investigational microbial immunotherapy",
+          "status": "Investigational",
+          "url": "https://clinicaltrials.gov/search?term=Prokarium"
+        }
+      ],
+      "patent_lead": {
+        "alternate_url": "https://patents.google.com/?q=%22Fecal%20microbiota%20transfer%20combined%20with%20checkpoint%20therapy%22%20Anti-PD-1-resistant%20melanoma",
+        "status": "Public patent search lead only; no claim, ownership, jurisdiction or freedom-to-operate review."
+      },
+      "warnings": [
+        "Conceptual pathway arrows do not establish proven molecular causality.",
+        "This is a static curated evidence snapshot; live trial discovery requires the backend.",
+        "Patent search links are unreviewed leads and not FTO conclusions."
+      ]
+    },
+    "VE303_RCDI": {
+      "claim": {
+        "id": "VE303_RCDI",
+        "area": "Microbiome",
+        "title": "Defined bacterial consortium VE303 for recurrent CDI",
+        "intervention": "VE303 defined bacterial consortium",
+        "disease": "Recurrent C. difficile infection",
+        "mechanism": "Hypothesized restoration of colonization resistance and metabolic functions",
+        "biomarker": "Consortium engraftment and microbial metabolites (research)",
+        "outcome": "Randomized phase 2 evidence; not proof of market approval",
+        "grade": "randomized_phase2",
+        "relation": "exploratory_intervention",
+        "sources": [
+          "PMID_37060545",
+          "PMID_39747680"
+        ],
+        "limitations": "Indication- and formulation-specific; larger trial validation and current development status require confirmation.",
+        "novelty": "Defined-consortium IP needs separate claim/jurisdiction review",
+        "evidence_label": "Randomized phase 2",
+        "curated_sources": [
+          {
+            "id": "PMID_37060545",
+            "title": "VE303 randomized phase 2 trial for recurrent CDI",
+            "kind": "randomized_phase2",
+            "year": 2023,
+            "url": "https://pubmed.ncbi.nlm.nih.gov/37060545/",
+            "note": "Indication-specific randomized evidence; no market approval implied."
+          },
+          {
+            "id": "PMID_39747680",
+            "title": "VE303 multi-omic mechanistic analysis",
+            "kind": "mechanistic",
+            "year": 2025,
+            "url": "https://pubmed.ncbi.nlm.nih.gov/39747680/",
+            "note": "Supports mechanistic characterization, not independent clinical approval."
+          }
+        ]
+      },
+      "pathway": [
+        {
+          "id": "therapy",
+          "kind": "Intervention",
+          "label": "VE303 defined bacterial consortium",
+          "description": "Therapeutic intervention or observational exposure; efficacy not automatically established."
+        },
+        {
+          "id": "molecular",
+          "kind": "Mechanism",
+          "label": "Hypothesized restoration of colonization resistance and metabolic functions",
+          "description": "Mechanism or hypothesis at the stated evidence tier; clinical causality may be incomplete."
+        },
+        {
+          "id": "marker",
+          "kind": "Biomarker",
+          "label": "Consortium engraftment and microbial metabolites (research)",
+          "description": "Research biomarker; clinical validity not implied."
+        },
+        {
+          "id": "outcome",
+          "kind": "Clinical interpretation",
+          "label": "Randomized phase 2 evidence; not proof of market approval",
+          "description": "Evidence-qualified, indication-specific clinical interpretation."
+        }
+      ],
+      "curated_sources": [
+        {
+          "id": "PMID_37060545",
+          "title": "VE303 randomized phase 2 trial for recurrent CDI",
+          "kind": "randomized_phase2",
+          "year": 2023,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37060545/",
+          "note": "Indication-specific randomized evidence; no market approval implied."
+        },
+        {
+          "id": "PMID_39747680",
+          "title": "VE303 multi-omic mechanistic analysis",
+          "kind": "mechanistic",
+          "year": 2025,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39747680/",
+          "note": "Supports mechanistic characterization, not independent clinical approval."
+        }
+      ],
+      "discovery_leads": [],
+      "discovery_total_matching": 0,
+      "comparators": [
+        {
+          "name": "Vedanta Biosciences",
+          "approach": "Defined microbial communities",
+          "status": "Investigational",
+          "url": "https://clinicaltrials.gov/search?term=VE303"
+        },
+        {
+          "name": "MaaT Pharma",
+          "approach": "Microbiome ecosystem therapeutics",
+          "status": "Development and regulatory status require verification",
+          "url": "https://clinicaltrials.gov/search?term=MaaT+Pharma"
+        }
+      ],
+      "patent_lead": {
+        "alternate_url": "https://patents.google.com/?q=%22VE303%20defined%20bacterial%20consortium%22%20Recurrent%20C.%20difficile%20infection",
+        "status": "Public patent search lead only; no claim, ownership, jurisdiction or freedom-to-operate review."
+      },
+      "warnings": [
+        "Conceptual pathway arrows do not establish proven molecular causality.",
+        "This is a static curated evidence snapshot; live trial discovery requires the backend.",
+        "Patent search links are unreviewed leads and not FTO conclusions."
+      ]
+    },
+    "METFORMIN_GUT": {
+      "claim": {
+        "id": "METFORMIN_GUT",
+        "area": "Cardiometabolic",
+        "title": "Metformin–microbiome interactions in type 2 diabetes",
+        "intervention": "Metformin exposure (not a bacterial therapeutic)",
+        "disease": "Type 2 diabetes",
+        "mechanism": "Microbiome composition and functional changes associated with metformin effect",
+        "biomarker": "Metagenomic microbial features and glycemic parameters (research)",
+        "outcome": "Mechanistic relationship reported; no bacterial product efficacy established",
+        "grade": "mechanistic_human",
+        "relation": "mechanistic_association",
+        "sources": [
+          "DOI_NM4345"
+        ],
+        "limitations": "The study investigates effects associated with a conventional drug; no approved bacteria-based diabetes treatment is established by this paper.",
+        "novelty": "No patent inference from mechanistic association",
+        "evidence_label": "Mechanistic human study",
+        "curated_sources": [
+          {
+            "id": "DOI_NM4345",
+            "title": "Wu et al. Metformin alters the gut microbiome of individuals with treatment-naive T2D",
+            "kind": "mechanistic",
+            "year": 2017,
+            "url": "https://www.nature.com/articles/nm.4345",
+            "note": "Metformin study; not a bacterial therapeutic trial."
+          }
+        ]
+      },
+      "pathway": [
+        {
+          "id": "therapy",
+          "kind": "Intervention",
+          "label": "Metformin exposure (not a bacterial therapeutic)",
+          "description": "Therapeutic intervention or observational exposure; efficacy not automatically established."
+        },
+        {
+          "id": "molecular",
+          "kind": "Mechanism",
+          "label": "Microbiome composition and functional changes associated with metformin effect",
+          "description": "Mechanism or hypothesis at the stated evidence tier; clinical causality may be incomplete."
+        },
+        {
+          "id": "marker",
+          "kind": "Biomarker",
+          "label": "Metagenomic microbial features and glycemic parameters (research)",
+          "description": "Research biomarker; clinical validity not implied."
+        },
+        {
+          "id": "outcome",
+          "kind": "Clinical interpretation",
+          "label": "Mechanistic relationship reported; no bacterial product efficacy established",
+          "description": "Evidence-qualified, indication-specific clinical interpretation."
+        }
+      ],
+      "curated_sources": [
+        {
+          "id": "DOI_NM4345",
+          "title": "Wu et al. Metformin alters the gut microbiome of individuals with treatment-naive T2D",
+          "kind": "mechanistic",
+          "year": 2017,
+          "url": "https://www.nature.com/articles/nm.4345",
+          "note": "Metformin study; not a bacterial therapeutic trial."
+        }
+      ],
+      "discovery_leads": [],
+      "discovery_total_matching": 0,
+      "comparators": [
+        {
+          "name": "Microbial metabolite research",
+          "approach": "SCFA, bile acid and TMAO biology",
+          "status": "Research hypotheses",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=microbiome+cardiometabolic"
+        }
+      ],
+      "patent_lead": {
+        "alternate_url": "https://patents.google.com/?q=%22Metformin%20exposure%20(not%20a%20bacterial%20therapeutic)%22%20Type%202%20diabetes",
+        "status": "Public patent search lead only; no claim, ownership, jurisdiction or freedom-to-operate review."
+      },
+      "warnings": [
+        "Conceptual pathway arrows do not establish proven molecular causality.",
+        "This is a static curated evidence snapshot; live trial discovery requires the backend.",
+        "Patent search links are unreviewed leads and not FTO conclusions."
+      ]
+    },
+    "TMAO_CVD_HYPOTHESIS": {
+      "claim": {
+        "id": "TMAO_CVD_HYPOTHESIS",
+        "area": "Cardiometabolic",
+        "title": "Microbial metabolite TMAO and cardiovascular disease hypothesis",
+        "intervention": "Potential microbiome-metabolite modulation (hypothetical)",
+        "disease": "Atherosclerotic cardiovascular disease",
+        "mechanism": "Putative microbial metabolite–host cardiovascular signaling",
+        "biomarker": "Plasma TMAO (investigational)",
+        "outcome": "No bacterial treatment cardiovascular-event benefit established in this curated set",
+        "grade": "hypothesis",
+        "relation": "proposed_mechanism",
+        "sources": [],
+        "limitations": "This is a research hypothesis only; source-level verification and interventional outcome evidence required before asserting benefit.",
+        "novelty": "No FTO conclusion",
+        "evidence_label": "Unverified hypothesis",
+        "curated_sources": []
+      },
+      "pathway": [
+        {
+          "id": "therapy",
+          "kind": "Intervention",
+          "label": "Potential microbiome-metabolite modulation (hypothetical)",
+          "description": "Therapeutic intervention or observational exposure; efficacy not automatically established."
+        },
+        {
+          "id": "molecular",
+          "kind": "Mechanism",
+          "label": "Putative microbial metabolite–host cardiovascular signaling",
+          "description": "Mechanism or hypothesis at the stated evidence tier; clinical causality may be incomplete."
+        },
+        {
+          "id": "marker",
+          "kind": "Biomarker",
+          "label": "Plasma TMAO (investigational)",
+          "description": "Research biomarker; clinical validity not implied."
+        },
+        {
+          "id": "outcome",
+          "kind": "Clinical interpretation",
+          "label": "No bacterial treatment cardiovascular-event benefit established in this curated set",
+          "description": "Evidence-qualified, indication-specific clinical interpretation."
+        }
+      ],
+      "curated_sources": [],
+      "discovery_leads": [],
+      "discovery_total_matching": 0,
+      "comparators": [
+        {
+          "name": "Microbial metabolite research",
+          "approach": "SCFA, bile acid and TMAO biology",
+          "status": "Research hypotheses",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=microbiome+cardiometabolic"
+        }
+      ],
+      "patent_lead": {
+        "alternate_url": "https://patents.google.com/?q=%22Potential%20microbiome-metabolite%20modulation%20(hypothetical)%22%20Atherosclerotic%20cardiovascular%20disease",
+        "status": "Public patent search lead only; no claim, ownership, jurisdiction or freedom-to-operate review."
+      },
+      "warnings": [
+        "Conceptual pathway arrows do not establish proven molecular causality.",
+        "This is a static curated evidence snapshot; live trial discovery requires the backend.",
+        "Patent search links are unreviewed leads and not FTO conclusions."
+      ]
+    },
+    "SCFA_METABOLIC_HYPOTHESIS": {
+      "claim": {
+        "id": "SCFA_METABOLIC_HYPOTHESIS",
+        "area": "Cardiometabolic",
+        "title": "Short-chain fatty acids in metabolic inflammation",
+        "intervention": "Potential modulation of microbiome metabolic products (hypothetical)",
+        "disease": "Obesity and insulin resistance",
+        "mechanism": "Possible gut–immune–metabolic signaling",
+        "biomarker": "Fecal or circulating SCFA levels (exploratory)",
+        "outcome": "No validated bacterial product for clinical metabolic outcomes established here",
+        "grade": "hypothesis",
+        "relation": "proposed_mechanism",
+        "sources": [],
+        "limitations": "Plausible mechanisms alone do not prove clinical effect; intervention, dosing, safety and endpoints unestablished.",
+        "novelty": "No FTO conclusion",
+        "evidence_label": "Unverified hypothesis",
+        "curated_sources": []
+      },
+      "pathway": [
+        {
+          "id": "therapy",
+          "kind": "Intervention",
+          "label": "Potential modulation of microbiome metabolic products (hypothetical)",
+          "description": "Therapeutic intervention or observational exposure; efficacy not automatically established."
+        },
+        {
+          "id": "molecular",
+          "kind": "Mechanism",
+          "label": "Possible gut–immune–metabolic signaling",
+          "description": "Mechanism or hypothesis at the stated evidence tier; clinical causality may be incomplete."
+        },
+        {
+          "id": "marker",
+          "kind": "Biomarker",
+          "label": "Fecal or circulating SCFA levels (exploratory)",
+          "description": "Research biomarker; clinical validity not implied."
+        },
+        {
+          "id": "outcome",
+          "kind": "Clinical interpretation",
+          "label": "No validated bacterial product for clinical metabolic outcomes established here",
+          "description": "Evidence-qualified, indication-specific clinical interpretation."
+        }
+      ],
+      "curated_sources": [],
+      "discovery_leads": [],
+      "discovery_total_matching": 0,
+      "comparators": [
+        {
+          "name": "Microbial metabolite research",
+          "approach": "SCFA, bile acid and TMAO biology",
+          "status": "Research hypotheses",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=microbiome+cardiometabolic"
+        }
+      ],
+      "patent_lead": {
+        "alternate_url": "https://patents.google.com/?q=%22Potential%20modulation%20of%20microbiome%20metabolic%20products%20(hypothetical)%22%20Obesity%20and%20insulin%20resistance",
+        "status": "Public patent search lead only; no claim, ownership, jurisdiction or freedom-to-operate review."
+      },
+      "warnings": [
+        "Conceptual pathway arrows do not establish proven molecular causality.",
+        "This is a static curated evidence snapshot; live trial discovery requires the backend.",
+        "Patent search links are unreviewed leads and not FTO conclusions."
+      ]
+    }
+  }
+}
