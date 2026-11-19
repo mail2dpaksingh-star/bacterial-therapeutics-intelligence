@@ -95,6 +95,7 @@ html{scroll-behavior:smooth}body{background:radial-gradient(circle at 100% 0%,#e
   <div class="future-inputs">
     <label>Indication<select id="ftDisease"><option value="Oncology">Oncology</option><option value="Cardiometabolic">Cardiometabolic</option><option value="Microbiome">Microbiome / gut health</option></select></label>
     <label>Microbial platform<select id="ftMicrobe"><option value="Nonliving bacterial immunostimulant">Nonliving bacterial immunostimulant</option><option value="Engineered live microbial therapeutic">Engineered live microbial therapeutic</option><option value="Unmodified commensal microorganism">Unmodified commensal microorganism</option><option value="Defined bacterial consortium">Defined bacterial consortium</option><option value="Bacterial extracellular vesicles">Bacterial extracellular vesicles</option></select></label>
+    <label>Microbial type<select id="ftType"><option value="Commensal bacterial species">Commensal bacterial species</option><option value="Attenuated bacterial platform">Attenuated bacterial platform</option><option value="Obligate anaerobic bacteria">Obligate anaerobic bacteria</option><option value="Facultative anaerobic bacteria">Facultative anaerobic bacteria</option><option value="Multispecies bacterial community">Multispecies bacterial community</option><option value="Nonliving bacterial-derived material">Nonliving bacterial-derived material</option></select></label>
     <label>Engineering concept<select id="ftEngineering"><option value="Unmodified platform">Unmodified platform</option><option value="Controlled activity (concept)">Controlled activity (concept)</option><option value="Surface display (concept)">Surface display (concept)</option><option value="Cargo expression (concept)">Cargo expression (concept)</option></select></label>
     <label>Therapeutic cargo<select id="ftCargo"><option value="No added cargo">No added cargo</option><option value="Immune-modulating protein or peptide">Immune-modulating protein or peptide</option><option value="Therapeutic protein or enzyme">Therapeutic protein or enzyme</option><option value="Metabolite modulation">Metabolite modulation</option><option value="Nucleic-acid payload (concept)">Nucleic-acid payload (concept)</option></select></label>
     <label>Conjugated / formulated version<select id="ftConjugation"><option value="No conjugation">No conjugation</option><option value="Surface-associated targeting ligand (concept)">Surface-associated targeting ligand (concept)</option><option value="Carrier-conjugated formulation (concept)">Carrier-conjugated formulation (concept)</option><option value="Encapsulated / protected formulation (concept)">Encapsulated / protected formulation (concept)</option></select></label>
@@ -522,7 +523,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 </script><script>
 (()=>{'use strict';
 const by=id=>document.getElementById(id),NS='http://www.w3.org/2000/svg';
-const fields=['ftDisease','ftMicrobe','ftEngineering','ftCargo','ftConjugation','ftRoute'];
+const fields=['ftDisease','ftMicrobe','ftType','ftEngineering','ftCargo','ftConjugation','ftRoute'];
 if(!fields.every(id=>by(id)))return;
 const diseaseInfo={
 Oncology:{interaction:'Potential engagement of tumor-associated innate and adaptive immune pathways, depending on platform and exposure.',readouts:'Tumor immune phenotypes, cytokines, CD8+ T-cell infiltration, tumor response endpoints, adverse inflammatory events.',context:'Tumor targeting and efficacy are not established by choosing a platform or delivery route.'},
@@ -575,7 +576,7 @@ updateDetail();
 function render(){
 const values=Object.fromEntries(fields.map(id=>[id,by(id).value]));const area=values.ftDisease;
 steps=[
-['Microbial platform',values.ftMicrobe+' · feasibility and biological properties depend on the selected platform'],
+['Microbial platform',values.ftMicrobe+' / '+values.ftType+' · feasibility and biological properties depend on the selected platform and microbial classification'],
 ['Engineering approach',values.ftEngineering+' · any modification requires separate biosafety and functional assessment'],
 ['Cargo / therapeutic function',values.ftCargo+' · activity, localization and stability are unknown'],
 ['Conjugated / formulated format',values.ftConjugation+' · compatibility and exposure must be established'],
