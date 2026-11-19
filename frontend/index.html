@@ -64,6 +64,18 @@ html{scroll-behavior:smooth}body{background:radial-gradient(circle at 100% 0%,#e
 @media(max-width:780px){.home-stage{padding:16px!important}.home-research{padding:16px!important}.workspace-picker{display:flex!important;flex-direction:column!important;align-items:stretch!important}.workspace-picker select{width:100%!important}}
 
 .notice-center{display:none !important}.notice-center.show{display:none !important}.notice-banner{border-radius:12px;padding:12px 14px;font-size:13px;line-height:1.5;border:1px solid #d7e7eb;background:#f4fbfc;color:#184758}.notice-banner.info{background:#eef8fb;border-color:#d4e5ed;color:#1b5666}.notice-banner.success{background:#edf9f1;border-color:#d6ebdc;color:#216246}.notice-banner.warning{background:#fff8ec;border-color:#f0e0b8;color:#7b5c13}.notice-banner.error{background:#fff1f1;border-color:#efcfcf;color:#8a3035}.notice-banner .notice-close{float:right;border:0;background:transparent;color:inherit;font-size:18px;cursor:pointer;line-height:1;padding-left:10px}
+
+/* Research-only multimodal therapeutics predictive pathway studio */
+.future-studio{margin:16px 0 20px;padding:25px 29px;background:#fff;border:1px solid #d4e6eb;border-radius:20px;box-shadow:0 12px 30px #1a3b550b}
+.future-head{display:flex;justify-content:space-between;gap:17px;align-items:flex-start}.future-head h2{color:#11364b;font-size:clamp(22px,2.5vw,32px);letter-spacing:-.03em;margin:6px 0 8px}.future-head p{color:#607b88;font-size:13px;line-height:1.65;margin:0;max-width:820px}.future-label{font-size:11px;color:#16777c;background:#eaf6f4;padding:9px 12px;border-radius:30px;white-space:nowrap}
+.future-inputs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;margin:20px 0 17px}.future-inputs label{font-weight:800;font-size:11px;color:#3f6676;display:flex;flex-direction:column;gap:7px}.future-inputs select{width:100%;font-size:12px;background:#f8fbfc;min-height:43px}
+.future-workspace{display:grid;grid-template-columns:minmax(0,1.72fr) minmax(275px,.78fr);gap:15px}
+.future-chart{min-width:0;padding:17px;background:#091f2e;border-radius:16px}.future-chart-head{display:flex;justify-content:space-between;gap:12px;font-size:11px;color:#addcdb;letter-spacing:.07em}.future-chart svg{display:block;width:100%;height:auto;margin:8px 0}.future-node-detail{min-height:51px;background:#173b4d;border-radius:10px;padding:12px;color:#d2edf0;font-size:12px;line-height:1.55}
+.future-report{padding:20px;background:#f5fafb;border:1px solid #dce9ed;border-radius:14px;display:flex;flex-direction:column}.future-report h3{font-size:20px;margin:8px 0 12px;color:#143a4e}.future-section{margin:10px 0}.future-section strong{font-size:11px;color:#157b83;text-transform:uppercase;letter-spacing:.045em}.future-section p{font-size:12px;line-height:1.65;color:#3d6275;margin:6px 0 0}.future-section a{display:block;color:#137983;font-size:11px;line-height:1.5;margin:7px 0;text-decoration:none}.future-section a:hover{text-decoration:underline}.future-method{font-size:11px;line-height:1.5;border-top:1px solid #d8e6eb;margin-top:auto;padding-top:12px;color:#708a96}
+.future-actions{display:flex;gap:12px;margin-top:15px}.future-actions button{font-size:12px;font-weight:800;border-radius:10px;background:#127d85;border:1px solid #127d85;color:#fff;padding:11px 14px}.future-actions .future-secondary{color:#27677a;background:#fff;border-color:#bdd4db}
+#ftDiagram .ft-node{cursor:pointer;outline:none}#ftDiagram .ft-node:hover .ft-card,#ftDiagram .ft-node:focus .ft-card,#ftDiagram .ft-node.active .ft-card{stroke:#fff;stroke-width:3;filter:drop-shadow(0 0 7px #77ccdb)}
+@media(max-width:970px){.future-workspace{grid-template-columns:1fr}.future-inputs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.future-studio{padding:16px 12px}.future-inputs{grid-template-columns:1fr}.future-head{display:block}.future-label{display:inline-block;margin-top:12px}.future-actions{flex-wrap:wrap}.future-actions button{width:100%}}
 </style><script>window.btiSnapshotPromise=null;window.btiGet=async function(url){try{const live=await fetch(url,{cache:'no-store'});if(live.ok)return await live.json()}catch(_e){}if(!window.btiSnapshotPromise){window.btiSnapshotPromise=fetch('/pathway_snapshot.json').then(r=>{if(!r.ok)throw Error('Static pathway dataset unavailable');return r.json()})}const snap=await window.btiSnapshotPromise;if(url.endsWith('/overview'))return snap.overview;const id=decodeURIComponent(url.substring(url.lastIndexOf('/')+1));if(snap.details&&snap.details[id])return snap.details[id];throw Error('No curated pathway found for '+id)};</script></head><body><a class="skip-link" href="#workspaceSelect">Skip to workspace navigation</a><main class="shell"><header class="top home-top"><div class="brand"><span aria-hidden="true" class="brand-mark">BT</span><span>BACTERIAL THERAPEUTICS <span class="brand-divider">/</span> INTELLIGENCE</span><span class="brand-edition">SCIENTIFIC RESEARCH PLATFORM</span></div><div class="top-status"><span class="status-dot"></span> Evidence-grounded research <span class="top-status-dot">•</span> v1.8.1</div></header>
 <section class="home-stage" aria-label="Unified scientific research homepage">
   <div class="home-head"><div class="home-title-group"><div class="home-kicker"><span class="pulse-dot"></span> BACTERIAL THERAPEUTICS · RESEARCH HOME <span class="home-tag">RESEARCH ENVIRONMENT</span></div><h1>Pathway Explorer.<br><span>From disease to evidence.</span></h1><p>Start with a disease. Explore an interactive mechanism and examine its supporting literature, clinical trial records and patent-search leads. Select AI specialists from the workspace menu when deeper analysis is needed.</p><div class="home-head-actions"><button type="button" class="home-cta" id="homeStartExplore">Explore a pathway <span aria-hidden="true">↗</span></button><button type="button" class="home-cta-alt" id="homeBrowseTools">Browse research workspaces <span aria-hidden="true">→</span></button></div></div>
@@ -76,6 +88,23 @@ html{scroll-behavior:smooth}body{background:radial-gradient(circle at 100% 0%,#e
   </div>
   <div class="home-pipeline"><div class="home-pipeline-top"><span class="home-eyebrow">02 / CONNECTED RESEARCH WORKFLOW</span><span class="home-live-dot"><span class="pulse-dot"></span> Interactive exploration</span></div><div class="home-pipeline-nodes"><div><span>01</span><strong>Disease</strong><small>Indication</small></div><b>→</b><div><span>02</span><strong>Therapy</strong><small>Modality</small></div><b>→</b><div><span>03</span><strong>Mechanism</strong><small>Molecular biology</small></div><b>→</b><div><span>04</span><strong>Evidence</strong><small>Published sources</small></div><b>→</b><div><span>05</span><strong>Translation</strong><small>Trials & IP leads</small></div></div></div>
   <div class="home-workflow-links"><span>DIRECT ACCESS</span><button type="button" class="home-jump" data-target="library">Scientific literature ↗</button><button type="button" class="home-jump" data-target="moa">Mechanisms ↗</button><button type="button" class="home-jump" data-target="graph">Knowledge graph ↗</button><button type="button" class="home-jump" data-target="multi">Five AI agents ↗</button></div>
+</section>
+
+<section id="futureTherapeuticStudio" class="future-studio" aria-labelledby="futureStudioTitle">
+  <div class="future-head"><div><span class="home-eyebrow">FUTURE THERAPEUTIC CONCEPTS</span><h2 id="futureStudioTitle">Predictive Bacterial Therapeutics Pathway Studio</h2><p>Explore possible relationships among microbial platform, engineering concept, cargo, conjugation, and delivery route. The diagram generates testable hypotheses, not efficacy predictions.</p></div><span class="future-label">Conceptual modeling</span></div>
+  <div class="future-inputs">
+    <label>Indication<select id="ftDisease"><option value="Oncology">Oncology</option><option value="Cardiometabolic">Cardiometabolic</option><option value="Microbiome">Microbiome / gut health</option></select></label>
+    <label>Microbial platform<select id="ftMicrobe"><option value="Nonliving bacterial immunostimulant">Nonliving bacterial immunostimulant</option><option value="Engineered live microbial therapeutic">Engineered live microbial therapeutic</option><option value="Unmodified commensal microorganism">Unmodified commensal microorganism</option><option value="Defined bacterial consortium">Defined bacterial consortium</option><option value="Bacterial extracellular vesicles">Bacterial extracellular vesicles</option></select></label>
+    <label>Engineering concept<select id="ftEngineering"><option value="Unmodified platform">Unmodified platform</option><option value="Controlled activity (concept)">Controlled activity (concept)</option><option value="Surface display (concept)">Surface display (concept)</option><option value="Cargo expression (concept)">Cargo expression (concept)</option></select></label>
+    <label>Therapeutic cargo<select id="ftCargo"><option value="No added cargo">No added cargo</option><option value="Immune-modulating protein or peptide">Immune-modulating protein or peptide</option><option value="Therapeutic protein or enzyme">Therapeutic protein or enzyme</option><option value="Metabolite modulation">Metabolite modulation</option><option value="Nucleic-acid payload (concept)">Nucleic-acid payload (concept)</option></select></label>
+    <label>Conjugated / formulated version<select id="ftConjugation"><option value="No conjugation">No conjugation</option><option value="Surface-associated targeting ligand (concept)">Surface-associated targeting ligand (concept)</option><option value="Carrier-conjugated formulation (concept)">Carrier-conjugated formulation (concept)</option><option value="Encapsulated / protected formulation (concept)">Encapsulated / protected formulation (concept)</option></select></label>
+    <label>Delivery context<select id="ftRoute"><option value="Oral">Oral</option><option value="Systemic">Systemic</option><option value="Local / intratumoral">Local / intratumoral</option><option value="Mucosal / regional">Mucosal / regional</option></select></label>
+  </div>
+  <div class="future-workspace">
+    <div class="future-chart"><div class="future-chart-head"><strong>Interactive mechanistic hypothesis map</strong><span id="ftDomain">ONCOLOGY</span></div><svg id="ftDiagram" viewBox="0 0 1120 385" role="img" aria-label="Proposed delivery and biological mechanism diagram"></svg><div class="future-node-detail" id="ftNodeDetail" aria-live="polite">Select a pathway step to inspect its proposed role.</div></div>
+    <aside class="future-report"><span class="home-eyebrow">PREDICTIVE INTERPRETATION</span><h3 id="ftTitle">Research hypothesis</h3><div class="future-section"><strong>Possible biological interaction</strong><p id="ftHypothesis"></p></div><div class="future-section"><strong>Research readouts</strong><p id="ftReadouts"></p></div><div class="future-section"><strong>Development considerations</strong><p id="ftConsiderations"></p></div><div class="future-section"><strong>Linked literature</strong><div id="ftSources"></div></div><div class="future-method">Hypothesis generation only. Molecular feasibility, delivery, safety and clinical performance are not predicted or validated by this tool.</div></aside>
+  </div>
+  <div class="future-actions"><button type="button" id="ftExplore">Explore curated disease evidence ↓</button><button type="button" id="ftReset" class="future-secondary">Reset concept</button></div>
 </section>
 
 <section class="home-research" aria-label="Integrated homepage research console">
@@ -489,5 +518,79 @@ document.addEventListener('DOMContentLoaded',()=>{
  async function health(){try{const r=await fetch('/api/health',{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);const d=await r.json();localOnly=d.auth_mode==='local_only';ready=d.status==='ready';by('homeAiReady').textContent=ready?'AI backend ready': 'AI key not configured';}catch(e){by('homeAiReady').textContent='Backend offline';ready=false}}
  async function run(){if(busy)return;const q=by('homeAiQuestion').value.trim();if(q.length<12){by('homeAiStatus').textContent='Please enter a longer research question.';return;}await health();if(!ready){by('homeAiStatus').textContent='AI backend not ready. Configure the server-side OpenAI API key.';return;}const token=by('liveToken')?.value.trim();if(!localOnly&&!token){by('homeAiStatus').textContent='Token-protected server: open specialist workspace to authenticate.';goWorkspace('multi');return;}busy=true;by('homeAiRun').disabled=true;by('homeAiStatus').textContent='Retrieving scientific sources and running the five agents…';const output=by('homeAiResponse');clean(output);output.append(text('p','Analyzing sources…'));try{const resp=await fetch('/api/research',{method:'POST',headers:localOnly?{'Content-Type':'application/json'}:{'Content-Type':'application/json','Authorization':'Bearer '+token},body:JSON.stringify({question:q,mode:'full'})});const data=await resp.json();if(!resp.ok)throw Error(typeof data.detail==='string'?data.detail:'HTTP '+resp.status);clean(output);output.append(text('h4','Lead research synthesis'),text('p',data.synthesis||'No synthesis returned'));for(const [name,detail]of Object.entries(data.findings||{})){const d=document.createElement('details');d.append(text('summary',name.charAt(0).toUpperCase()+name.slice(1)+' agent'),text('p',detail));output.append(d)}if(data.evidence?.length){output.append(text('h4','Cited source records'));data.evidence.slice(0,12).forEach(e=>card(output,e.title,e.kind+' · '+e.id,e.url))}for(const warn of data.warnings||[])output.append(text('p','Warning: '+warn));output.append(text('p',data.disclaimer||'Clinical and patent conclusions require independent validation'));by('homeAiStatus').textContent=data.status+' · '+(data.evidence?.length||0)+' retrieved records';}catch(e){clean(output);output.append(text('p','Live AI research unavailable: '+e.message));by('homeAiStatus').textContent='Analysis not completed';}finally{busy=false;by('homeAiRun').disabled=false}}
  document.addEventListener('DOMContentLoaded',async()=>{by('homeOpenFull').addEventListener('click',()=>goWorkspace('journey'));by('homeAiDetails').addEventListener('click',()=>{by('liveQuestion').value=by('homeAiQuestion').value;goWorkspace('multi')});by('homeAiRun').addEventListener('click',run);by('homePath').addEventListener('change',()=>load(by('homePath').value));await health();try{claims=(await window.btiGet('/api/workbench/overview')).claims||[];chooseArea('Oncology')}catch(e){by('homeFetchStatus').textContent='Start the Windows launcher to load curated pathways: '+e.message}document.querySelectorAll('.home-domain').forEach(btn=>btn.addEventListener('click',()=>chooseArea(btn.dataset.area)))});
+})();
+</script><script>
+(()=>{'use strict';
+const by=id=>document.getElementById(id),NS='http://www.w3.org/2000/svg';
+const fields=['ftDisease','ftMicrobe','ftEngineering','ftCargo','ftConjugation','ftRoute'];
+if(!fields.every(id=>by(id)))return;
+const diseaseInfo={
+Oncology:{interaction:'Potential engagement of tumor-associated innate and adaptive immune pathways, depending on platform and exposure.',readouts:'Tumor immune phenotypes, cytokines, CD8+ T-cell infiltration, tumor response endpoints, adverse inflammatory events.',context:'Tumor targeting and efficacy are not established by choosing a platform or delivery route.'},
+Cardiometabolic:{interaction:'Potential modification of microbial metabolites and host metabolic or inflammatory signaling, with uncertain clinical consequences.',readouts:'Metabolite exposure, HbA1c, insulin sensitivity, lipid profiles, liver-specific clinical endpoints, systemic safety.',context:'Metabolite associations do not demonstrate benefit in diabetes, obesity or cardiovascular disease.'},
+Microbiome:{interaction:'Potential shifts in microbial ecological functions, intestinal barrier interactions or colonization resistance.',readouts:'Microbial functional profiles, microbiome composition, metabolomics, disease-specific outcomes and safety.',context:'Approved recurrent C. difficile products do not establish efficacy in other diseases.'}
+};
+const delivery={
+Oral:'Proposed exposure begins in the gastrointestinal tract; survival, localization, and systemic exposure cannot be assumed.',
+Systemic:'Systemic microbial or component exposure raises major distribution, immune toxicity, infection and clearance questions; requires stringent biosafety assessment.',
+'Local / intratumoral':'Local exposure could change tissue immune signaling but does not establish tumor-selective activity or safety.',
+'Mucosal / regional':'Regional administration may influence mucosal exposure and immune signaling, with site-specific efficacy and safety uncertainties.'
+};
+const colors=['#83e7d6','#8fc5f6','#c6a1ed','#e9bf83','#a3dea4','#eb9db9'];
+let selectedIndex=0,steps=[];
+const svg=by('ftDiagram');
+const shape=(tag,attrs,text,parent=svg)=>{const el=document.createElementNS(NS,tag);for(const[k,v]of Object.entries(attrs||{}))el.setAttribute(k,String(v));if(text!==undefined)el.textContent=text;parent.appendChild(el);return el};
+const wrap=(s,max)=>{let lines=[],line='';for(const word of String(s).split(/\s+/)){if((line+' '+word).trim().length>max&&line){lines.push(line);line=word}else line+=(line?' ':'')+word}if(line)lines.push(line);return lines.slice(0,4)};
+let sourcesPromise=null;
+async function sources(area){
+const el=by('ftSources');el.replaceChildren();
+try{
+sourcesPromise ||= window.btiGet('/api/workbench/overview');
+const overview=await sourcesPromise;
+const all=(overview.claims||[]).filter(c=>c.area===area).flatMap(c=>c.curated_sources||[]);
+const unique=[...new Map(all.filter(x=>x.url&&/^https:\/\//.test(x.url)).map(x=>[x.url,x])).values()].slice(0,4);
+if(!unique.length){el.textContent='No curated publication linked to this area.';return}
+unique.forEach(r=>{const a=document.createElement('a');a.href=r.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=r.title||'Open curated source';el.appendChild(a)});
+}catch(e){el.textContent='Curated evidence temporarily unavailable.'}
+}
+function updateDetail(){const step=steps[selectedIndex];by('ftNodeDetail').textContent=step[0]+': '+step[1];svg.querySelectorAll('.ft-node').forEach((node,i)=>node.classList.toggle('active',i===selectedIndex))}
+function renderSvg(){
+svg.replaceChildren();shape('rect',{width:1120,height:385,rx:15,fill:'#091f2e'});
+for(let i=0;i<=22;i++)shape('path',{d:'M'+(i*51)+' 0V385',stroke:'#85b7c5','stroke-opacity':'.055'});
+for(let j=0;j<=8;j++)shape('path',{d:'M0 '+(j*48)+'H1120',stroke:'#85b7c5','stroke-opacity':'.055'});
+shape('text',{x:25,y:39,fill:'#a4dcd9','font-size':14,'font-weight':750,'letter-spacing':1},'CONCEPTUAL BIOLOGICAL SEQUENCE');
+steps.forEach(([title,desc],i)=>{
+const x=14+i*185,y=88,w=169,h=203;
+if(i<steps.length-1){shape('path',{d:'M'+(x+w)+' 181h16',stroke:'#83d5d4','stroke-width':2,fill:'none'});shape('path',{d:'M'+(x+w+10)+' 176l6 5-6 5',stroke:'#83d5d4','stroke-width':2,fill:'none'})}
+const g=shape('g',{role:'button',tabindex:0,'aria-label':'Step '+(i+1)+': '+title});g.classList.add('ft-node');
+const box=shape('rect',{x,y,width:w,height:h,rx:15,fill:'#16394a',stroke:colors[i],'stroke-width':2},undefined,g);box.classList.add('ft-card');
+shape('circle',{cx:x+24,cy:y+29,r:15,fill:colors[i]},undefined,g);
+shape('text',{x:x+24,y:y+35,'text-anchor':'middle','font-size':14,fill:'#092130','font-weight':900},String(i+1),g);
+wrap(title,19).forEach((line,k)=>shape('text',{x:x+13,y:y+70+k*19,fill:'#edfaff','font-size':13,'font-weight':750},line,g));
+wrap(desc,27).slice(0,4).forEach((line,k)=>shape('text',{x:x+13,y:y+135+k*16,fill:'#a4ccd5','font-size':10},line,g));
+const select=()=>{selectedIndex=i;updateDetail()};g.addEventListener('click',select);g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();select()}});
+});
+shape('text',{x:24,y:346,fill:'#98c7ce','font-size':12},'Hypothesis sequence, not demonstrated causal biology or a validated delivery model.');
+updateDetail();
+}
+function render(){
+const values=Object.fromEntries(fields.map(id=>[id,by(id).value]));const area=values.ftDisease;
+steps=[
+['Microbial platform',values.ftMicrobe+' · feasibility and biological properties depend on the selected platform'],
+['Engineering approach',values.ftEngineering+' · any modification requires separate biosafety and functional assessment'],
+['Cargo / therapeutic function',values.ftCargo+' · activity, localization and stability are unknown'],
+['Conjugated / formulated format',values.ftConjugation+' · compatibility and exposure must be established'],
+['Delivery and exposure',values.ftRoute+' · '+delivery[values.ftRoute]],
+['Host response / outcome',diseaseInfo[area].interaction]
+];
+selectedIndex=0;by('ftTitle').textContent=area+' · Future therapeutic concept';
+by('ftHypothesis').textContent=diseaseInfo[area].interaction;
+by('ftReadouts').textContent=diseaseInfo[area].readouts;
+by('ftConsiderations').textContent=delivery[values.ftRoute]+' '+diseaseInfo[area].context+' Selected platform–cargo–formulation combinations are not asserted to be feasible.';
+by('ftDomain').textContent=area.toUpperCase();renderSvg();sources(area);
+}
+fields.forEach(id=>by(id).addEventListener('change',render));
+by('ftReset').addEventListener('click',()=>{fields.forEach(id=>by(id).selectedIndex=0);render()});
+by('ftExplore').addEventListener('click',()=>{document.querySelector('.home-domain[data-area="'+by('ftDisease').value+'"]')?.click();document.querySelector('.home-research')?.scrollIntoView({behavior:'smooth',block:'start'})});
+render();
 })();
 </script></body></html>
