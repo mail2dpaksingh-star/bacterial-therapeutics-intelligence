@@ -75,7 +75,7 @@ html{scroll-behavior:smooth}body{background:radial-gradient(circle at 100% 0%,#e
 .moa-node{cursor:pointer;outline:none}.moa-node:focus .moa-node-disc,.moa-node:hover .moa-node-disc,.moa-node.is-selected .moa-node-disc{stroke:#fff;stroke-width:3.5;filter:drop-shadow(0 0 8px #70dacb)}
 .moa-atlas-details{background:#f5fafb;border-radius:16px;border:1px solid #d8e8eb;padding:23px;display:flex;flex-direction:column;gap:14px}
 .moa-atlas-details h3{font-size:23px;line-height:1.2;color:#12374a;margin:0}.moa-atlas-details>p{font-size:13px;line-height:1.7;color:#3d6577;margin:0}
-.moa-evidence-note{border-left:3px solid #1f9994;padding:11px 13px;background:#eaf5f4;border-radius:5px}.moa-evidence-note strong{font-size:12px;color:#125e67}.moa-evidence-note p{font-size:12px;line-height:1.6;color:#416d73;margin:5px 0 0}
+
 .moa-atlas-details .moa-atlas-next{margin-top:auto;font-size:11px}.moa-atlas-details button{background:#177f85;color:white;border:0;border-radius:10px;padding:12px;font-weight:800;cursor:pointer}
 @media(max-width:850px){.moa-atlas-layout{grid-template-columns:1fr}.moa-atlas{padding:14px}.moa-atlas-head{flex-direction:column}.moa-atlas-tag{white-space:normal}}
 </style><script>
@@ -124,7 +124,7 @@ window.btiGet=async function(url){
  </svg>
  <div class="moa-atlas-foot">Select a numbered mechanism · Six conceptual categories · Clickable and keyboard accessible</div>
  </div>
- <aside class="moa-atlas-details" aria-live="polite"><span class="home-eyebrow">MECHANISM DETAILS</span><h3 id="btiMoaName">Select a mechanism</h3><p id="btiMoaDesc">Choose one of the six numbered mechanisms to explore its biological rationale and evidence limitations.</p><div class="moa-evidence-note"><strong>Evidence qualification</strong><p id="btiMoaLevel">Evidence varies by intervention and disease. These categories are not proof of clinical efficacy.</p></div><p class="moa-atlas-next">Select the corresponding disease area below to inspect curated source records.</p><button type="button" id="btiMoaExplore">Explore related pathway ↓</button></aside>
+ <aside class="moa-atlas-details" aria-live="polite"><span class="home-eyebrow">MECHANISM DETAILS</span><h3 id="btiMoaName">Select a mechanism</h3><p id="btiMoaDesc">Choose one of the six numbered mechanisms to explore its biological rationale.</p><p class="moa-atlas-next">Select the corresponding disease area below to inspect curated source records.</p><button type="button" id="btiMoaExplore">Explore related pathway ↓</button></aside>
  </div>
 </section>
 
@@ -505,7 +505,7 @@ consortia:{name:'Microbiome ecosystem restoration',area:'Microbiome',desc:'Defin
 barrier:{name:'Barrier and inflammation regulation',area:'Microbiome',desc:'Microbial community changes and microbial metabolites can influence mucosal barrier functions, epithelial signaling and host inflammatory tone.',level:'Mechanism and human intervention evidence are context dependent; not an established treatment for most systemic inflammatory or cardiometabolic diseases.'}
 };
 let selected='innate';
-function choose(id){const d=data[id];if(!d)return;selected=id;document.querySelectorAll('#btiAtlasSvg .moa-node').forEach(x=>x.classList.toggle('is-selected',x.dataset.moa===id));document.getElementById('btiMoaName').textContent=d.name;document.getElementById('btiMoaDesc').textContent=d.desc;document.getElementById('btiMoaLevel').textContent=d.level;}
+function choose(id){const d=data[id];if(!d)return;selected=id;document.querySelectorAll('#btiAtlasSvg .moa-node').forEach(x=>x.classList.toggle('is-selected',x.dataset.moa===id));document.getElementById('btiMoaName').textContent=d.name;document.getElementById('btiMoaDesc').textContent=d.desc;}
 document.querySelectorAll('#btiAtlasSvg .moa-node').forEach(n=>{n.addEventListener('click',()=>choose(n.dataset.moa));n.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();choose(n.dataset.moa)}})});
 document.getElementById('btiMoaExplore')?.addEventListener('click',()=>{const area=data[selected].area;const btn=document.querySelector('.home-domain[data-area="'+area+'"]');btn?.click();document.querySelector('.home-research')?.scrollIntoView({behavior:'smooth',block:'start'});});
 choose('innate');
