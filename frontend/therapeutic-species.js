@@ -116,7 +116,7 @@
  }
  async function load(){
   if(loaded)return;
-  if(!loadPromise)loadPromise=fetch('therapeutic_species.json').then(response=>{
+  if(!loadPromise)loadPromise=fetch('/therapeutic_species.json').then(response=>{
    if(!response.ok)throw Error('Dataset unavailable (HTTP '+response.status+')');
    return response.json();
   }).then(data=>{
@@ -136,23 +136,33 @@
   section.hidden=!open;
   by('btiOpenSpeciesFromText')?.setAttribute('aria-expanded',String(open));
  }
- async function open(){
+ // Scroll immediately; data loading must never block navigation to the explorer.
+ function open(){
   const section=by('btiSpeciesExplorer');
   if(!section)return;
-  if(!section.hidden){
-   syncOpen(false);
-   by('btiOpenSpeciesFromText')?.focus();
-   return;
-  }
   syncOpen(true);
-  await load();
+  if(window.location.hash!=='#btiSpeciesExplorer'){
+   window.history.replaceState(window.history.state,'',window.location.pathname+window.location.search+'#btiSpeciesExplorer');
+  }
   section.scrollIntoView({behavior:'smooth',block:'start'});
+  void load();
+ }
+ function close(){
+  syncOpen(false);
+  if(window.location.hash==='#btiSpeciesExplorer'){
+   window.history.replaceState(window.history.state,'',window.location.pathname+window.location.search);
+  }
+  by('btiOpenSpeciesFromText')?.focus();
  }
  document.addEventListener('DOMContentLoaded',()=>{
   const button=by('btiOpenSpeciesFromText');
   if(!button||!by('btiSpeciesExplorer'))return;
-  button.addEventListener('click',open);
-  by('btiCloseSpecies')?.addEventListener('click',()=>{syncOpen(false);button.focus();by('btiMechanismFeature')?.scrollIntoView({behavior:'smooth',block:'start'})});
+  button.addEventListener('click',event=>{event.preventDefault();open();});
+  by('btiCloseSpecies')?.addEventListener('click',close);
   ['btiSpeciesSearch','btiSpeciesArea','btiSpeciesGram','btiSpeciesEvidence','btiSpeciesPlatform'].forEach(id=>by(id)?.addEventListener(id==='btiSpeciesSearch'?'input':'change',render));
+  if(window.location.hash==='#btiSpeciesExplorer')open();
+  window.addEventListener('hashchange',()=>{
+   if(window.location.hash==='#btiSpeciesExplorer')open();
+  });
  });
 })();
