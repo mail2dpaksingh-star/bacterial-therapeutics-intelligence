@@ -46,6 +46,12 @@ function render(){
 }
 document.addEventListener('DOMContentLoaded',async()=>{
  if(!find('immunePathwayDetails'))return;
+ const disclosure=find('immuneModulators');
+ const openFromLink=()=>{if(disclosure)disclosure.open=true;};
+ document.querySelectorAll('a[href="#immuneModulators"]').forEach(link=>link.addEventListener('click',openFromLink));
+ const syncDeepLink=()=>{if(window.location.hash==='#immuneModulators')openFromLink();};
+ window.addEventListener('hashchange',syncDeepLink);
+ syncDeepLink();
  try{
  const response=await fetch('immune_modulator_pathways.json',{cache:'no-store'});
  if(!response.ok)throw Error('HTTP '+response.status);
