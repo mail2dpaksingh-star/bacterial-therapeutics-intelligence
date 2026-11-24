@@ -243,7 +243,7 @@ html{scroll-behavior:smooth}#btiHomeHero,#btiMechanismFeature,#homeResearchExplo
 #workspaceSelect{max-width:100%;min-width:0}
 #tab-graph,#tab-community,#tab-library,#tab-atlas,#tab-review{max-width:100%}
 @media(max-width:730px){#btiResearchMenu{display:flex;flex-direction:column;align-items:stretch}#btiResearchMenu select{width:100%!important}}
-</style><script>window.btiSnapshotPromise=null;window.btiGet=async function(url){try{const live=await fetch(url,{cache:'no-store'});if(live.ok)return await live.json()}catch(_e){}if(!window.btiSnapshotPromise){window.btiSnapshotPromise=fetch('/pathway_snapshot.json').then(r=>{if(!r.ok)throw Error('Static pathway dataset unavailable');return r.json()})}const snap=await window.btiSnapshotPromise;if(url.endsWith('/overview'))return snap.overview;const id=decodeURIComponent(url.substring(url.lastIndexOf('/')+1));if(snap.details&&snap.details[id])return snap.details[id];throw Error('No curated pathway found for '+id)};</script><script>
+</style><script>window.btiSnapshotPromise=null;window.btiGet=async function(url){if(!window.btiSnapshotPromise){window.btiSnapshotPromise=fetch('pathway_snapshot.json').then(r=>{if(!r.ok)throw Error('Curated pathway dataset unavailable');return r.json()}).catch(e=>{window.btiSnapshotPromise=null;throw e})}const snap=await window.btiSnapshotPromise;if(url.endsWith('/overview'))return snap.overview;const id=decodeURIComponent(url.substring(url.lastIndexOf('/')+1));if(snap.details&&snap.details[id])return snap.details[id];throw Error('No curated pathway found for '+id)};</script><script>
 /* Website public-mode configuration. No client-side API keys or token popups. */
 window.BTI_PUBLIC_STATIC_MODE=true;
 window.notify=function(message){const x=document.getElementById('reviewStatus');if(x)x.textContent=String(message||'');};
@@ -596,20 +596,14 @@ document.addEventListener('DOMContentLoaded',()=>{renderBriefs()});
   function save(name,doc){const a=document.createElement('a');const u=URL.createObjectURL(new Blob([JSON.stringify(doc,null,2)],{type:'application/json'}));a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),1200)}
   async function refresh(){const target=by('graphDetail');try{
     const selected=by('graphClaim').value,area=by('graphArea').value;
-    let graphData=null;
-    try{const r=await fetch('/api/knowledge/graph?area='+encodeURIComponent(area),{cache:'no-store'});if(r.ok)graphData=await r.json()}catch(_error){}
-    if(!graphData||!Array.isArray(graphData.claims)){
-      const r=await fetch('/pathway_snapshot.json');if(!r.ok)throw Error('Curated pathway data is unavailable');
-      const snapshot=await r.json();
-      const claims=(snapshot.overview?.claims||[]).filter(c=>area==='All'||c.area===area);
-      const sources={};const edges=[];
-      for(const claim of claims){
-        for(const source of claim.curated_sources||[]){sources[source.id]={title:source.title,year:source.year,kind:source.kind,url:source.url}}
-        for(const sourceId of claim.sources||[])edges.push({source:claim.id,target:sourceId,relation:'supported_by'});
-      }
-      graphData={claims,sources,edges,static_snapshot:true};
+    const snapshot=await window.btiGet('/api/workbench/overview');
+    const claims=(snapshot.claims||[]).filter(c=>area==='All'||c.area===area);
+    const sources={};const edges=[];
+    for(const claim of claims){
+      for(const source of claim.curated_sources||[])sources[source.id]={title:source.title,year:source.year,kind:source.kind,url:source.url};
+      for(const sourceId of claim.sources||[])edges.push({source:claim.id,target:sourceId,relation:'supported_by'});
     }
-    graph=graphData;
+    graph={claims,sources,edges,static_snapshot:true};
     const dropdown=by('graphClaim');clear(dropdown);
     for(const c of graph.claims){const o=e('option',c.title);o.value=c.id;dropdown.appendChild(o)}
     if(graph.claims.some(c=>c.id===selected))dropdown.value=selected;
@@ -659,6 +653,7 @@ by('discoveryFilter').addEventListener('change',()=>browse().catch(e=>msg.textCo
 /* Progressive enhancement for workspace context and shortcuts; existing handlers remain untouched. */
 (function(){
 const descriptions={
+ overview:['Choose a research tool','Select a focused research tool or explore the Pathway Explorer on the homepage.','◈'],
  journey:['Detailed Pathway Explorer','Navigate from disease pathways to source-linked mechanisms, trials, platform comparators and patent-search leads.','◈'],
  community:['Community Research Blog','Browse public science ideas, share hypotheses, and join conversations about bacterial therapeutics.','✧'],
  graph:['Knowledge Graph & Evidence Checks','Explore curated relationships and examine how strongly therapeutic claims are supported.','◇'],
@@ -674,7 +669,7 @@ const descriptions={
  sources:['Evidence, Safety & Intellectual Property','Review source quality, biosafety, regulatory issues, and preliminary patent leads.','⚑'],
  about:['Scope & Roadmap','Understand the platform boundaries and upcoming development priorities.','ⓘ']
 };
-function update(){const sel=document.getElementById('workspaceSelect');if(!sel)return;const key=sel.value.startsWith('focus-')?'multi':sel.value;const v=descriptions[key]||descriptions.multi;const title=document.getElementById('contextTitle'),desc=document.getElementById('contextDescription'),ico=document.querySelector('.context-icon');if(title)title.textContent=v[0];if(desc)desc.textContent=v[1];if(ico)ico.textContent=v[2];document.title=v[0]+' | Bacterial Therapeutics Intelligence';}
+function update(){const sel=document.getElementById('workspaceSelect');if(!sel)return;const key=sel.value.startsWith('focus-')?'multi':sel.value;const v=descriptions[key]||descriptions.overview;const title=document.getElementById('contextTitle'),desc=document.getElementById('contextDescription'),ico=document.querySelector('.context-icon');if(title)title.textContent=v[0];if(desc)desc.textContent=v[1];if(ico)ico.textContent=v[2];document.title=v[0]+' | Bacterial Therapeutics Intelligence';}
 document.addEventListener('DOMContentLoaded',()=>{const sel=document.getElementById('workspaceSelect');if(!sel)return;sel.addEventListener('change',update);document.querySelectorAll('.quick-workspace').forEach(b=>b.addEventListener('click',()=>{sel.value=b.dataset.target;sel.dispatchEvent(new Event('change',{bubbles:true}));document.querySelector('.workspace-picker')?.scrollIntoView({behavior:'smooth',block:'start'});}));update();});
 })();
 </script><script>
@@ -688,7 +683,7 @@ function empty(id,txt){clear(id);$(id).append(el('div',txt,'journey-empty'))}
 function smallSource(data,kind){const box=el('div',undefined,'journey-source');box.append(el('b',data.title||data.name||'Unnamed source'));const line=el('div',(kind?kind+' · ':'')+(data.year||data.published||data.status||''),'muted');box.append(line);if(data.url&&/^https:\/\//.test(data.url)){const a=el('a','Open original source ↗');a.href=data.url;a.rel='noopener noreferrer';a.target='_blank';box.append(a)}if(data.note)box.append(el('p',data.note,'muted'));if(data.match_basis)box.append(el('div','Title keyword match only — not verified mechanism','source-tag'));return box}
 function switchWorkspace(id){const s=$('workspaceSelect');s.value=id;s.dispatchEvent(new Event('change',{bubbles:true}));document.querySelector('.workspace-picker')?.scrollIntoView({behavior:'smooth',block:'start'})}
 function setMetric(label,value){const x=el('div',undefined,'journey-metric');x.append(el('b',value),el('small',label));$('journeyMetrics').append(x)}
-function renderOverview(preferredId){clear('journeyClaim');const area=$('journeyArea').value;let claims=overview.claims.filter(c=>area==='All'||c.area===area);for(const c of claims){const o=el('option',c.disease+' · '+c.intervention);o.value=c.id;$('journeyClaim').append(o)}if(!claims.length)empty('journeyFigure','No curated claims for this selection.');else {const picked=claims.some(c=>c.id===preferredId)?preferredId:claims[0].id;$('journeyClaim').value=picked;load(picked)}}
+function renderOverview(preferredId){if(!overview)return;clear('journeyClaim');const area=$('journeyArea').value;let claims=overview.claims.filter(c=>area==='All'||c.area===area);for(const c of claims){const o=el('option',c.disease+' · '+c.intervention);o.value=c.id;$('journeyClaim').append(o)}if(!claims.length)empty('journeyFigure','No curated claims for this selection.');else {const picked=claims.some(c=>c.id===preferredId)?preferredId:claims[0].id;$('journeyClaim').value=picked;load(picked)}}
 window.btiOpenJourneyClaim=async function(id){try{if(!overview)overview=await window.btiGet('/api/workbench/overview');const claim=overview.claims.find(c=>c.id===id);if(!claim)return false;$('journeyArea').value=claim.area;renderOverview(id);return true}catch(e){empty('journeyFigure','Detailed evidence currently unavailable: '+e.message);return false}};
 function svgNode(tag,attrs,txt){const n=document.createElementNS(SVG,tag);Object.entries(attrs).forEach(([k,v])=>n.setAttribute(k,v));if(txt!==undefined)n.textContent=txt;return n}
 function wrapLines(str,max=20,rows=4){let words=String(str).split(/\s+/),lines=[],line='';for(let word of words){let next=(line?line+' ':'')+word;if(next.length>max&&line){lines.push(line);line=word}else line=next}if(line)lines.push(line);if(lines.length>rows){lines=lines.slice(0,rows);lines[rows-1]=lines[rows-1].slice(0,max-1)+'…'}return lines}
