@@ -366,6 +366,25 @@ html{scroll-behavior:smooth}#btiHomeHero,#btiMechanismFeature,#homeResearchExplo
 @media(max-width:530px){.bti-species-filters{grid-template-columns:1fr}.bti-species-facts{grid-template-columns:1fr}.bti-species-close{width:100%}}
 @media(prefers-reduced-motion:reduce){.bti-host-hotspot{transition:none}}
 
+/* Collapsible immune research explorer: compact on the homepage until requested */
+.immune-explorer-collapsible{padding:0;overflow:hidden}
+.immune-explorer-toggle{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:19px 24px;cursor:pointer;list-style:none;background:linear-gradient(120deg,#f8fcfd,#edf8f7);border-radius:20px}
+.immune-explorer-toggle::-webkit-details-marker{display:none}
+.immune-explorer-toggle::marker{content:""}
+.immune-explorer-toggle:focus-visible{outline:3px solid #078a97;outline-offset:-4px}
+.immune-explorer-toggle:hover{background:#eaf6f6}
+.immune-explorer-identity{display:grid;gap:4px;min-width:0}
+.immune-explorer-identity .home-eyebrow{font-size:10px;letter-spacing:.13em}
+.immune-explorer-identity h2{font-size:clamp(17px,1.8vw,22px);line-height:1.2;margin:0}
+.immune-explorer-hint{font-size:12px;color:#597786;line-height:1.5}
+.immune-explorer-action{flex-shrink:0;display:flex;align-items:center;gap:9px;color:#087c83;font-weight:750;font-size:12px}
+.immune-explorer-chevron{display:grid;place-items:center;width:30px;height:30px;border:1px solid #9fcaca;background:white;border-radius:50%;font-size:22px;line-height:1;transition:transform .2s}
+.immune-explorer-collapsible[open] .immune-explorer-chevron{transform:rotate(180deg)}
+.immune-explorer-collapsible[open] .immune-explorer-toggle{border-radius:20px 20px 0 0;border-bottom:1px solid #dbeaed}
+.immune-explorer-content{padding:20px 24px 24px}
+@media(max-width:650px){.immune-explorer-toggle{padding:16px;gap:10px}.immune-explorer-hint{font-size:11px}.immune-explorer-action-label{display:none}.immune-explorer-content{padding:16px}}
+@media(prefers-reduced-motion:reduce){.immune-explorer-chevron{transition:none}}
+
 /* Concise, public-facing immune pathway crosswalk — independent of research backend */
 .immune-explorer{background:#fff;border:1px solid #d9e8ee;border-radius:20px;padding:26px;margin:16px 0 22px;scroll-margin-top:18px}
 .immune-explorer h2{margin:6px 0 9px;color:#163d54;font-size:clamp(23px,2.2vw,30px)}
@@ -435,14 +454,18 @@ window.notify=function(message){const x=document.getElementById('reviewStatus');
  </div>
  <p class="bti-species-method">This library separates four preparation types: live bacteria, killed intact whole-cell bacteria, bacterial cell-wall preparations, and bacterial-derived components. Species may appear more than once when investigated in different preparation forms. Cell-envelope features and evidence can vary among strains. No genomic engineering instructions or unverified treatment recommendations are provided.</p>
 </section>
-<section class="immune-explorer" id="immuneModulators" aria-labelledby="immuneModulatorsHeading">
- <div class="home-eyebrow">HOST–MICROBE IMMUNE SIGNALING · RESEARCH LIBRARY</div>
- <h2 id="immuneModulatorsHeading">TLR &amp; Interferon Modulator Explorer</h2>
+<details class="immune-explorer immune-explorer-collapsible" id="immuneModulators" aria-labelledby="immuneModulatorsHeading">
+ <summary class="immune-explorer-toggle">
+  <span class="immune-explorer-identity"><span class="home-eyebrow">HOST–MICROBE IMMUNE SIGNALING · RESEARCH LIBRARY</span><h2 id="immuneModulatorsHeading">TLR &amp; Interferon Modulators</h2><span class="immune-explorer-hint">Natural bacterial ligands · Engineered bacterial platforms · Clinical safety</span></span>
+  <span class="immune-explorer-action" aria-hidden="true"><span class="immune-explorer-action-label">Explore pathways</span><span class="immune-explorer-chevron">⌄</span></span>
+ </summary>
+ <div class="immune-explorer-content">
  <p class="immune-intro">Compare native bacterial ligands, potential engineered microbial delivery, synthetic TLR agonists, and host interferon therapeutics. Choose a pathway to inspect molecular signaling, research maturity, clinical safety concerns, and linked company portfolios.</p>
  <div class="immune-tools"><label for="immunePathSearch">Search pathway, molecule or company<input id="immunePathSearch" type="search" placeholder="e.g. TLR9, CpG, IFN-gamma, engineered bacteria"></label><label for="immunePathGroup">Mechanism family<select id="immunePathGroup"><option value="all">All pathways</option><option value="Toll-like receptors">Toll-like receptors</option><option value="Interferon signaling">Interferons (IFN-α / β / γ)</option></select></label><span id="immunePathCount" class="immune-count">Loading pathways…</span></div>
  <div class="immune-layout"><div class="immune-path-list" id="immunePathList" role="group" aria-label="Select a TLR or interferon pathway"></div><article class="immune-path-details" id="immunePathwayDetails" aria-live="polite"><p>Loading source-linked immune pathways…</p></article></div>
  <p class="immune-method">Evidence classification: receptor binding and immune activation do not themselves prove clinical efficacy. Engineering a bacterium to manufacture a protein is different from a live bacterial therapy delivering it in a patient. Safety findings refer to the named product and clinical cohort, and trial deaths are not automatically treatment-related.</p>
- </section>
+ </div>
+ </details>
 <section class="bti-architecture" aria-labelledby="btiStructureHeading">
  <div class="bti-architecture-intro"><span class="bti-arch-rule"></span><span class="bti-arch-kicker">EXPLORE KEY INSIGHTS</span><h2 id="btiStructureHeading">From Bacterial Structure<br>to Therapeutic Design</h2><p>Explore key bacterial features and the research concepts they inform without leaving this page.</p></div>
  <details class="bti-insight-card"><summary><img src="assets/bacterial-cell-architecture.svg" loading="lazy" alt="Illustrated bacterial cell with capsule, wall, membrane, nucleoid, plasmids, pili, and ribosomes"><span class="bti-insight-text"><strong>Bacterial Cell Architecture</strong><small>Cell envelope, surface components, nucleoid DNA, plasmids, ribosomes and vesicles.</small><span class="bti-insight-action">Explore Cell Architecture <span aria-hidden="true">↓</span></span></span></summary><div class="bti-insight-expanded"><img src="assets/bacterial-cell-architecture.svg" loading="lazy" alt="Full educational bacterial cell architecture diagram with component labels"/></div></details>
