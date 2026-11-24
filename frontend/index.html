@@ -426,7 +426,7 @@ window.notify=function(message){const x=document.getElementById('reviewStatus');
     <button class="home-domain" type="button" data-area="Microbiome" aria-pressed="false"><span class="home-domain-icon">⬡</span><span class="home-domain-main"><strong>Microbiome</strong><small>Consortia · Ecology · Host interactions</small></span><span class="home-domain-arrow">↗</span></button>
   </div>
   <div class="home-pipeline"><div class="home-pipeline-top"><span class="home-eyebrow">02 / CONNECTED RESEARCH WORKFLOW</span><span class="home-live-dot"><span class="pulse-dot"></span> Interactive exploration</span></div><div class="home-pipeline-nodes"><div><span>01</span><strong>Disease</strong><small>Indication</small></div><b>→</b><div><span>02</span><strong>Therapy</strong><small>Modality</small></div><b>→</b><div><span>03</span><strong>Mechanism</strong><small>Molecular biology</small></div><b>→</b><div><span>04</span><strong>Evidence</strong><small>Published sources</small></div><b>→</b><div><span>05</span><strong>Translation</strong><small>Trials & IP leads</small></div></div></div>
-  <div class="home-workflow-links"><span>DIRECT ACCESS</span><button type="button" class="home-jump" data-target="library">Scientific literature ↗</button><button type="button" class="home-jump" data-target="moa">Mechanisms ↗</button><button type="button" class="home-jump" data-target="graph">Knowledge graph ↗</button><button type="button" class="home-jump" data-target="community">Community Blog ↗</button></div>
+  <div class="home-workflow-links"><span>DIRECT ACCESS</span><button type="button" class="home-jump" id="btiOpenSafety" aria-label="Open clinical safety and reported adverse events in company research">Clinical safety &amp; adverse events ↗</button><button type="button" class="home-jump" data-target="library">Scientific literature ↗</button><button type="button" class="home-jump" data-target="moa">Mechanisms ↗</button><button type="button" class="home-jump" data-target="graph">Knowledge graph ↗</button><button type="button" class="home-jump" data-target="community">Community Blog ↗</button></div>
 </section>
 
 <section id="futureTherapeuticStudio" class="future-studio" aria-labelledby="futureStudioTitle">
@@ -577,11 +577,13 @@ window.notify=function(message){const x=document.getElementById('reviewStatus');
 <select id="reviewLens" aria-label="Choose company research focus">
 <option value="overview">Overview &amp; program status</option>
 <option value="clinical">Clinical development and reported outcomes</option>
+<option value="safety">Clinical Safety &amp; Adverse Events (including deaths)</option>
 <option value="evidence">Scientific evidence and publications</option>
 <option value="patents">Patent and IP landscape leads</option>
 <option value="sources">All public documents and disclosures</option>
 </select>
 </div>
+<p class="company-method-note">Clinical safety includes reported serious adverse events, fatal events, and investigator-assessed attribution. Synthetic dsRNA / TLR3 immunomodulators are labeled separately as nonbacterial comparator therapies.</p>
 <div id="companyDossier" aria-live="polite" class="company-dossier"><p>Loading public research profiles…</p></div>
 <section class="company-updates" id="companySourceUpdates" aria-labelledby="companyUpdateTitle">
   <div class="company-updates-head">
@@ -1000,6 +1002,17 @@ document.addEventListener('DOMContentLoaded',()=>{
    const menu=document.getElementById('workspaceSelect');
    if(menu){menu.value='community';menu.dispatchEvent(new Event('change',{bubbles:true}));}
   });
+ });
+});
+document.addEventListener('DOMContentLoaded',()=>{
+ const btn=document.getElementById('btiOpenSafety');
+ if(!btn)return;
+ btn.addEventListener('click',()=>{
+  const menu=document.getElementById('workspaceSelect');
+  const lens=document.getElementById('reviewLens');
+  if(menu){menu.value='review';menu.dispatchEvent(new Event('change',{bubbles:true}));}
+  if(lens){lens.value='safety';lens.dispatchEvent(new Event('change',{bubbles:true}));}
+  document.getElementById('companyIntelHeading')?.scrollIntoView({behavior:'smooth',block:'start'});
  });
 });
 </script><script src="therapeutic-species.js" defer></script><script src="company-research.js" defer></script><script src="company-updates.js" defer></script><script src="scientific-question.js" defer></script><script src="community.js" defer></script></body></html>
