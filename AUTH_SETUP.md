@@ -4,7 +4,7 @@
 
 The public sign-in page is available at **https://bacterial-therapeutics-intelligence.pages.dev/sign-in.html**.
 It is intentionally **not active** until the operator configures and verifies a Supabase Auth project.
-The current public file `frontend/auth-config.js` contains blank settings and collects no passwords.
+The optional public file `frontend/auth-config.js` remains blank, and the Cloudflare auth configuration endpoint returns an unconfigured status by default. No passwords are collected.
 Public research at `/index.html` continues working without sign-in.
 Research Pro remains a future product: signing in does **not** grant subscriptions, protected scientific data or paid features.
 
@@ -19,23 +19,27 @@ Research Pro remains a future product: signing in does **not** grant subscriptio
    - Add any separately trusted custom-domain / staging callback URLs you really use.
 5. Review the Supabase email template; it must provide a working sign-in link. Do not send password-reset or OTP secrets to a third-party endpoint.
 
-## 2 — Set PUBLIC client configuration
+## 2 — Activate from Cloudflare (no GitHub key editing)
 
-In GitHub edit `frontend/auth-config.js`. Replace only these public fields:
+The website now reads the Supabase **public** URL and publishable key from a Cloudflare Pages Function:
+`GET /api/auth-public-config`. Its default response is `{"configured":false}` until settings are entered. The browser never receives Supabase administrative/secret keys.
 
-```js
-window.BTI_AUTH_CONFIG = Object.freeze({
-  supabaseUrl: "https://YOUR_PROJECT_REF.supabase.co",
-  supabasePublishableKey: "YOUR_SUPABASE_PUBLISHABLE_KEY"
-});
-```
+In Cloudflare Dashboard → **Workers & Pages → bacterial-therapeutics-intelligence → Settings → Variables and Secrets**, create these **Production** variables:
 
-Use the **Project URL** and **publishable key** (`sb_publishable_...`) from Supabase project settings.
-Legacy `anon` public keys may work, but new publishable keys are preferred.
+| Name | Value |
+|---|---|
+| `BTI_SUPABASE_URL` | Supabase Project URL, e.g. `https://PROJECT_REF.supabase.co` |
+| `BTI_SUPABASE_PUBLISHABLE_KEY` | Supabase project's **publishable key** beginning with `sb_publishable_` |
 
-**NEVER put `sb_secret_...`, `service_role`, a database password, or SMTP credentials into the website's files or frontend environment.** The publishable key is designed to be public; it cannot replace row-level security in any future database.
+Get both values from your Supabase project settings. These values are public client identifiers, not login passwords; only use the publishable key. Do not use any `sb_secret_` key, `service_role` credential, database password, SMTP password, or JWT admin key.
 
-Commit the change to GitHub `main`; Cloudflare's Git integration should deploy it. Verify the new deployment has succeeded before inviting anyone.
+**Important:** Save variables for the production environment and trigger a new Cloudflare production deployment; variable changes typically need a new deployment before Pages Functions can read them. Check the latest deployment is **Success**.
+
+Verify `https://bacterial-therapeutics-intelligence.pages.dev/api/auth-public-config` responds with `"configured":true`. The response intentionally exposes only the PUBLIC project URL and publishable key. Do not share screenshots containing unrelated Cloudflare credentials.
+
+The alternative static `frontend/auth-config.js` remains blank and is optional for local development. Production should use Cloudflare environment settings instead.
+
+For real public signup, configure a **custom SMTP sender**, email delivery/authentication, abuse controls, and rate limits in Supabase before inviting users; the built-in Supabase email service is test-limited. Check https://supabase.com/docs/guides/auth/auth-smtp and https://supabase.com/docs/guides/auth/rate-limits .
 
 ## 3 — Verify actual sign-in
 
@@ -63,6 +67,6 @@ If sign-in links fail, check the Supabase allowed redirect URLs, email provider 
 
 ## Existing Cloudflare settings
 
-Keep the working Cloudflare Pages build configuration unchanged: use GitHub `main`, **root directory empty**, **build output directory `frontend`**, and your previously working build command. Auth pages are ordinary static assets. **Do not add a backend secret to Cloudflare solely to show the sign-in page.**
+Keep the working Cloudflare Pages build configuration unchanged: use GitHub `main`, **root directory empty**, **build output directory `frontend`**, and your previously working build command. Auth pages are ordinary static assets. **The two Supabase configuration values above are PUBLIC identifiers and should not be confused with backend secrets. Never store a privileged key in a client-readable Pages endpoint.**
 
 The consulting inquiry form and its separate email delivery provider are independent of this authentication setup.
