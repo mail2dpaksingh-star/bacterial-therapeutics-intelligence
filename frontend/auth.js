@@ -4,12 +4,25 @@
    This browser code is not, by itself, a paid-content authorization system. */
 (()=>{'use strict';
 const el=id=>document.getElementById(id);
-const config=window.BTI_AUTH_CONFIG||{};
-const url=String(config.supabaseUrl||'').trim();
-const key=String(config.supabasePublishableKey||'').trim();
-function configured(){
- if(!key||/^(sb_secret_|service_role|sk_)/i.test(key))return false;
- try{const parsed=new URL(url);return parsed.protocol==='https:'&&!!parsed.hostname;}catch{return false;}
+// Prefer Cloudflare deployment settings; the static file remains an optional
+// local-development fallback. Neither route may carry a private Supabase key.
+async function publicConfig(){
+ let fallback=window.BTI_AUTH_CONFIG||{};
+ try{
+  const response=await fetch('/api/auth-public-config',{cache:'no-store',credentials:'same-origin'});
+  if(response.ok){
+   const result=await response.json();
+   if(result?.configured===true)return result;
+  }
+ }catch{}
+ return fallback;
+}
+function configured(url,key){
+ if(typeof key!=='string'||!key.startsWith('sb_publishable_')||key.length<=20)return false;
+ try{
+  const parsed=new URL(url);
+  return parsed.protocol==='https:'&&parsed.hostname.endsWith('.supabase.co')&&!parsed.username&&!parsed.password;
+ }catch{return false;}
 }
 function feedback(id,message,kind){
  const target=el(id);if(!target)return;
@@ -38,7 +51,10 @@ function accountView(user){
 async function main(){
  const form=el('signInForm'),account=el('accountStatus');
  if(!form&&!account)return;
- if(!configured()){
+ const settings=await publicConfig();
+ const url=String(settings.supabaseUrl||'').trim();
+ const key=String(settings.supabasePublishableKey||'').trim();
+ if(!configured(url,key)){
   if(form){show('authUnavailable',true);feedback('signInStatus','Account registration and sign-in are not yet activated. The public research website is available without an account.');}
   if(account){accountView(null);feedback('accountStatus','Account sign-in is not yet activated. You may continue using public research without signing in.');}
   return;
