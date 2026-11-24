@@ -95,6 +95,14 @@ const related=q=>{
  return scoring.filter(t=>t.score>=5).sort((a,b)=>b.score-a.score).slice(0,3);
 };
 const searchTerms=q=>q.replace(/[?!,.]/g,'').slice(0,180);
+function literatureTerms(q,matchedIds){
+ const ids=new Set(matchedIds||[]);
+ if(ids.has('tmao')&&(/tmao|trimethylamine/i).test(q))return '"trimethylamine N-oxide" AND (cardiovascular OR kidney)';
+ if(ids.has('scfa')&&/inflamm|immune|colitis/i.test(q))return '(butyrate OR propionate OR "short-chain fatty acids") AND (inflammation OR immunity)';
+ if(ids.has('indole')&&/inflamm|immune|barrier/i.test(q))return '(indole OR tryptophan) AND (microbiome OR bacteria) AND (inflammation OR barrier)';
+ if(ids.has('bcg'))return 'BCG AND (bladder cancer OR immunotherapy)';
+ return searchTerms(q);
+}
 function renderSource(box,source){
  const row=append(box,'li',undefined,'ask-source');
  link(row,source.title,source.url,'ask-source-link');
@@ -117,9 +125,9 @@ function renderTopic(out,topic,index){
  topic.articles.forEach(x=>renderSource(ul,x));
 }
 function currentContext(out,claimId,q){
- if(!claimId)return;
+ if(!claimId||!by('btiCuratedGraph')?.open)return;
  const note=append(out,'p',undefined,'ask-context');
- note.textContent='The separately selected claim above is a reference record. Your typed question was analyzed independently; it was not forced into that claim.';
+ note.textContent='The selected claim in the optional Knowledge Graph below was not used to answer your typed question.';
 }
 async function liveSearch(q,out,report){
  const container=append(out,'section',undefined,'ask-discovery');
@@ -133,7 +141,7 @@ async function liveSearch(q,out,report){
  const controller=new AbortController();
  const tm=setTimeout(()=>controller.abort(),8500);
  try{
-  const u='https://www.ebi.ac.uk/europepmc/webservices/rest/search?'+new URLSearchParams({query:searchTerms(q),format:'json',pageSize:'6',resultType:'lite'});
+  const normalized=literatureTerms(q,report.matched_topics);report.normalized_publication_search=normalized;const u='https://www.ebi.ac.uk/europepmc/webservices/rest/search?'+new URLSearchParams({query:normalized,format:'json',pageSize:'6',resultType:'lite'});
   const response=await fetch(u,{signal:controller.signal});
   if(!response.ok)throw Error('Publication search unavailable');
   const payload=await response.json();
