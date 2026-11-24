@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updated_at": "2026-11-24",
-  "about": "Scientifically qualified, static species-and-strain explorer for bacterial and microbiota-based therapeutics. Classification and clinical status are product/strain-specific; categorical descriptions are educational only.",
+  "about": "Source-linked therapeutic platform explorer. Platform class is defined by the administered preparation (live, killed intact whole-cell, isolated cell-wall material, or extracted/derived component), not merely by species. Product-specific clinical evidence and status do not transfer across preparations.",
   "entries": [
     {
       "id": "bcg",
@@ -31,7 +31,8 @@
           "type": "FDA licensed biologic"
         }
       ],
-      "notes": "Specific BCG strains and products are not interchangeable without evidence."
+      "notes": "Specific BCG strains and products are not interchangeable without evidence.",
+      "platform_class": "Live bacteria"
     },
     {
       "id": "salmonella",
@@ -62,7 +63,8 @@
           "type": "Clinical study"
         }
       ],
-      "notes": "VNP20009 is a historical experimental strain. Other attenuated Salmonella platforms (including MUL001) are separate programs; evidence from one strain should not be transferred to another."
+      "notes": "VNP20009 is a historical experimental strain. Other attenuated Salmonella platforms (including MUL001) are separate programs; evidence from one strain should not be transferred to another.",
+      "platform_class": "Live bacteria"
     },
     {
       "id": "listeria",
@@ -98,7 +100,8 @@
           "type": "Preclinical translational study"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "platform_class": "Live bacteria"
     },
     {
       "id": "c_novyi",
@@ -128,7 +131,8 @@
           "type": "Clinical study"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "platform_class": "Live bacteria"
     },
     {
       "id": "ecoli_nissle",
@@ -166,7 +170,8 @@
           "type": "Clinical trial record"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "platform_class": "Live bacteria"
     },
     {
       "id": "ecoli_killed_decoy",
@@ -207,7 +212,8 @@
           "type": "Clinical research presentation"
         }
       ],
-      "notes": "Nonliving whole-cell E. coli is distinct from live/engineered E. coli Nissle 1917. Decoy10 and Decoy20 are investigational formulations, not approved products."
+      "notes": "Nonliving whole-cell E. coli is distinct from live/engineered E. coli Nissle 1917. Decoy10 and Decoy20 are investigational formulations, not approved products.",
+      "platform_class": "Killed whole-cell bacteria"
     },
     {
       "id": "l_lactis",
@@ -238,7 +244,8 @@
           "type": "Clinical study"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "platform_class": "Live bacteria"
     },
     {
       "id": "l_cremoris",
@@ -274,7 +281,8 @@
           "type": "Company pipeline"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "platform_class": "Live bacteria"
     },
     {
       "id": "c_butyricum",
@@ -310,15 +318,16 @@
           "type": "Clinical study"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "platform_class": "Live bacteria"
     },
     {
       "id": "akkermansia",
       "name": "Akkermansia muciniphila",
-      "strain": "Live or pasteurized strains used in human studies",
+      "strain": "Live Akkermansia muciniphila; human feasibility research",
       "category": "Cardiometabolic",
       "gram": "Gram-negative",
-      "modality": "Live or pasteurized commensal preparation",
+      "modality": "Live commensal preparation (distinct from pasteurized product)",
       "stage": "Human proof-of-concept studies",
       "indications": [
         "Insulin resistance",
@@ -347,7 +356,46 @@
           "type": "Clinical study"
         }
       ],
-      "notes": ""
+      "notes": " Live and pasteurized experimental formulations are catalogued separately in this explorer.",
+      "platform_class": "Live bacteria"
+    },
+    {
+      "id": "akkermansia_pasteurized",
+      "name": "Akkermansia muciniphila",
+      "strain": "Pasteurized Akkermansia muciniphila MucT; nonviable whole-cell preparation",
+      "category": "Cardiometabolic",
+      "gram": "Gram-negative",
+      "modality": "Pasteurized, nonliving whole-cell commensal preparation",
+      "stage": "Human proof-of-concept and randomized clinical research",
+      "indications": [
+        "Insulin resistance",
+        "Metabolic syndrome",
+        "Body-weight maintenance"
+      ],
+      "components": [
+        "Outer membrane",
+        "Mucin-associated proteins",
+        "Microbial metabolites"
+      ],
+      "mechanism": "Pasteurized, nonviable A. muciniphila has been investigated for metabolic effects, including effects potentially associated with its bacterial surface molecules. Clinical findings are formulation- and population-specific.",
+      "cargo": "Native surface proteins and metabolites; no engineered cargo in cited trials.",
+      "delivery": "Oral study preparations.",
+      "evidence": "Human proof-of-concept work compared live and pasteurized preparations; a 2026 randomized clinical study investigated pasteurized A. muciniphila in weight-loss maintenance.",
+      "companies": null,
+      "sources": [
+        {
+          "label": "Human proof-of-concept study (Nature Medicine, 2019)",
+          "url": "https://www.nature.com/articles/s41591-019-0495-2",
+          "type": "Peer-reviewed clinical research"
+        },
+        {
+          "label": "Pasteurized MucT randomized trial (2026)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42120725/",
+          "type": "Peer-reviewed clinical research"
+        }
+      ],
+      "notes": "Pasteurization makes this a nonliving whole-cell preparation, not a cell-wall extract or a live probiotic.",
+      "platform_class": "Killed whole-cell bacteria"
     },
     {
       "id": "faecalibacterium",
@@ -383,7 +431,8 @@
           "type": "Mechanistic review"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "platform_class": "Live bacteria"
     },
     {
       "id": "b_longum",
@@ -414,7 +463,8 @@
           "type": "Literature search lead"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "platform_class": "Live bacteria"
     },
     {
       "id": "l_plantarum",
@@ -445,7 +495,8 @@
           "type": "Literature search lead"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "platform_class": "Live bacteria"
     },
     {
       "id": "l_rhamnosus",
@@ -476,7 +527,8 @@
           "type": "Literature search lead"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "platform_class": "Live bacteria"
     },
     {
       "id": "b_subtilis",
@@ -507,7 +559,8 @@
           "type": "Literature search lead"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "platform_class": "Live bacteria"
     },
     {
       "id": "b_clausii",
@@ -538,7 +591,8 @@
           "type": "Literature search lead"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "platform_class": "Live bacteria"
     },
     {
       "id": "b_fragilis",
@@ -569,7 +623,8 @@
           "type": "Literature search lead"
         }
       ],
-      "notes": ""
+      "notes": "",
+      "platform_class": "Live bacteria"
     },
     {
       "id": "vowst",
@@ -599,7 +654,8 @@
           "type": "FDA licensed product"
         }
       ],
-      "notes": "A community product is not a single named bacterial species."
+      "notes": "A community product is not a single named bacterial species.",
+      "platform_class": "Live bacteria"
     },
     {
       "id": "rebyota",
@@ -629,7 +685,82 @@
           "type": "FDA licensed product"
         }
       ],
-      "notes": "Contains multiple bacterial taxa; it is not a species-level product."
+      "notes": "Contains multiple bacterial taxa; it is not a species-level product.",
+      "platform_class": "Live bacteria"
+    },
+    {
+      "id": "nocardia_cws",
+      "name": "Nocardia rubra",
+      "strain": "Nocardia rubra cell-wall skeleton (Nr-CWS)",
+      "category": "Oncology",
+      "gram": "Acid-fast / mycolic-acid-rich",
+      "platform_class": "Bacterial cell-wall preparations",
+      "modality": "Isolated bacterial cell-wall skeleton immunomodulator",
+      "stage": "Clinical observational and translational research; indication-specific",
+      "indications": [
+        "Cervical HPV-associated lesions",
+        "Cervical cancer immunobiology"
+      ],
+      "components": [
+        "Isolated cell-wall skeleton",
+        "Mycolic-acid-associated cell envelope structures",
+        "Peptidoglycan-associated immunostimulatory motifs"
+      ],
+      "mechanism": "Studies report modulation of dendritic cells and macrophages and local immune pathways; evidence does not establish efficacy for all cancer indications.",
+      "cargo": "No living bacteria or engineered cargo; cell-wall material is the investigated intervention.",
+      "delivery": "Local external administration in cited cervical studies; route varies by research context.",
+      "evidence": "Human cervical immune-marker studies and mechanistic cancer research are available; no blanket FDA oncology approval is implied.",
+      "companies": null,
+      "sources": [
+        {
+          "label": "Cervical immune response study",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33552075/",
+          "type": "Human translational study"
+        },
+        {
+          "label": "Macrophage and dendritic cell research",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34994088/",
+          "type": "Peer-reviewed mechanistic study"
+        }
+      ],
+      "notes": "Cell-wall skeleton preparations are distinct from intact killed bacteria."
+    },
+    {
+      "id": "om85_lysate",
+      "name": "Multi-species bacterial lysate",
+      "strain": "OM-85: lysate derived from multiple bacterial strains",
+      "category": "Microbiome",
+      "gram": "Mixed bacterial communities",
+      "platform_class": "Bacterial-derived components",
+      "modality": "Nonliving bacterial lysate / mixed bacterial extracts",
+      "stage": "Human clinical research; regulatory status varies by country and indication",
+      "indications": [
+        "Recurrent respiratory infection prevention research",
+        "Respiratory immune modulation"
+      ],
+      "components": [
+        "Bacterial lysate components",
+        "Microbial molecular patterns",
+        "Nonviable molecular fragments"
+      ],
+      "mechanism": "Bacterial lysates are investigated for immune modulation at mucosal and systemic sites; efficacy varies by population, formulation and endpoint.",
+      "cargo": "Bacterial extract, not intact killed cells, isolated cell-wall skeletons, or live organisms.",
+      "delivery": "Oral bacterial lysate preparations studied in respiratory indications.",
+      "evidence": "Clinical studies and systematic reviews report heterogeneous benefits and limitations. Do not infer approval or recommendation in every jurisdiction.",
+      "companies": null,
+      "sources": [
+        {
+          "label": "OM-85 clinical evidence and consensus review",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8543868/",
+          "type": "Clinical evidence review"
+        },
+        {
+          "label": "Bacterial lysate clinical evidence overview",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38962577/",
+          "type": "Peer-reviewed review"
+        }
+      ],
+      "notes": "This is a representative lysate preparation; it is not an isolated bacterial species."
     }
   ]
 }
