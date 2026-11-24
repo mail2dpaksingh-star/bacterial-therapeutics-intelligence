@@ -1,7 +1,7 @@
 {
   "version": "1.1",
   "snapshot_date": "2026-11-23",
-  "scope": "Source-linked public profiles as of November 23, 2026; mixed company stages are represented by individual program, not company-wide phase.",
+  "scope": "Source-linked public profiles as of November 23, 2026; mixed company stages are represented by individual program, not company-wide phase. Adjacent TLR3/dsRNA immunomodulators are included for safety comparison and explicitly labeled NOT bacterial-derived.",
   "method": "Stage is assessed per program, and some early adjacent modalities (bacteria-targeting vaccines, peptidoglycan antibodies, metabolic supplements, postbiotics) are distinguished from actual therapeutic bacterial-cell delivery. Patent links are leads, not FTO opinions. Source-level scientific verification and new disclosure checks are ongoing.",
   "companies": [
     {
@@ -1712,8 +1712,280 @@
         "source_ids": [],
         "reviewed_on": "2026-11-23"
       }
+    },
+    {
+      "id": "oncovir",
+      "name": "Oncovir, Inc.",
+      "focus": [
+        "Oncology"
+      ],
+      "platform": "Hiltonol (poly-ICLC; stabilized synthetic double-stranded RNA)",
+      "classification": "Adjacent immunomodulator · synthetic dsRNA / TLR3 and MDA5 (NOT bacterial)",
+      "programs": [
+        {
+          "name": "Hiltonol + oregovomab",
+          "indication": "Recurrent platinum-resistant ovarian cancer",
+          "phase": "Published Phase Ib combination study",
+          "status": "Published clinical safety results",
+          "status_reason": "2025 peer-reviewed 15-participant study",
+          "outcome": "Safety, tolerability and immune responses evaluated; Phase Ib results must not be generalized to all Hiltonol regimens.",
+          "latest_report": "2025-09-24",
+          "source_ids": [
+            "onc_ovarian_2025"
+          ]
+        },
+        {
+          "name": "Hiltonol (poly-ICLC)",
+          "indication": "Innate immune activation in treated HIV; oncology vaccine-adjuvant programs",
+          "phase": "Randomized early clinical study; other investigational programs",
+          "status": "Published clinical safety results",
+          "status_reason": "2019 randomized HIV study",
+          "outcome": "A small randomized trial documented transient immune activation and adverse events; serious events occurred only in the placebo group.",
+          "latest_report": "2019-04-24",
+          "source_ids": [
+            "onc_hiv2019"
+          ]
+        }
+      ],
+      "mechanism": "Hiltonol is synthetic stabilized poly(I:C), not bacterial material. It stimulates endosomal TLR3 and cytosolic dsRNA recognition, including MDA5, activating interferon-linked innate immune signaling. Biological effects can vary strongly with dose, route, disease, and combination therapy.",
+      "clinical": "In published studies, transient flu-like and injection-site reactions are common; rare grade 3 toxicities have been reported. Do not attribute combination-regimen events to TLR3 alone without investigator assessment.",
+      "publication": "2025 Phase Ib study combining Hiltonol with oregovomab in platinum-resistant ovarian cancer, and 2019 randomized poly-ICLC trial in treated HIV.",
+      "patent": "Investigational dsRNA immunomodulator. Patent search is not freedom-to-operate clearance.",
+      "patent_links": [
+        {
+          "kind": "Patent search lead",
+          "date": "2026-11-23",
+          "title": "Search Oncovir poly-ICLC intellectual property",
+          "url": "https://patents.google.com/?q=Oncovir+poly+ICLC",
+          "note": "Public patent discovery only"
+        }
+      ],
+      "clinical_safety": {
+        "status": "Grade 3 thrombocytopenia probably related in one study; no AE-related deaths reported in that cohort",
+        "trial": "Hiltonol + oregovomab Phase Ib ovarian cancer (15 patients); separate poly-ICLC HIV randomized study NCT02071095 (12 active, 3 placebo)",
+        "cohort": "Ovarian: 15 heavily pretreated patients; HIV: 12 receiving poly-ICLC, 3 placebo. These are different trials and must not be pooled.",
+        "adverse_events": "Ovarian combination: flu-like symptoms and reported Grade 3 hypertension (2 patients), Grade 3 thrombocytopenia (1 patient). HIV study: injection-site pain, fever, myalgia and transient Grade 3 neutropenia (1 treated participant).",
+        "serious_events": "Ovarian Phase Ib: serious adverse events in 7/15 (47%); one Grade 3 thrombocytopenia was considered probably related to Hiltonol; other serious or severe events may reflect the combination or underlying disease. HIV study: two SAEs deemed unrelated, both in placebo recipients.",
+        "deaths": "Ovarian report: no adverse events resulted in death. This does not mean no patients died later from advanced disease. The cited HIV study did not establish a general mortality risk estimate.",
+        "attribution": "Study investigators judged the thrombocytopenia probably related to Hiltonol; other Grade 3 ovarian events were not uniformly judged related. The HIV trial's two SAEs were unrelated and occurred in placebo.",
+        "limitations": "Different routes, populations and treatments. TLR3 is not the only dsRNA sensing pathway engaged by poly-ICLC. These reports cannot establish safety across all poly-ICLC studies.",
+        "source_ids": [
+          "onc_ovarian_2025",
+          "onc_hiv2019",
+          "onc_mechanism"
+        ],
+        "reviewed_on": "2026-11-23"
+      },
+      "sources": [
+        {
+          "id": "onc_ovarian_2025",
+          "kind": "Peer-reviewed Phase Ib clinical study",
+          "date": "2025-09-24",
+          "title": "Hiltonol + oregovomab in platinum-resistant ovarian cancer — serious AEs and death attribution",
+          "url": "https://www.mdpi.com/1718-7729/32/10/532",
+          "note": "15 participants; serious events in 7; grade 3 thrombocytopenia probably related; no AE-related deaths."
+        },
+        {
+          "id": "onc_hiv2019",
+          "kind": "Peer-reviewed randomized clinical study",
+          "date": "2019-04-24",
+          "title": "Poly-ICLC in treated HIV, NCT02071095 — injection reactions and grade 3 neutropenia",
+          "url": "https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2019.00725/full",
+          "note": "12 active/3 placebo; one transient grade 3 neutropenia, no related SAEs."
+        },
+        {
+          "id": "onc_mechanism",
+          "kind": "Company mechanism overview",
+          "date": "2026-11-23",
+          "title": "Oncovir Hiltonol mechanism: TLR3 plus cytosolic dsRNA sensors",
+          "url": "https://www.oncovir.com/science",
+          "note": "Company explanation; not an independent safety analysis."
+        }
+      ]
+    },
+    {
+      "id": "highlight",
+      "name": "Highlight Therapeutics",
+      "focus": [
+        "Oncology"
+      ],
+      "platform": "BO-112 (intralesional nanoplexed poly(I:C) dsRNA)",
+      "classification": "Adjacent immunomodulator · synthetic dsRNA / TLR3, MDA5, RIG-I (NOT bacterial)",
+      "programs": [
+        {
+          "name": "BO-112 SPOTLIGHT-204",
+          "indication": "Resectable basal cell carcinoma",
+          "phase": "Phase 2b (NCT06422936)",
+          "status": "Sponsor-reported Phase 2b results",
+          "status_reason": "September 30, 2026 company disclosure",
+          "outcome": "Sponsor-reported 46-person evaluable cohort; no serious adverse events or grade ≥3 treatment-related events in this specific Phase 2b dataset. Not a blanket safety claim.",
+          "latest_report": "2026-09-30",
+          "source_ids": [
+            "high_2026",
+            "high_registry204"
+          ]
+        },
+        {
+          "name": "BO-112 first-in-human program",
+          "indication": "Advanced solid tumors, some participants treated in combination with anti-PD-1",
+          "phase": "Phase 1 (NCT02828098)",
+          "status": "Published Phase 1 safety results",
+          "status_reason": "2020 peer-reviewed clinical publication",
+          "outcome": "Two reversible grade 3–4 thrombocytopenia reactions reported among early cohorts. Later cohorts, formulation and regimens differ.",
+          "latest_report": "2020-10-14",
+          "source_ids": [
+            "high_phase1"
+          ]
+        }
+      ],
+      "mechanism": "BO-112 is a synthetic poly(I:C) dsRNA nanoparticle formulated with polyethylenimine, not a bacterium or bacterial extract. It engages innate antiviral sensors, including TLR3 and cytosolic dsRNA sensing pathways, with tumor immune effects under investigation.",
+      "clinical": "Safety findings differ by route, indication and treatment schedule. Earlier severe thrombocytopenia reports and later no-SAE sponsor topline data represent different study populations, not contradictory findings.",
+      "publication": "2020 first-in-human multicenter report and September 2026 Phase 2b SPOTLIGHT-204 sponsor-reported results.",
+      "patent": "BO-112 has product- and formulation-specific IP questions; public patent searches alone are not FTO opinions.",
+      "patent_links": [
+        {
+          "kind": "Patent search lead",
+          "date": "2026-11-23",
+          "title": "Search BO-112 poly(I:C) patents",
+          "url": "https://patents.google.com/?q=BO-112+polyIC",
+          "note": "Unreviewed search lead."
+        }
+      ],
+      "clinical_safety": {
+        "status": "Earlier Grade 3–4 thrombocytopenia reactions; no serious AEs in separate 2026 Phase 2b report",
+        "trial": "Phase 1 BO-112 NCT02828098; separate Phase 2b SPOTLIGHT-204 NCT06422936",
+        "cohort": "Phase 1 reported early monotherapy cohorts and a separate 28-person anti-PD-1 combination cohort; Phase 2b 2026 results reported 46 evaluable BCC patients out of 50 enrolled.",
+        "adverse_events": "Published Phase 1 report: two reversible grade 3–4 thrombocytopenia reactions. Phase 2b sponsor topline: 91% of treatment-related events were Grade 1 and most resolved rapidly.",
+        "serious_events": "In the September 2026 Phase 2b BCC dataset, the sponsor reported no serious adverse events and no treatment-related Grade ≥3 adverse events. This does not negate earlier Phase 1 thrombocytopenia reports.",
+        "deaths": "The cited 2026 topline report does not provide a complete all-cause death tally; no treatment-related fatality is established from the selected source materials.",
+        "attribution": "Phase 1 paper describes thrombocytopenia reactions during BO-112 treatment; Phase 2b sponsor explicitly reported no Grade ≥3 related events in that distinct trial.",
+        "limitations": "Different study designs, endpoints, patient populations, combination therapies and data cuts. Do not combine into a single pooled rate or imply pure TLR3-mediated causality.",
+        "source_ids": [
+          "high_phase1",
+          "high_2026",
+          "high_registry204"
+        ],
+        "reviewed_on": "2026-11-23"
+      },
+      "sources": [
+        {
+          "id": "high_phase1",
+          "kind": "Peer-reviewed Phase 1 clinical study",
+          "date": "2020-10-14",
+          "title": "BO-112 in advanced solid tumors — two reversible grade 3–4 thrombocytopenia reactions",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33055241/",
+          "note": "Multicenter Phase 1 report."
+        },
+        {
+          "id": "high_2026",
+          "kind": "Company Phase 2b topline disclosure",
+          "date": "2026-09-30",
+          "title": "SPOTLIGHT-204 BO-112: no SAEs or Grade ≥3 treatment-related AEs in 2026 BCC dataset",
+          "url": "https://www.globenewswire.com/news-release/2026/09/30/3371962/0/en/highlight-therapeutics-presents-positive-phase-2b-topline-results-of-intralesional-bo-112-in-localized-basal-cell-carcinoma-as-a-late-breaker-at-eadv.html",
+          "note": "Company-reported 46 evaluable participants; 50 enrolled."
+        },
+        {
+          "id": "high_registry204",
+          "kind": "Clinical trial registry",
+          "date": "2026-11-23",
+          "title": "SPOTLIGHT-204 registry NCT06422936",
+          "url": "https://clinicaltrials.gov/study/NCT06422936",
+          "note": "Registry identifier and study protocol."
+        }
+      ]
+    },
+    {
+      "id": "aimimmunotech",
+      "name": "AIM ImmunoTech",
+      "focus": [
+        "Oncology"
+      ],
+      "platform": "Ampligen (rintatolimod; synthetic dsRNA TLR3 agonist)",
+      "classification": "Adjacent immunomodulator · synthetic dsRNA / TLR3-selective (NOT bacterial)",
+      "programs": [
+        {
+          "name": "Ampligen + durvalumab — DURIPANC",
+          "indication": "Metastatic pancreatic ductal adenocarcinoma after FOLFIRINOX",
+          "phase": "Phase 1/2 (NCT05927142)",
+          "status": "Clinical Phase 2 dosing completed; results pending",
+          "status_reason": "November 2026 corporate update",
+          "outcome": "28 participants enrolled across phases; sponsor-reported three Grade 3 immune-related AEs during interim safety follow-up. Primary Phase 2 benefit readout anticipated 2027.",
+          "latest_report": "2026-11-13",
+          "source_ids": [
+            "aim_nov2026",
+            "aim_registry"
+          ]
+        },
+        {
+          "name": "Ampligen named-patient pancreatic program",
+          "indication": "Locally advanced and metastatic pancreatic cancer following chemotherapy",
+          "phase": "Historical named-patient program",
+          "status": "Published observational safety assessment",
+          "status_reason": "2022 single-center study",
+          "outcome": "No grade 3–5 events after rintatolimod treatment observed in that nonrandomized program; not transferable to combination DURIPANC.",
+          "latest_report": "2022-03-19",
+          "source_ids": [
+            "aim_2022"
+          ]
+        }
+      ],
+      "mechanism": "Rintatolimod is a synthetic double-stranded RNA immunomodulator with a TLR3-focused mechanism. It is not a bacterial therapy and should be interpreted separately from poly-ICLC, whose cytosolic dsRNA sensing effects differ.",
+      "clinical": "In DURIPANC, the investigational combination includes anti-PD-L1 durvalumab, so immune-related AEs cannot be assigned to Ampligen alone without adjudication. Historical observational treatment differs from current prospective trial.",
+      "publication": "2022 published observational rintatolimod pancreatic cancer program; November 2026 AIM announcement summarizing interim DURIPANC safety.",
+      "patent": "Synthetic dsRNA TLR3 agonist and combinations; patent-search leads are not clearance.",
+      "patent_links": [
+        {
+          "kind": "Patent search lead",
+          "date": "2026-11-23",
+          "title": "Search Ampligen / rintatolimod patents",
+          "url": "https://patents.google.com/?q=rintatolimod+Ampligen",
+          "note": "Unreviewed patent-search lead"
+        }
+      ],
+      "clinical_safety": {
+        "status": "Three Grade 3 immune-related AEs reported in combination DURIPANC interim update",
+        "trial": "DURIPANC NCT05927142, Ampligen + durvalumab; separate historical named-patient pancreatic program",
+        "cohort": "November 2026 company update: 28 enrolled across Phase 1/2; 2022 named-patient safety series is a separate cohort.",
+        "adverse_events": "Sponsor reported three Grade 3 immune-related adverse events during DURIPANC combination treatment. Named-patient study documented milder events but no grade 3–5 post-treatment events in its specified follow-up.",
+        "serious_events": "The available interim corporate report does not establish a complete independently audited SAE count for DURIPANC. A grade 3 immune-related AE is severe but does not automatically satisfy the regulatory definition of a serious AE.",
+        "deaths": "No complete verified all-cause trial death table or treatment-attributed mortality count was established in the reviewed interim reports; do not infer zero deaths.",
+        "attribution": "The DURIPANC combination includes durvalumab (anti-PD-L1). The three Grade 3 immune-related events cannot be attributed to TLR3 activation or Ampligen alone from this interim sponsor summary.",
+        "limitations": "Data are interim and sponsor-reported. Named-patient study lacked randomized control. Do not mix with other TLR3 agonists or different treatment populations.",
+        "source_ids": [
+          "aim_nov2026",
+          "aim_2022",
+          "aim_registry"
+        ],
+        "reviewed_on": "2026-11-23"
+      },
+      "sources": [
+        {
+          "id": "aim_nov2026",
+          "kind": "Company Q3 2026 safety update",
+          "date": "2026-11-13",
+          "title": "DURIPANC interim results — 3 grade 3 immune-related adverse events",
+          "url": "https://www.globenewswire.com/news-release/2026/11/05/3396566/29489/en/aim-immunotech-highlights-ampligen-opportunity-to-potentially-extend-benefits-of-ras-targeted-therapies-in-pancreatic-cancer.html",
+          "note": "Nov 5, 2026 sponsor report; 28 enrolled; grade 3 events in combination with durvalumab."
+        },
+        {
+          "id": "aim_2022",
+          "kind": "Peer-reviewed named-patient study",
+          "date": "2022-03-01",
+          "title": "Rintatolimod after FOLFIRINOX — grade 3–5 events not observed in observational series",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8946630/",
+          "note": "Single-center observational program; not the DURIPANC trial."
+        },
+        {
+          "id": "aim_registry",
+          "kind": "Clinical trial registry",
+          "date": "2026-11-23",
+          "title": "DURIPANC ClinicalTrials.gov NCT05927142",
+          "url": "https://clinicaltrials.gov/study/NCT05927142",
+          "note": "Rintatolimod + durvalumab trial record."
+        }
+      ]
     }
   ],
-  "safety_review_method": "Focused publicly sourced safety summaries, not comprehensive systematic surveillance. Separate on-study deaths, grade 5/fatal adverse events, and investigator-attributed treatment-related deaths. Counts, data cuts and patient cohorts may differ. No-data-found is not evidence of absence.",
+  "safety_review_method": "Safety is program-, study- and data-cut-specific. Investigators' attribution differs from AE occurrence. Synthetic dsRNA TLR3 agonists are adjacent comparator immunotherapies, not bacterial platforms.",
   "safety_review_date": "2026-11-23"
 }
