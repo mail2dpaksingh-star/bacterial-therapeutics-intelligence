@@ -134,7 +134,9 @@
   const section=by('btiSpeciesExplorer');
   if(!section)return;
   section.hidden=!open;
-  by('btiOpenSpecies')?.setAttribute('aria-expanded',String(open));
+  for(const id of ['btiOpenSpecies','btiOpenSpeciesFromText']){
+   const b=by(id);if(b)b.setAttribute('aria-expanded',String(open));
+  }
  }
  async function open(){
   const section=by('btiSpeciesExplorer');
@@ -149,9 +151,10 @@
   section.scrollIntoView({behavior:'smooth',block:'start'});
  }
  document.addEventListener('DOMContentLoaded',()=>{
-  const hot=by('btiOpenSpecies');
+  const hot=by('btiOpenSpecies'),alternate=by('btiOpenSpeciesFromText');
   if(!hot||!by('btiSpeciesExplorer'))return;
   hot.addEventListener('click',open);
+  alternate?.addEventListener('click',open);
   by('btiCloseSpecies')?.addEventListener('click',()=>{syncOpen(false);hot.focus();by('btiMechanismFeature')?.scrollIntoView({behavior:'smooth',block:'start'})});
   ['btiSpeciesSearch','btiSpeciesArea','btiSpeciesGram','btiSpeciesEvidence','btiSpeciesPlatform'].forEach(id=>by(id)?.addEventListener(id==='btiSpeciesSearch'?'input':'change',render));
  });
