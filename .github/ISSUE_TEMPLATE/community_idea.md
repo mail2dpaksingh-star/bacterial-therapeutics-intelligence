@@ -2,8 +2,8 @@
 name: "Community research idea"
 about: "Share a hypothesis, research question, evidence gap, or therapeutic concept with the BTI community."
 title: "[Idea] "
-labels: []
-assignees: []
+labels: ""
+assignees: ""
 ---
 
 ## Research category
