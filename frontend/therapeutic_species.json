@@ -169,6 +169,47 @@
       "notes": ""
     },
     {
+      "id": "ecoli_killed_decoy",
+      "name": "Escherichia coli",
+      "strain": "Attenuated, killed and stabilized non-pathogenic E. coli; Indaptus Decoy10 / Decoy20",
+      "category": "Oncology",
+      "gram": "Gram-negative",
+      "modality": "Killed intact bacterial immunostimulant (nonliving)",
+      "stage": "Decoy20 clinical development discontinued in 2026",
+      "indications": [
+        "Advanced solid tumors (investigational)",
+        "Systemic innate immune priming (investigational)"
+      ],
+      "components": [
+        "Intact killed E. coli bacterial cells",
+        "Modified LPS/endotoxin activity",
+        "Multivalent bacterial pattern-recognition receptor ligands"
+      ],
+      "mechanism": "Killed, stabilized E. coli preparations were designed to engage multiple innate immune receptors, including TLR2, TLR4, TLR8, TLR9, NOD2 and STING, to induce immune activation; this does not establish clinical efficacy.",
+      "cargo": "Native bacterial immunostimulatory components; not a living bacterial delivery chassis.",
+      "delivery": "Intravenous investigational administration; not an approved therapy.",
+      "evidence": "Peer-reviewed preclinical/mechanistic work and Phase 1 investigation of Decoy20. Company disclosures in 2026 reported discontinuation of further Decoy20 clinical development.",
+      "companies": "indaptus",
+      "sources": [
+        {
+          "label": "Peer-reviewed Decoy platform study (2024)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11599860/",
+          "type": "Peer-reviewed research"
+        },
+        {
+          "label": "Indaptus 2026 SEC quarterly filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/1857044/000149315226023362/form10-q.htm",
+          "type": "SEC disclosure"
+        },
+        {
+          "label": "Decoy20 Phase 1 clinical study poster",
+          "url": "https://indaptusrx.com/wp-content/uploads/2024/11/preliminary-results-of-a-phase-1-study-of-decoy20-an-intravenous-killed-multiple-immune-receptor-agonist-bacterial-product-in-patients-with-advanced-solid-tumor.pdf",
+          "type": "Clinical research presentation"
+        }
+      ],
+      "notes": "Nonliving whole-cell E. coli is distinct from live/engineered E. coli Nissle 1917. Decoy10 and Decoy20 are investigational formulations, not approved products."
+    },
+    {
       "id": "l_lactis",
       "name": "Lactococcus lactis",
       "strain": "LL-Thy12 (engineered IL-10-producing research strain)",
