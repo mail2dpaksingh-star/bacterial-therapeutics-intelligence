@@ -1,0 +1,45 @@
+name: Company research source updates
+
+on:
+  workflow_dispatch:
+  schedule:
+    # UTC, four times per day. GitHub scheduled jobs may run late.
+    - cron: '17 0,6,12,18 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bti-company-source-feed
+  cancel-in-progress: false
+
+jobs:
+  scan-public-sources:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out latest main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+      - name: Configure Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Monitor company trial registries and publication metadata
+        run: node scripts/update_company_sources.mjs
+      - name: Validate public-source feed
+        run: node --test tests/company_monitor_smoke.mjs
+      - name: Commit new feed and published source-check timestamps
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add frontend/live_updates.json
+          if git diff --cached --quiet; then
+            echo "No changes to the published source feed."
+            exit 0
+          fi
+          git commit -m "data: refresh public company research source leads [automated]"
+          git push origin HEAD:main
