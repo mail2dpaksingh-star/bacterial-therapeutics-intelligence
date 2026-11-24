@@ -132,8 +132,7 @@ html{scroll-behavior:smooth}#btiHomeHero,#btiMechanismFeature,#homeResearchExplo
 .bti-hero{position:relative;overflow:hidden;isolation:isolate;min-height:290px;padding:36px 46px 38px;margin:12px 0 14px;border-radius:21px;background:radial-gradient(circle at 73% 33%,#127b80 0,#0b4b5d 28%,transparent 55%),linear-gradient(115deg,#091a35,#0b314c 63%,#116875);display:grid;grid-template-columns:minmax(0,1.25fr) minmax(280px,.85fr);gap:20px;color:#fff}
 .bti-hero-copy{z-index:1}.bti-hero-kicker{font-size:10px;letter-spacing:.13em;color:#a2e7dd;font-weight:800}.bti-live-dot{display:inline-block;vertical-align:middle;margin-right:9px;width:8px;height:8px;border-radius:50%;background:#6fe5ca;box-shadow:0 0 0 5px #6fe5ca22}
 .bti-hero h1{font-size:clamp(36px,4vw,58px);letter-spacing:-.055em;line-height:1.05;margin:17px 0 12px;font-weight:850}.bti-hero h1 span{color:#85e9de}
-.bti-hero p{font-size:14px;line-height:1.65;max-width:635px;margin:0;color:#d6ebf0}.bti-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:19px}.bti-primary-cta,.bti-ghost-cta{border-radius:10px;padding:12px 17px;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:800;font-size:12px;text-decoration:none;transition:background .15s,transform .15s}.bti-primary-cta{background:#168f91;color:#fff!important;border:1px solid #1e999b}.bti-primary-cta:hover{background:#067476;transform:translateY(-1px)}.bti-ghost-cta{color:#e9fcfd;border:1px solid #a1c9cc}.bti-ghost-cta:hover{background:#ffffff1a}
-.bti-hero-tags{display:flex;flex-wrap:wrap;gap:15px;margin-top:23px;color:#b6dbdf;font-size:11px}.bti-hero-tags span+span{border-left:1px solid #54818e;padding-left:15px}
+.bti-hero p{font-size:14px;line-height:1.65;max-width:635px;margin:0;color:#d6ebf0}.bti-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:19px}.bti-primary-cta{border-radius:10px;padding:12px 17px;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:800;font-size:12px;text-decoration:none;transition:background .15s,transform .15s;background:#168f91;color:#fff!important;border:1px solid #1e999b}.bti-primary-cta:hover{background:#067476;transform:translateY(-1px)}
 .bti-hero-visual{display:grid;place-items:center;opacity:.97}.bti-hero-visual svg{width:100%;max-width:480px;height:auto}
 .bti-featured{border:1px solid #cde5e8;border-radius:20px;padding:23px 22px;box-shadow:0 10px 35px #0f385312;background:linear-gradient(120deg,#fff,#f0fbfb);display:grid;grid-template-columns:minmax(250px,.72fr) minmax(0,1.75fr);gap:20px;align-items:center}
 .bti-kicker{display:inline-block;padding:7px 11px;background:#dff6f3;border-radius:20px;color:#127e82;letter-spacing:.07em;font-size:10px;font-weight:850}
@@ -156,7 +155,7 @@ html{scroll-behavior:smooth}#btiHomeHero,#btiMechanismFeature,#homeResearchExplo
 #homeResearchExplorer:target{border-color:#8bd5d2}
 @media(max-width:1100px){.bti-architecture{grid-template-columns:1fr 1fr}.bti-architecture-intro{grid-column:1/-1}.bti-featured{grid-template-columns:minmax(220px,.75fr) minmax(0,1.35fr)}.bti-insight-card summary{grid-template-columns:1fr;min-height:0}.bti-insight-card summary>img{height:auto;max-height:260px}}
 @media(max-width:730px){.home-top{flex-wrap:wrap}.bti-public-nav{gap:12px}.bti-hero{padding:24px 20px;grid-template-columns:1fr}.bti-hero h1{font-size:34px}.bti-hero-visual{display:none}.bti-featured{grid-template-columns:1fr;padding:17px}.bti-architecture{grid-template-columns:1fr}.bti-architecture-intro{grid-column:auto}.bti-insight-card summary{grid-template-columns:1fr;gap:12px}.bti-insight-card summary>img{height:auto;max-height:240px}.home-domains{padding:0 12px 15px!important}.home-domain-header{padding:15px 12px 8px!important}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.bti-primary-cta,.bti-ghost-cta{transition:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.bti-primary-cta{transition:none}}
 
 /* Public idea blog replaces the backend-token workspace. */
 .bti-community{padding:25px 28px!important;min-height:0!important}
@@ -419,8 +418,7 @@ window.notify=function(message){const x=document.getElementById('reviewStatus');
   <div class="bti-hero-kicker"><span class="bti-live-dot"></span> RESEARCH WORKSPACE &nbsp; / &nbsp; ONCOLOGY · CARDIOMETABOLIC · MICROBIOME</div>
   <h1 id="btiHeroTitle">Bacterial Therapeutics<br><span>Intelligence</span></h1>
   <p>An evidence-linked research platform to explore bacterial mechanisms, therapeutic platforms, host interactions and translational research—within one connected workspace.</p>
-  <div class="bti-hero-actions"><a class="bti-primary-cta" href="#homeResearchExplorer">Explore Therapeutic Pathways ↗</a><a class="bti-ghost-cta" href="#btiMechanismFeature">View Mechanism Map ↓</a></div>
-  <div class="bti-hero-tags"><span>◈ Scientific evidence</span><span>⬡ Mechanism mapping</span><span>◇ Therapeutic intelligence</span></div>
+  <div class="bti-hero-actions"><a class="bti-primary-cta" href="#homeResearchExplorer">Explore Therapeutic Pathways ↗</a></div>
  </div>
  <div class="bti-hero-visual" aria-hidden="true">
  <svg viewBox="0 0 520 294" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="btiAura"><stop stop-color="#30aeaa" stop-opacity=".6"/><stop offset="1" stop-color="#30aeaa" stop-opacity="0"/></radialGradient><linearGradient id="btiBac" x2="1" y2="1"><stop stop-color="#8af2e2"/><stop offset="1" stop-color="#238e98"/></linearGradient></defs>
