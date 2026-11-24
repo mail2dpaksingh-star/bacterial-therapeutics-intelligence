@@ -281,6 +281,13 @@ html{scroll-behavior:smooth}#btiHomeHero,#btiMechanismFeature,#homeResearchExplo
 .company-program-mismatch{padding:12px 13px;background:#f3f9fa;border-radius:10px;border-left:3px solid #4e9daa;color:#4c7280;font-size:12px;line-height:1.65}
 .company-profile-brief{display:grid;gap:6px}.company-profile-brief p{font-size:12px;line-height:1.65;margin:6px 0}
 @media(max-width:820px){.company-profile-grid{grid-template-columns:1fr}.company-intel-head{flex-direction:column}.company-snapshot-label{white-space:normal}.company-intel{padding:13px}.company-intel-actions{flex-direction:column}.company-intel-actions .btn{width:100%;justify-content:center}}
+/* Program status shown even while reviewing the evidence or patents lens. */
+.company-current-status{width:100%;display:flex;align-items:center;gap:11px;flex-wrap:wrap;border-top:1px solid #e2ecef;padding:12px 0 0;margin-top:11px}
+.company-current-status strong{font-size:12px;color:#365c6f}
+.company-current-status small{font-size:11px;color:#7b929b}
+.company-mini-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:11px}
+.company-mini-links a{color:#147881;text-decoration:none;font-size:11px;font-weight:800}
+.company-mini-links a:hover{text-decoration:underline}
 </style><script>window.btiSnapshotPromise=null;window.btiGet=async function(url){if(!window.btiSnapshotPromise){window.btiSnapshotPromise=fetch('pathway_snapshot.json').then(r=>{if(!r.ok)throw Error('Curated pathway dataset unavailable');return r.json()}).catch(e=>{window.btiSnapshotPromise=null;throw e})}const snap=await window.btiSnapshotPromise;if(url.endsWith('/overview'))return snap.overview;const id=decodeURIComponent(url.substring(url.lastIndexOf('/')+1));if(snap.details&&snap.details[id])return snap.details[id];throw Error('No curated pathway found for '+id)};</script><script>
 /* Website public-mode configuration. No client-side API keys or token popups. */
 window.BTI_PUBLIC_STATIC_MODE=true;
