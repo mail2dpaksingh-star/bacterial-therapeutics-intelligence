@@ -10,8 +10,8 @@ const data=JSON.parse(fs.readFileSync(path.join(root,'frontend','company_dossier
 const js=fs.readFileSync(path.join(root,'frontend','company-research.js'),'utf8');
 
 test('all listed company and precedent records have source-linked programs',()=>{
- assert.equal(data.companies.length,10);
- assert.equal(data.companies.reduce((n,p)=>n+p.programs.length,0),14);
+ assert.equal(data.companies.length,21);
+ assert.equal(data.companies.reduce((n,p)=>n+p.programs.length,0),30);
  for(const company of data.companies){
   assert.ok(company.id&&company.name);
   assert.ok(company.sources.length>0,company.id+' has no sources');
@@ -35,6 +35,12 @@ test('clinical statuses reflect separate dated program outcomes',()=>{
  assert.match(find('neobe').programs[0].phase,/preclinical/i);
  assert.equal(find('enterome').programs.length,3);
  assert.equal(find('bcg').programs[0].status,'Approved precedent');
+ assert.match(find('aurexo').programs[0].phase,/preclinical/i);
+ assert.match(find('aurealis').programs[0].phase,/preclinical/i);
+ assert.match(find('seres').programs[0].phase,/preclinical/i);
+ assert.match(find('medosome').programs[0].phase,/preclinical/i);
+ assert.match(find('longhorn').classification,/adjacent/i);
+ assert.match(find('bactheravax').classification,/adjacent/i);
 });
 
 class Element{
@@ -72,4 +78,10 @@ test('company selection, focus controls, and related documents render without ba
  get('reviewPlatform').value='vedanta';get('reviewPlatform').dispatch('change');
  assert.match(get('companyDossier').textContent,/Phase 3/i);
  assert.match(get('companyDossier').textContent,/ongoing/i);
+ get('reviewPlatform').value='aurexo';get('reviewPlatform').dispatch('change');
+ assert.match(get('companyDossier').textContent,/AeBEV-001/);
+ get('reviewPreclinicalOnly').checked=true;get('reviewPreclinicalOnly').dispatch('change');
+ assert.ok(get('reviewPlatform').children.length>=11);
+ assert.ok(!get('reviewPlatform').children.some(o=>o.value==='indaptus'));
+ assert.ok(get('reviewPlatform').children.some(o=>o.value==='seres'));
 });
