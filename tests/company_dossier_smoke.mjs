@@ -43,6 +43,18 @@ test('clinical statuses reflect separate dated program outcomes',()=>{
  assert.match(find('bactheravax').classification,/adjacent/i);
 });
 
+test('therapeutic atlas and preclinical research notes include all public company dossiers',()=>{
+ const html=fs.readFileSync(path.join(root,'frontend','index.html'),'utf8');
+ const match=html.match(/const RECORDS=(\[[\s\S]*?\]);const CONCEPTS=/);
+ assert.ok(match,'atlas dataset exists');
+ const records=JSON.parse(match[1]);
+ const atlasIds=new Set(records.map(r=>r.id));
+ assert.equal(records.length,data.companies.length);
+ for(const profile of data.companies)assert.ok(atlasIds.has(profile.id),'atlas missing '+profile.id);
+ assert.match(html,/id="preclinicalOnly"/);
+ assert.match(html,/id="reviewPreclinicalOnly"/);
+ assert.match(html,/Infectious diseases/);
+});
 class Element{
  constructor(tag='div'){
   this.tag=tag;this.children=[];this._text='';this.listeners={};this.value='';
