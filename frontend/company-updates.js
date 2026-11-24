@@ -41,7 +41,7 @@ function render(){
  const checked=current.last_successful_check_at;
  const monitorCount=Number(current.companies_monitored)||0,failed=Number(current.checks_failed)||0;
  meta.textContent=waiting
-  ? 'First successful public source scan is pending. Scheduled scans are configured every six hours (subject to GitHub scheduling).'
+  ? 'First successful public source scan is pending. Scheduled scans are configured for the first day of each month at 08:17 UTC (subject to GitHub scheduling).'
   : 'Last successful scan: '+dateLabel(checked)+' · '+monitorCount+' companies watched · '+(current.items.length)+' published research leads'+(failed?' · '+failed+' source checks failed':'')+'.';
  const scope=by('companyUpdateScope')?.value||'selected',selected=by('reviewPlatform')?.value;
  let list=(current.items||[]).filter(item=>
