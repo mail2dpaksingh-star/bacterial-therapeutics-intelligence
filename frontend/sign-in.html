@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,follow">
+<meta name="description" content="Secure email sign-in for a future Bacterial Therapeutics Intelligence research account. Public research remains free.">
+<title>Sign in | Bacterial Therapeutics Intelligence</title>
+<link rel="stylesheet" href="business.css"><link rel="stylesheet" href="auth.css">
+<script src="auth-config.js" defer></script><script src="auth.js" defer></script>
+</head><body>
+<header class="bar"><div class="wrap"><a class="logo" href="index.html">BACTERIAL THERAPEUTICS<small>INTELLIGENCE</small></a><nav class="nav" aria-label="Main navigation">
+<a href="index.html">Research</a><a href="services.html">Services</a><a href="research-pro.html">Research Pro</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="sign-in.html" aria-current="page">Sign in</a>
+</nav></div></header>
+<main class="wrap auth-page"><div class="auth-shell">
+<section class="auth-story" aria-labelledby="authStoryHeading">
+<div class="eyebrow">BACTERIAL THERAPEUTICS INTELLIGENCE · RESEARCH ACCOUNT</div>
+<h1 id="authStoryHeading">Your research, connected.</h1>
+<p>One place to build your research workspace as the platform grows. Explore bacterial therapeutics, immune pathways, clinical safety, and company intelligence.</p>
+<ul class="auth-perks">
+<li>Explore the public evidence-linked research library</li>
+<li>Prepare for future personal research collections</li>
+<li>Keep company and clinical safety insights together</li>
+</ul>
+<div class="auth-free">Public research stays free — no account required.</div>
+</section>
+<section class="auth-pane" aria-labelledby="signInHeading">
+<div class="eyebrow">SECURE ACCOUNT ACCESS</div>
+<h2 id="signInHeading">Sign in or create an account</h2>
+<p class="explain">Enter your email address to receive a one-time sign-in link. New users can create an account through the same flow once account registration is enabled.</p>
+<div id="authUnavailable" class="auth-closed" role="status">Account sign-in is being prepared. You can continue exploring all public research without signing in.</div>
+<form id="signInForm" novalidate>
+<label for="signInEmail">Email address</label>
+<input id="signInEmail" type="email" name="email" autocomplete="email" inputmode="email" spellcheck="false" maxlength="254" required placeholder="you@example.com" disabled>
+<button class="auth-submit" id="signInButton" type="submit" disabled>Email me a sign-in link</button>
+</form>
+<p id="signInStatus" role="status" aria-live="polite" class="auth-feedback"></p>
+<p class="auth-note">No password required. We will never ask you to enter your email password on this website. Authentication emails will be sent by the configured identity provider, not through the consulting contact form.</p>
+<hr class="auth-divider">
+<div class="auth-link-row"><a href="index.html">← Continue as a guest</a><a href="research-pro.html">What is Research Pro?</a></div>
+<p class="auth-note">By requesting account access, you acknowledge our <a href="privacy.html">Privacy Notice</a> and <a href="disclaimer.html">Research Disclaimer</a>. Signing in does not activate a Research Pro subscription.</p>
+</section>
+</div></main>
+<footer class="footer"><div class="wrap"><div>© 2026 Bacterial Therapeutics Intelligence. Independent research and consulting.</div><div><a href="privacy.html">Privacy</a><a href="disclaimer.html">Disclaimer</a><a href="contact.html">Contact</a></div></div></footer>
+</body></html>
