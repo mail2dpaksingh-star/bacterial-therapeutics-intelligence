@@ -1,0 +1,40 @@
+/* BTI research account — accessible, mobile-first, matched to business.css */
+.auth-page{min-height:calc(100svh - 192px);padding:48px 0 80px}
+.auth-shell{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(340px,.95fr);gap:28px;align-items:stretch}
+.auth-story{background:radial-gradient(circle at 80% 0%,#1a8b91a8,transparent 44%),linear-gradient(145deg,#0b243f,#123f56 65%,#146e77);border-radius:24px;padding:clamp(30px,4vw,53px);color:white;min-height:465px;position:relative;overflow:hidden}
+.auth-story:after{content:"";position:absolute;right:-90px;bottom:-140px;width:340px;height:340px;border:1px solid #c9f3ee36;border-radius:50%;box-shadow:0 0 0 44px #c9f3ee0a,0 0 0 88px #c9f3ee08;pointer-events:none}
+.auth-story>*{position:relative;z-index:1}.auth-story .eyebrow{color:#88ebdf}
+.auth-story h1{font-size:clamp(2.1rem,3.7vw,3.3rem);max-width:550px;line-height:1.15;margin:16px 0}
+.auth-story p{color:#d6e9ed;font-size:1.02rem;max-width:485px}
+.auth-perks{display:grid;gap:14px;margin:38px 0 25px;padding:0;list-style:none}
+.auth-perks li{display:flex;align-items:flex-start;gap:12px;color:#e4f2f3;font-size:.95rem}
+.auth-perks li:before{content:"✓";display:inline-grid;place-items:center;flex:none;width:24px;height:24px;border-radius:50%;background:#b4efe323;color:#bdf7f4;font-weight:850}
+.auth-free{display:inline-block;color:#c9ebed;font-size:.84rem;border:1px solid #8bc7cc66;background:#ffffff0b;padding:9px 13px;border-radius:9px}
+.auth-pane{border:1px solid #dbe8ec;background:white;border-radius:24px;padding:clamp(24px,4vw,45px);box-shadow:0 12px 34px #123e5210;display:flex;flex-direction:column;justify-content:center}
+.auth-pane .eyebrow{color:#158388}.auth-pane h2{font-size:clamp(1.55rem,2.6vw,2.12rem);line-height:1.23;margin:10px 0}
+.auth-pane .explain{color:#587185;font-size:.94rem;margin:0 0 23px}
+.auth-pane label{font-size:.86rem;font-weight:750;color:#294a5e;display:block;margin:0 0 8px}
+.auth-pane input{width:100%;padding:13px 14px;border:1px solid #a8c1ca;background:#fafdfd;color:#173149;border-radius:10px;font:inherit;font-size:.97rem}
+.auth-pane input:focus-visible{outline:3px solid #a9e4e4;outline-offset:2px}
+.auth-pane button{font:inherit}
+.auth-submit{display:block;width:100%;margin-top:17px;border:0;border-radius:10px;background:#087f88;color:white;font-weight:780;padding:13px 16px;cursor:pointer;min-height:48px}
+.auth-submit:hover:not(:disabled){background:#08656d}
+.auth-submit:disabled{opacity:.57;cursor:not-allowed}
+.auth-note{color:#617787;font-size:.8rem;line-height:1.65;margin:20px 0 0}
+.auth-note a{font-weight:650}
+.auth-feedback{margin:12px 0 0;padding:12px 14px;background:#eff8fb;border-radius:10px;font-size:.87rem;line-height:1.6;color:#355b6b}
+.auth-feedback:empty{display:none}
+.auth-feedback[data-kind="error"]{background:#fff1ec;color:#934933}
+.auth-feedback[data-kind="success"]{background:#e8f8ed;color:#23603e}
+.auth-closed{border:1px solid #c9e5e6;background:#edf9f9;color:#275e65;padding:14px 16px;border-radius:10px;font-size:.9rem;margin:0 0 18px}
+.auth-closed[hidden]{display:none}
+.auth-divider{margin:25px 0 15px;border:0;border-top:1px solid #e2edf0}
+.auth-link-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;font-size:.88rem}
+.auth-account-detail{border:1px solid #d8e9ef;background:#f5fbfc;border-radius:12px;padding:15px 18px;margin:14px 0 22px}
+.auth-account-detail strong{display:block;color:#1a445c}
+.auth-account-detail span{color:#456879;overflow-wrap:anywhere}
+.auth-actions{display:flex;flex-wrap:wrap;gap:11px;align-items:center}
+.auth-actions .button{font-size:.91rem}
+.auth-actions button{margin:0}
+@media(max-width:800px){.auth-shell{grid-template-columns:1fr;gap:16px}.auth-story{min-height:0;padding:28px}.auth-perks{margin:22px 0}.auth-pane{padding:26px}}
+@media(max-width:500px){.auth-page{padding:22px 0 48px}.auth-story h1{font-size:1.8rem}.auth-pane h2{font-size:1.5rem}}
