@@ -13,8 +13,7 @@
       "synthetic": "Synthetic triacylated-lipopeptide mimics, including Amplivant conjugates.",
       "signal": "Primarily MyD88-dependent NF-κB / inflammatory pathways; TLR2 pairs with TLR1 for triacylated ligands.",
       "companies": [
-        "isa_pharma",
-        "indaptus"
+        "isa_pharma"
       ],
       "safety": "Excess inflammatory stimulation, fever and local reactogenicity; read product-level clinical safety.",
       "sources": [
@@ -58,7 +57,7 @@
       "key": "TLR4",
       "group": "Toll-like receptors",
       "ligand": "Gram-negative bacterial LPS / lipid A; monophosphoryl lipid A (MPL)",
-      "natural": "A well-established receptor for bacterial LPS through the TLR4–MD2 complex; lipid A chemistry strongly affects activity.",
+      "natural": "A well-established receptor for bacterial LPS through the TLR4–MD2 complex; lipid A chemistry strongly affects activity. Indaptus Decoy10 research documented TLR2/4/8/9 agonist activity, but did not establish TLR1/2 versus TLR2/6 pairing.",
       "engineered": "Bacteria may be modified to alter their LPS/lipid A immune-stimulation profile. Such changes require product-specific inflammatory safety evaluation and should not be assumed clinically safe.",
       "engineer_level": "Established research platform, clinical relevance formulation-specific",
       "synthetic": "MPL and synthetic lipid A analogues used in vaccine adjuvant research; SHINGRIX contains bacterial-derived MPL.",
@@ -76,6 +75,10 @@
         {
           "label": "Bacterial TLR ligands",
           "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6698371/"
+        },
+        {
+          "label": "Indaptus killed E. coli receptor profile (TLR2/4/8/9, NOD2, STING)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39606250/"
         }
       ]
     },
@@ -163,8 +166,7 @@
       "synthetic": "AVONEX (interferon beta-1a) as a clinically administered interferon product.",
       "signal": "IFNAR1/IFNAR2 → JAK/STAT interferon-stimulated gene programs.",
       "companies": [
-        "biogen_ifnb",
-        "aimimmunotech"
+        "biogen_ifnb"
       ],
       "safety": "Interferon-beta labels warn of psychiatric, hepatic and hematologic adverse events and other severe complications.",
       "sources": [
@@ -188,8 +190,7 @@
       "synthetic": "ACTIMMUNE (interferon gamma-1b) is a licensed recombinant host-cytokine therapy for specified noncancer indications.",
       "signal": "IFNGR1/IFNGR2 → JAK1/JAK2 → STAT1; influences antigen presentation and immunity.",
       "companies": [
-        "amgen_ifng",
-        "actym"
+        "amgen_ifng"
       ],
       "safety": "Systemic IFN-γ can have dose-limiting inflammatory effects; live bacterial delivery additionally needs shedding, biodistribution, containment and product-specific risk assessment.",
       "sources": [
