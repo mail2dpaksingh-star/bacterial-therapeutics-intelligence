@@ -195,6 +195,41 @@ html{scroll-behavior:smooth}#btiHomeHero,#btiMechanismFeature,#homeResearchExplo
 .blog-prompt-grid button{background:#fff;border:1px solid #afcfd8;border-radius:9px;padding:8px 10px;font-size:11px;font-weight:800;color:#157982}
 @media(max-width:950px){.blog-layout{grid-template-columns:1fr}.blog-intro{align-items:flex-start}.blog-prompt-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:650px){.bti-community{padding:12px!important}.blog-intro{padding:18px;flex-direction:column}.blog-intro-actions{width:100%}.blog-filters{grid-template-columns:1fr}.blog-feed-head{align-items:start}.blog-prompt-grid{grid-template-columns:1fr}}
+
+/* Question-first research; curated graph stays accessible without forcing the question into its selected claim. */
+.ask-question-panel{background:linear-gradient(128deg,#eefbfa,#f7fbfe);border:1px solid #d0e6eb;border-radius:15px;padding:20px 23px;margin:18px 0}
+.ask-question-panel .label{font-size:16px;font-weight:850;color:#183f53;display:block;margin-bottom:10px}
+.ask-question-panel #graphQuery{width:100%;min-height:58px;font-size:16px;background:#fff;border-radius:11px;padding:13px 17px}
+.ask-examples{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 14px}.ask-example{border:1px solid #bedde2;background:#fff;color:#146f7c;font-size:11px;font-weight:800;padding:8px 12px;border-radius:30px;cursor:pointer}
+.ask-example:hover{background:#e4f6f4}.ask-action-row{margin:12px 0 7px}.ask-question-panel #graphQueryHelp{margin:8px 0 0;font-size:11px;color:#668897;line-height:1.6}
+.ask-results{background:#fff;border-radius:15px;border:1px solid #d7e7eb;padding:24px;margin-bottom:17px}
+.ask-empty{padding:20px;background:#f5fafb;border-radius:11px;color:#607f8d}.ask-empty strong{font-size:16px;color:#24485c}.ask-empty p{line-height:1.65}
+.ask-result-kicker,.ask-topic-kicker{font-size:10px;font-weight:850;letter-spacing:.09em;color:#16818a}
+.ask-question{font-size:23px;line-height:1.25;color:#123a53;margin:7px 0 18px}
+.ask-answer{background:#e8f7f3;border-left:4px solid #168c86;padding:17px;border-radius:8px;margin:0 0 17px}
+.ask-answer strong{color:#196872;font-size:15px}.ask-answer p{font-size:14px;line-height:1.7;color:#315e6c;margin:8px 0}
+.ask-answer small{font-size:11px;line-height:1.65;color:#4b8082;display:block}
+.ask-topic{border:1px solid #d8e8ed;background:linear-gradient(130deg,#fff,#fafdfd);border-radius:13px;padding:17px 19px;margin:12px 0}
+.ask-topic h4{font-size:18px;line-height:1.35;color:#1b4559;margin:7px 0}.ask-topic>p{font-size:13px;line-height:1.7;color:#527183;margin:6px 0 13px}
+.ask-topic-details{margin-top:13px}.ask-topic-details summary{cursor:pointer;font-size:12px;color:#0b7b84;font-weight:850;padding:7px 0}
+.ask-mechanisms{padding:10px 13px;background:#f2f9fa;border-radius:9px}.ask-mechanisms p{font-size:12px;line-height:1.65;color:#4f6e80;margin:5px 0 9px}.ask-mechanisms strong{font-size:12px;color:#286375}
+.ask-references{margin-top:15px}.ask-references h5{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:#24586c;margin:0 0 9px}
+.ask-references ul,.ask-publications{list-style:none;padding:0;margin:0;display:grid;gap:7px}
+.ask-source,.ask-publications li{border-radius:8px;background:#f4fafb;padding:11px;border:1px solid #e3eef0}
+.ask-source-link,.ask-publications a{font-size:12px;line-height:1.6;color:#087b86;font-weight:800;text-decoration:none}.ask-source-link:hover,.ask-publications a:hover{text-decoration:underline}
+.ask-source-info,.ask-publications small{display:block;color:#7b939e;margin-top:4px;font-size:11px}
+.ask-discovery{border-top:1px solid #dce9ee;padding-top:15px;margin-top:18px}.ask-discovery h4{margin:0 0 7px;font-size:17px;color:#214e63}
+.ask-discovery-status{font-size:12px;line-height:1.6;color:#5c7b8d}
+.ask-external-links{display:flex;gap:12px;flex-wrap:wrap;margin:10px 0 15px}
+.ask-external-links a{font-size:12px;text-decoration:none;font-weight:800;color:#0a7580;border:1px solid #b9dce1;border-radius:9px;padding:9px 12px}
+.ask-no-match{border:1px solid #dae9ed;background:#f7fbfc;border-radius:12px;padding:19px}.ask-no-match h4{font-size:16px;margin:0 0 7px}.ask-no-match p{font-size:12px;line-height:1.65;color:#557789}
+.ask-context{font-size:11px;color:#7d929e;border-top:1px solid #ebf1f2;padding-top:11px}
+.ask-graph-reference{border:1px solid #d5e4ea;border-radius:13px;padding:8px 17px;background:#f8fbfc;margin-top:14px}
+.ask-graph-reference>summary{cursor:pointer;padding:13px 0;display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;color:#1b5163}
+.ask-graph-reference summary strong{font-size:14px}.ask-graph-reference summary span{font-size:11px}
+.ask-graph-reference .toolbar{margin:12px 0}.ask-graph-reference select.wide{min-height:42px}
+.ask-diagram-wrap{max-width:1140px;margin:12px auto}
+@media(max-width:700px){.ask-question-panel{padding:14px}.ask-results{padding:13px}.ask-question{font-size:18px}.ask-graph-reference{padding:7px 12px}}
 </style><script>window.btiSnapshotPromise=null;window.btiGet=async function(url){try{const live=await fetch(url,{cache:'no-store'});if(live.ok)return await live.json()}catch(_e){}if(!window.btiSnapshotPromise){window.btiSnapshotPromise=fetch('/pathway_snapshot.json').then(r=>{if(!r.ok)throw Error('Static pathway dataset unavailable');return r.json()})}const snap=await window.btiSnapshotPromise;if(url.endsWith('/overview'))return snap.overview;const id=decodeURIComponent(url.substring(url.lastIndexOf('/')+1));if(snap.details&&snap.details[id])return snap.details[id];throw Error('No curated pathway found for '+id)};</script></head><body><a class="skip-link" href="#workspaceSelect">Skip to workspace navigation</a><main class="shell"><header class="top home-top"><div class="brand"><span aria-hidden="true" class="brand-mark">BT</span><span>BACTERIAL THERAPEUTICS <span class="brand-divider">/</span> INTELLIGENCE</span><span class="brand-edition">SCIENTIFIC RESEARCH PLATFORM</span></div><nav class="bti-public-nav" aria-label="Primary website navigation"><a href="#btiHomeHero">Home</a><a href="#btiMechanismFeature">Mechanisms</a><a href="#homeResearchExplorer">Pathway Explorer</a><a href="#btiResearchMenu">Research Tools</a><a href="#btiResearchMenu" data-bti-open-community="true">Community Blog</a></nav></header>
 <section class="bti-hero" id="btiHomeHero" aria-labelledby="btiHeroTitle">
  <div class="bti-hero-copy">
@@ -337,12 +372,25 @@ html{scroll-behavior:smooth}#btiHomeHero,#btiMechanismFeature,#homeResearchExplo
 <div class="toolbar"><input type="search" id="discoveryQuery" placeholder="Filter saved titles, PMID, NCT, or keywords…"><select id="discoveryFilter"><option>All</option><option>Oncology</option><option>Cardiometabolic</option><option>Microbiome</option></select><button class="btn" id="discoveryGraph" type="button">Explore linked concepts</button></div>
 <div id="discoveryCounts" class="toolbar"></div><div id="discoveryResults" class="cards"></div><div id="discoveryLinks"></div>
 </section>
-<section class="panel sectionhide" id="tab-graph"><div class="sectionHead"><div><h2>Scientific Knowledge Graph &amp; Evidence Verification</h2><p class="muted small">Source-linked claim → therapy → disease → mechanism → biomarker connections. Transparent scientific limitations; no invented causal conclusions.</p></div><span class="pill">Curated evidence</span></div>
-<div class="warning"><b>Interpretation:</b> The graph connects curated claims with source records; connections do not establish causality or clinical efficacy. Proposed records are not verified facts. Automated contradiction detection requires matched experimental outcomes and full-text review and is not claimed here.</div>
-<div class="toolbar"><label class="label" for="graphArea">Research domain</label><select id="graphArea"><option>All</option><option>Oncology</option><option>Cardiometabolic</option><option>Microbiome</option></select><button class="btn" type="button" id="graphReload">Refresh knowledge graph</button><button class="btn" type="button" id="graphExport">Export graph JSON</button></div>
-<div id="graphSummary" class="pills"></div><div class="gap"></div><div class="mini" style="overflow:auto"><svg id="graphDiagram" viewBox="0 0 840 185" width="100%" style="min-width:530px;display:block" role="img" aria-label="Conceptual diagram connecting an intervention to disease, mechanism, biomarker, and source records"></svg><p class="small muted">Illustrative relationship schema; select a claim below to inspect its own links and sources.</p></div>
-<div class="gap"></div><div class="inputs"><div><label class="label" for="graphClaim">Claim or therapeutic hypothesis</label><select class="wide" id="graphClaim"></select></div><div><label class="label" for="graphQuery">Evidence-check question</label><input id="graphQuery" class="wide" placeholder="e.g., microbiome therapy for type 2 diabetes" /></div></div><div class="toolbar"><button class="btn primary" type="button" id="graphCheck">Check the evidence</button><button class="btn" type="button" id="graphReport">Export evidence-check report</button></div>
-<div id="graphDetail" class="mini" aria-live="polite"></div><div class="gap"></div><h3>Evidence-check results</h3><div id="graphResults" class="mini" aria-live="polite">Enter a scientific question and click Check the evidence. The check uses curated records and transparent keyword matching, not live peer review.</div>
+<section class="panel sectionhide" id="tab-graph">
+<div class="sectionHead"><div><span class="home-eyebrow">EVIDENCE-LINKED RESEARCH</span><h2>Scientific Question Explorer</h2><p class="muted small">Start with your scientific question, not a preselected hypothesis. Explore research mechanisms, available source records and new literature leads.</p></div><span class="pill">Curated research + live source discovery</span></div>
+<div class="ask-question-panel">
+ <label class="label" for="graphQuery">What would you like to investigate?</label>
+ <input id="graphQuery" class="wide" type="search" placeholder="e.g., Which bacterial metabolites influence inflammation?" autocomplete="off">
+ <div id="btiQuestionExamples" class="ask-examples" aria-label="Example research questions"></div>
+ <div class="toolbar ask-action-row"><button class="btn primary" type="button" id="graphCheck">Explore scientific evidence</button><button class="btn" type="button" id="graphReport">Export research results</button></div>
+ <p id="graphQueryHelp" class="muted small">The question drives the answer. Curated scientific explanations are shown only for supported topics; other queries offer external publication searches. This is not a generative AI model or clinical assessment.</p>
+</div>
+<div id="graphResults" class="ask-results" aria-live="polite"><div class="ask-empty"><strong>Ask your first research question</strong><p>For example, which microbial metabolites influence inflammation? You will see a topic-specific overview, mechanism context and linked publications.</p></div></div>
+<details class="ask-graph-reference" id="btiCuratedGraph">
+ <summary><strong>Explore the curated Knowledge Graph</strong><span class="muted small">Optional claim-based diagrams and linked records ↓</span></summary>
+ <div class="toolbar"><label class="label" for="graphArea">Research domain</label><select id="graphArea"><option>All</option><option>Oncology</option><option>Cardiometabolic</option><option>Microbiome</option></select><button class="btn" type="button" id="graphReload">Refresh knowledge graph</button><button class="btn" type="button" id="graphExport">Export graph JSON</button></div>
+ <div id="graphSummary" class="pills"></div>
+ <div class="mini ask-diagram-wrap" style="overflow:auto"><svg id="graphDiagram" viewBox="0 0 840 185" width="100%" style="min-width:530px;display:block" role="img" aria-label="Conceptual diagram connecting intervention, disease, mechanism, biomarker, and evidence records"></svg></div>
+ <label class="label" for="graphClaim">Select a separate curated claim to inspect (does not override your typed question)</label>
+ <select class="wide" id="graphClaim"></select>
+ <div id="graphDetail" class="mini" aria-live="polite"></div>
+</details>
 </section>
 <section class="panel sectionhide bti-community" id="tab-community" aria-labelledby="communityTitle">
 <div class="sectionHead community-head">
@@ -566,8 +614,13 @@ document.addEventListener('DOMContentLoaded',()=>{renderBriefs();runCommand()});
     if(!graph.claims.length){clear(by('graphDiagram'));fail(target,'No curated claims in this category.');return}
     detail();
   }catch(ex){fail(target,'Could not display the knowledge graph: '+ex.message)}}
-  async function check(){const q=by('graphQuery').value.trim();if(q.length<3){fail(by('graphResults'),'Enter a question containing at least 3 characters.');return}const out=by('graphResults');out.textContent='Checking curated evidence…';try{const r=await fetch('/api/knowledge/check',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({query:q,area:by('graphArea').value})});if(!r.ok)throw new Error('HTTP '+r.status);const d=await r.json();lastCheck=d;clear(out);field(out,'Method',d.method);field(out,'Contradiction status',d.contradiction_status+' — '+d.contradiction_note);out.appendChild(e('h4','Matched claims'));if(!d.matched.length)out.appendChild(e('p','No matching curated claims.'));d.matched.forEach(item=>{const wrap=e('div');wrap.style.borderTop='1px solid #dce8ee';wrap.style.padding='10px 0';wrap.appendChild(e('b',item.claim.title));field(wrap,'Evidence tier',item.claim.grade.replaceAll('_',' '));field(wrap,'Interpretation',item.claim.outcome);field(wrap,'Caveat',item.claim.limitations);field(wrap,'Matched terms',item.matching_terms.join(', '));out.appendChild(wrap)});out.appendChild(e('h4','Evidence flags'));if(d.flags.length)d.flags.forEach(t=>out.appendChild(e('p','• '+t)));else out.appendChild(e('p','No additional rule-based flags. This is not a confirmation of safety or efficacy.'))}catch(ex){fail(out,'Evidence check unavailable: '+ex.message)}}
-  document.addEventListener('DOMContentLoaded',()=>{const selector=by('workspaceSelect');if(!selector)return;by('graphArea').addEventListener('change',refresh);by('graphReload').addEventListener('click',refresh);by('graphClaim').addEventListener('change',detail);by('graphCheck').addEventListener('click',check);by('graphExport').addEventListener('click',()=>{if(graph)save('bti_curated_knowledge_graph_v1_2.json',graph)});by('graphReport').addEventListener('click',()=>{if(lastCheck)save('bti_evidence_check_v1_2.json',lastCheck);else notify('Run an evidence check first.','warning')});refresh()});
+  async function check(){
+  const query=by('graphQuery')?.value.trim()||'';
+  const out=by('graphResults');
+  if(!window.btiAskScientificQuestion){fail(out,'The question library did not load. Refresh the page and try again.');return}
+  await window.btiAskScientificQuestion({query,area:by('graphArea')?.value||'All',claimId:by('graphClaim')?.value||'',setReport:r=>{lastCheck=r}});
+}
+  document.addEventListener('DOMContentLoaded',()=>{const selector=by('workspaceSelect');if(!selector)return;by('graphArea').addEventListener('change',refresh);by('graphReload').addEventListener('click',refresh);by('graphClaim').addEventListener('change',detail);by('graphCheck').addEventListener('click',check);by('graphExport').addEventListener('click',()=>{if(graph)save('bti_curated_knowledge_graph_v1_2.json',graph)});by('graphReport').addEventListener('click',()=>{if(lastCheck)save('bti_evidence_check_v1_2.json',lastCheck);else {const msg=by('graphQueryHelp');if(msg)msg.textContent='Ask a question and explore evidence before exporting a report.';}});refresh()});
 })();
 </script><script>
 (()=>{
@@ -809,4 +862,4 @@ document.addEventListener('DOMContentLoaded',()=>{
   });
  });
 });
-</script><script src="community.js" defer></script></body></html>
+</script><script src="scientific-question.js" defer></script><script src="community.js" defer></script></body></html>
