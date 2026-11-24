@@ -318,10 +318,6 @@ html{scroll-behavior:smooth}#btiHomeHero,#btiMechanismFeature,#homeResearchExplo
 /* Interactive central Host–bacteria hotspot and same-page species explorer */
 .bti-host-graphic{position:relative;width:100%;overflow:hidden;border:1px solid #daeaed;border-radius:16px;background:#f5fcfd}
 .bti-feature-art .bti-host-graphic img{width:100%;display:block;height:auto;border:0;border-radius:0}
-.bti-host-hotspot{position:absolute;left:38.25%;top:43.83%;width:22.33%;height:12.34%;display:block;cursor:pointer;border-radius:999px;background:transparent;border:2px solid transparent;padding:0;z-index:1;transition:box-shadow .15s,border-color .15s,background .15s}
-.bti-host-hotspot:hover,.bti-host-hotspot:focus-visible{border-color:#70e4d9;background:#0c5a6921;box-shadow:0 0 0 4px #69d8d744,0 0 15px #51b4bd55;outline:0}
-.bti-host-hotspot[aria-expanded=true]{border-color:#54c5b7;box-shadow:0 0 0 3px #51c9be55}
-.bti-visually-hidden{position:absolute;width:1px;height:1px;clip:rect(0,0,0,0);overflow:hidden;white-space:nowrap}
 .bti-feature-copy>.bti-species-link{display:block;background:#edf9f8;color:#11767c;font-size:12px;font-weight:850;border:1px solid #bfe2e0;padding:11px 14px;border-radius:10px;margin-top:11px;cursor:pointer;text-align:left}
 .bti-feature-copy>.bti-species-link:hover{background:#d7f3ee}
 .bti-species-explorer[hidden]{display:none!important}
@@ -364,7 +360,6 @@ html{scroll-behavior:smooth}#btiHomeHero,#btiMechanismFeature,#homeResearchExplo
 @media(max-width:1080px){.bti-species-filters{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:850px){.bti-species-layout{grid-template-columns:1fr}.bti-species-list{max-height:285px}.bti-species-explorer{padding:15px}.bti-species-header{flex-wrap:wrap}}
 @media(max-width:530px){.bti-species-filters{grid-template-columns:1fr}.bti-species-facts{grid-template-columns:1fr}.bti-species-close{width:100%}}
-@media(prefers-reduced-motion:reduce){.bti-host-hotspot{transition:none}}
 
 /* Collapsible immune research explorer: compact on the homepage until requested */
 .immune-explorer-collapsible{padding:0;overflow:hidden}
@@ -432,7 +427,7 @@ window.notify=function(message){const x=document.getElementById('reviewStatus');
 </section>
 <section class="bti-featured" id="btiMechanismFeature" aria-labelledby="btiMechanismHeading">
  <div class="bti-feature-copy"><span class="bti-kicker">◈ FEATURED MECHANISM EXPLORER</span><h2 id="btiMechanismHeading">Host–Bacteria<br>Therapeutic Interface</h2><p>See how bacterial platforms may interact with the immune system, tumor environments, microbial ecosystems, and metabolic signaling.</p><div class="bti-feature-points"><span>✓ Connect bacterial features to host mechanisms</span><span>✓ Explore oncology, cardiometabolic and microbiome contexts</span><span>✓ Follow evidence into detailed research</span></div><a href="#homeResearchExplorer" class="bti-primary-cta">Explore Mechanistic Pathways ↗</a><button type="button" class="bti-species-link" id="btiOpenSpeciesFromText" aria-controls="btiSpeciesExplorer" aria-expanded="false">Therapeutic Bacterial Species &amp; Strain Explorer ↗</button></div>
- <figure class="bti-feature-art"><div class="bti-host-graphic"><img src="assets/host-bacteria-interface-clean.svg" loading="eager" width="1200" height="632" alt="Conceptual scientific illustration of bacterial therapeutic platforms interacting with host immune and metabolic biology through six mechanistic pathways; the central Host–bacteria node opens the species and strain explorer"><button type="button" class="bti-host-hotspot" id="btiOpenSpecies" aria-controls="btiSpeciesExplorer" aria-expanded="false" aria-label="Explore therapeutic bacterial species, strains and cell-envelope components from the central Host–bacteria node"><span class="bti-visually-hidden">Explore 22 therapeutic bacterial preparations and research entries</span></button></div><figcaption>Click the central <strong>Host–bacteria</strong> node to explore therapeutic species, strains, and key cell components.</figcaption></figure>
+ <figure class="bti-feature-art"><div class="bti-host-graphic"><img src="assets/host-bacteria-interface-clean.svg" loading="eager" width="1200" height="632" alt="Conceptual scientific illustration of bacterial therapeutic platforms interacting with host immune and metabolic biology through six mechanistic pathways"></div><figcaption>Conceptual illustration of host–bacteria interactions across therapeutic mechanisms.</figcaption></figure>
 </section>
 <section class="bti-species-explorer" id="btiSpeciesExplorer" aria-labelledby="btiSpeciesTitle" hidden>
  <div class="bti-species-header">
