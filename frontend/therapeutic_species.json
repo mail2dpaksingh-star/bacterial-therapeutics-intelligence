@@ -1,0 +1,594 @@
+{
+  "version": 1,
+  "updated_at": "2026-11-24",
+  "about": "Scientifically qualified, static species-and-strain explorer for bacterial and microbiota-based therapeutics. Classification and clinical status are product/strain-specific; categorical descriptions are educational only.",
+  "entries": [
+    {
+      "id": "bcg",
+      "name": "Mycobacterium bovis BCG",
+      "strain": "TICE BCG (named product strain)",
+      "category": "Oncology",
+      "gram": "Acid-fast / mycolic-acid-rich",
+      "modality": "Live attenuated immunotherapy",
+      "stage": "Approved for specified bladder indications",
+      "indications": [
+        "Bladder cancer"
+      ],
+      "components": [
+        "Mycolic-acid-rich envelope",
+        "Peptidoglycan–arabinogalactan",
+        "Cell-wall lipids and pattern-recognition ligands"
+      ],
+      "mechanism": "Local BCG exposure can recruit innate immune cells and support antitumor immune responses in the bladder; the precise mechanisms are multifactorial.",
+      "cargo": "No engineered payload in the licensed TICE BCG product.",
+      "delivery": "Intravesical, under specialist supervision.",
+      "evidence": "Licensed bacterial therapeutic for specified non-muscle-invasive bladder cancer indications; not a precedent proving engineered platforms.",
+      "companies": "bcg",
+      "sources": [
+        {
+          "label": "FDA TICE BCG product page",
+          "url": "https://www.fda.gov/vaccines-blood-biologics/vaccines/tice-bcg",
+          "type": "FDA licensed biologic"
+        }
+      ],
+      "notes": "Specific BCG strains and products are not interchangeable without evidence."
+    },
+    {
+      "id": "salmonella",
+      "name": "Salmonella enterica serovar Typhimurium",
+      "strain": "Attenuated VNP20009 (historical research strain)",
+      "category": "Oncology",
+      "gram": "Gram-negative",
+      "modality": "Engineered/attenuated live bacterial vector",
+      "stage": "Historical Phase 1; investigational",
+      "indications": [
+        "Advanced solid tumors",
+        "Tumor immune microenvironment"
+      ],
+      "components": [
+        "LPS-containing outer membrane",
+        "Peptidoglycan",
+        "Flagellin and surface antigens"
+      ],
+      "mechanism": "Tumor-associated exposure, bacterial sensing, and local inflammatory activation have been investigated with attenuated strains; broad clinical antitumor efficacy is unproven.",
+      "cargo": "Investigational surface/payload engineering; strain-specific, not a single validated cargo.",
+      "delivery": "Systemic or local in historic clinical studies; research only.",
+      "evidence": "Human phase 1 experience exists for VNP20009; not an approved cancer treatment.",
+      "companies": "mulberry",
+      "sources": [
+        {
+          "label": "Phase I study of attenuated Salmonella VNP20009",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/11773163/",
+          "type": "Clinical study"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "listeria",
+      "name": "Listeria monocytogenes",
+      "strain": "Attenuated investigational antigen-delivery strains",
+      "category": "Oncology",
+      "gram": "Gram-positive",
+      "modality": "Attenuated bacterial cancer-vaccine vector",
+      "stage": "Clinical research; investigational",
+      "indications": [
+        "Tumor-associated antigen vaccination",
+        "T-cell priming"
+      ],
+      "components": [
+        "Peptidoglycan",
+        "Lipoteichoic acid",
+        "Intracellular antigen-presentation interactions"
+      ],
+      "mechanism": "Attenuated platforms are studied to stimulate antigen-specific T-cell immunity using intracellular antigen handling.",
+      "cargo": "Cancer-antigen cargo in investigational platforms.",
+      "delivery": "Systemic investigational vaccine administration; protocol-dependent.",
+      "evidence": "Cancer-vaccine studies have involved attenuated strains; no general approval for Listeria as cancer therapy.",
+      "companies": null,
+      "sources": [
+        {
+          "label": "Listeria vaccine vectors and therapeutic immune responses",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/15210801/",
+          "type": "Mechanistic research"
+        },
+        {
+          "label": "Attenuated Listeria platform for cancer immunotherapy",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19020110/",
+          "type": "Preclinical translational study"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "c_novyi",
+      "name": "Clostridium novyi",
+      "strain": "C. novyi-NT (nontoxic investigational strain)",
+      "category": "Oncology",
+      "gram": "Gram-positive",
+      "modality": "Attenuated anaerobic bacterial spores",
+      "stage": "Early clinical research",
+      "indications": [
+        "Hypoxic solid-tumor regions"
+      ],
+      "components": [
+        "Spore structure",
+        "Peptidoglycan",
+        "Anaerobic germination biology"
+      ],
+      "mechanism": "Tumor hypoxia-associated growth and local lysis/inflammation were studied in a first-in-human intratumoral study.",
+      "cargo": "No specific engineered therapeutic cargo in the cited NT study.",
+      "delivery": "Intratumoral administration in clinical research.",
+      "evidence": "A Phase 1 study reported biologic activity and clinically important adverse events; not an approved treatment.",
+      "companies": null,
+      "sources": [
+        {
+          "label": "First-in-human C. novyi-NT solid-tumor study",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33046513/",
+          "type": "Clinical study"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "ecoli_nissle",
+      "name": "Escherichia coli",
+      "strain": "Nissle 1917 (EcN); engineered investigational derivatives",
+      "category": "Oncology",
+      "gram": "Gram-negative",
+      "modality": "Engineered commensal bacterial chassis",
+      "stage": "Clinical research; program-specific",
+      "indications": [
+        "Metabolic disorders",
+        "Tumor-localized engineered delivery",
+        "Gastrointestinal functions"
+      ],
+      "components": [
+        "LPS-containing outer membrane",
+        "Periplasm",
+        "Peptidoglycan",
+        "Fimbriae"
+      ],
+      "mechanism": "EcN is a widely studied chassis for engineered substrate conversion, biological sensing, and local expression of therapeutic functions; mechanisms depend on the construct.",
+      "cargo": "Examples include metabolite-conversion enzymes or therapeutic proteins in distinct programs.",
+      "delivery": "Typically oral for gut-targeted programs; alternative routes are experimental.",
+      "evidence": "Clinical research includes historical Synlogic engineered EcN programs; their outcomes and status are program-specific.",
+      "companies": null,
+      "sources": [
+        {
+          "label": "FDA orphan designation: engineered E. coli Nissle 1917",
+          "url": "https://www.accessdata.fda.gov/scripts/opdlisting/oopd/detailedIndex.cfm?cfgridkey=608717",
+          "type": "Regulatory research record"
+        },
+        {
+          "label": "Clinical study planning for Synlogic SYNB1934",
+          "url": "https://clinicaltrials.gov/study/NCT05764239",
+          "type": "Clinical trial record"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "l_lactis",
+      "name": "Lactococcus lactis",
+      "strain": "LL-Thy12 (engineered IL-10-producing research strain)",
+      "category": "Microbiome",
+      "gram": "Gram-positive",
+      "modality": "Engineered live cytokine-delivery platform",
+      "stage": "Historical human Phase 1 research",
+      "indications": [
+        "Crohn's disease",
+        "Mucosal immune regulation"
+      ],
+      "components": [
+        "Thick peptidoglycan",
+        "Lipoteichoic acid",
+        "Cell-membrane proteins"
+      ],
+      "mechanism": "Engineered bacteria have been studied for local IL-10 exposure and mucosal immune regulation in Crohn's disease.",
+      "cargo": "IL-10 in the historical LL-Thy12 research program.",
+      "delivery": "Oral experimental mucosal delivery.",
+      "evidence": "Phase 1 feasibility research was published; this is not an approved Crohn's therapy.",
+      "companies": null,
+      "sources": [
+        {
+          "label": "Phase I engineered Lactococcus lactis expressing IL-10",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/16716759/",
+          "type": "Clinical study"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "l_cremoris",
+      "name": "Lactococcus lactis subsp. cremoris / L. cremoris",
+      "strain": "Aurealis AUP-55 oncology research chassis",
+      "category": "Oncology",
+      "gram": "Gram-positive",
+      "modality": "Engineered therapeutic-protein delivery",
+      "stage": "Preclinical oncology program",
+      "indications": [
+        "Tumor immune microenvironment",
+        "Solid tumors"
+      ],
+      "components": [
+        "Thick peptidoglycan",
+        "Lipoteichoic acid",
+        "Cell-envelope display"
+      ],
+      "mechanism": "The engineered lactic-acid bacterial chassis is being investigated for delivery of therapeutic protein functions in tumor-related research.",
+      "cargo": "Engineered therapeutic proteins; exact program-dependent functions should be checked against public disclosure.",
+      "delivery": "Program-specific investigational delivery; not an approved route.",
+      "evidence": "Company reports AUP-55 as preclinical; results from a separate wound-healing program cannot establish its oncology efficacy.",
+      "companies": "aurealis",
+      "sources": [
+        {
+          "label": "Aurealis cancer program",
+          "url": "https://aurealistherapeutics.com/cancer/",
+          "type": "Company preclinical program"
+        },
+        {
+          "label": "Aurealis pipeline and science",
+          "url": "https://aurealistherapeutics.com/pipeline-and-science/",
+          "type": "Company pipeline"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "c_butyricum",
+      "name": "Clostridium butyricum",
+      "strain": "MIYAIRI 588 (CBM588)",
+      "category": "Oncology",
+      "gram": "Gram-positive",
+      "modality": "Live probiotic adjunct in immunotherapy studies",
+      "stage": "Human clinical research",
+      "indications": [
+        "Renal-cell carcinoma combination immunotherapy",
+        "Gut microbial ecosystem support"
+      ],
+      "components": [
+        "Endospore",
+        "Peptidoglycan",
+        "Fermentation-derived butyrate"
+      ],
+      "mechanism": "CBM588 has been investigated as an oral adjunct to immune-checkpoint therapy, potentially affecting gut microbial composition and immune response.",
+      "cargo": "Native metabolic activity, not an engineered oncology payload.",
+      "delivery": "Oral supplementation in oncology research.",
+      "evidence": "Small randomized clinical studies exist; these do not establish a universally effective cancer therapy.",
+      "companies": null,
+      "sources": [
+        {
+          "label": "Randomized phase 1 CBM588 with nivolumab/ipilimumab",
+          "url": "https://www.nature.com/articles/s41591-022-01694-6",
+          "type": "Clinical study"
+        },
+        {
+          "label": "CBM588 with cabozantinib/nivolumab randomized trial",
+          "url": "https://www.nature.com/articles/s41591-024-03086-4",
+          "type": "Clinical study"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "akkermansia",
+      "name": "Akkermansia muciniphila",
+      "strain": "Live or pasteurized strains used in human studies",
+      "category": "Cardiometabolic",
+      "gram": "Gram-negative",
+      "modality": "Live or pasteurized commensal preparation",
+      "stage": "Human proof-of-concept studies",
+      "indications": [
+        "Insulin resistance",
+        "Metabolic syndrome",
+        "Body-weight maintenance"
+      ],
+      "components": [
+        "Outer membrane",
+        "Mucin-associated proteins",
+        "Microbial metabolites"
+      ],
+      "mechanism": "Mucin-associated ecology, host barrier interactions and immunometabolic signaling are under active investigation, including pasteurized preparations.",
+      "cargo": "Native surface proteins and metabolites; no engineered cargo in cited trials.",
+      "delivery": "Oral study preparations.",
+      "evidence": "Human trials have examined safety and metabolic outcomes; clinical effects are preparation- and indication-dependent.",
+      "companies": null,
+      "sources": [
+        {
+          "label": "Human exploratory Akkermansia trial (2019)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31263284/",
+          "type": "Human clinical study"
+        },
+        {
+          "label": "Pasteurized A. muciniphila weight-loss maintenance trial (2026)",
+          "url": "https://www.nature.com/articles/s41591-026-04394-7",
+          "type": "Clinical study"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "faecalibacterium",
+      "name": "Faecalibacterium prausnitzii",
+      "strain": "EXL01 investigated in Crohn's disease",
+      "category": "Microbiome",
+      "gram": "Atypical / Gram-variable staining",
+      "modality": "Next-generation commensal live biotherapeutic",
+      "stage": "First-in-human research",
+      "indications": [
+        "Crohn's disease",
+        "Intestinal inflammatory signaling"
+      ],
+      "components": [
+        "Atypical cell envelope",
+        "Butyrate-production pathways",
+        "Oxygen-sensitive physiology"
+      ],
+      "mechanism": "A butyrate-producing intestinal commensal studied for immune regulation and intestinal epithelial interactions; Gram-staining and envelope classification require nuance.",
+      "cargo": "Native microbial metabolic functions, not an engineered payload in the referenced EXL01 study.",
+      "delivery": "Oral investigational administration.",
+      "evidence": "A first-in-human Crohn's disease study was published in 2026; not an approved treatment.",
+      "companies": null,
+      "sources": [
+        {
+          "label": "EXL01 first-in-human Crohn's disease trial",
+          "url": "https://www.nature.com/articles/s41467-026-72375-y",
+          "type": "Clinical research"
+        },
+        {
+          "label": "Ecology and atypical envelope of F. prausnitzii",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4063839/",
+          "type": "Mechanistic review"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "b_longum",
+      "name": "Bifidobacterium longum",
+      "strain": "Various strains (strain-specific evidence required)",
+      "category": "Microbiome",
+      "gram": "Gram-positive",
+      "modality": "Live probiotic / engineered research chassis",
+      "stage": "Strain-specific human and preclinical studies",
+      "indications": [
+        "Intestinal immune regulation",
+        "Microbiome-immune interactions"
+      ],
+      "components": [
+        "Peptidoglycan",
+        "Exopolysaccharides",
+        "Cell-surface adhesins"
+      ],
+      "mechanism": "Bifidobacterial ecology and immune interactions have been investigated as probiotic or engineered-delivery concepts.",
+      "cargo": "Native microbial metabolites; research concepts include strain-specific proteins.",
+      "delivery": "Primarily oral in probiotic research.",
+      "evidence": "No single clinical-efficacy claim applies to all strains of B. longum.",
+      "companies": null,
+      "sources": [
+        {
+          "label": "Search B. longum clinical evidence on PubMed",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%22Bifidobacterium%20longum%22%20probiotic%20randomized%20clinical%20trial",
+          "type": "Literature search lead"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "l_plantarum",
+      "name": "Lactiplantibacillus plantarum",
+      "strain": "Formerly Lactobacillus plantarum; diverse probiotic strains",
+      "category": "Microbiome",
+      "gram": "Gram-positive",
+      "modality": "Live probiotic / candidate engineered chassis",
+      "stage": "Strain-dependent human research",
+      "indications": [
+        "Gastrointestinal symptoms",
+        "Mucosal immune interactions"
+      ],
+      "components": [
+        "Peptidoglycan",
+        "Teichoic acids",
+        "Surface adhesins"
+      ],
+      "mechanism": "Cell-envelope and metabolite effects vary across probiotic strains and experimental host settings.",
+      "cargo": "Native fermentation products; engineered cargo only in individual research programs.",
+      "delivery": "Oral probiotic and investigational mucosal studies.",
+      "evidence": "A species name alone cannot establish strain-specific clinical benefits.",
+      "companies": null,
+      "sources": [
+        {
+          "label": "Search L. plantarum clinical trials",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%22Lactiplantibacillus%20plantarum%22%20randomized%20trial",
+          "type": "Literature search lead"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "l_rhamnosus",
+      "name": "Lacticaseibacillus rhamnosus",
+      "strain": "GG (LGG); formerly Lactobacillus rhamnosus",
+      "category": "Microbiome",
+      "gram": "Gram-positive",
+      "modality": "Live probiotic",
+      "stage": "Human probiotic research",
+      "indications": [
+        "Gastrointestinal disorders",
+        "Mucosal host interactions"
+      ],
+      "components": [
+        "Peptidoglycan",
+        "Pili",
+        "Exopolysaccharides"
+      ],
+      "mechanism": "The LGG strain is studied for mucosal adherence and immune modulation; disease-specific effect sizes and safety depend on the population and intervention.",
+      "cargo": "Native microbial function; not a genetically engineered therapeutic cargo.",
+      "delivery": "Oral probiotic.",
+      "evidence": "Probiotic evidence is strain-specific and does not imply cancer therapy or universal therapeutic effects.",
+      "companies": null,
+      "sources": [
+        {
+          "label": "LGG evidence overview (PubMed query)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%22Lacticaseibacillus%20rhamnosus%20GG%22%20randomized%20trial",
+          "type": "Literature search lead"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "b_subtilis",
+      "name": "Bacillus subtilis",
+      "strain": "Selected probiotic strains; research-stage engineered platforms",
+      "category": "Microbiome",
+      "gram": "Gram-positive",
+      "modality": "Spore-forming probiotic / research chassis",
+      "stage": "Strain-specific research",
+      "indications": [
+        "Gut microbiome",
+        "Oral biologic-delivery concepts"
+      ],
+      "components": [
+        "Peptidoglycan",
+        "Endospore coat",
+        "Surface-associated proteins"
+      ],
+      "mechanism": "Spore tolerance and bacterial surface architecture motivate strain-specific probiotic and delivery research, without implying approved engineered biologics.",
+      "cargo": "Experimental antigen or protein display concepts only.",
+      "delivery": "Oral probiotic research.",
+      "evidence": "Clinical outcomes and quality attributes are strain- and product-dependent.",
+      "companies": null,
+      "sources": [
+        {
+          "label": "Search B. subtilis probiotic clinical trials",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%22Bacillus%20subtilis%22%20probiotic%20randomized%20trial",
+          "type": "Literature search lead"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "b_clausii",
+      "name": "Alkalihalobacillus clausii (Bacillus clausii)",
+      "strain": "Various commercial probiotic strains",
+      "category": "Microbiome",
+      "gram": "Gram-positive",
+      "modality": "Spore-forming probiotic",
+      "stage": "Human probiotic-use research",
+      "indications": [
+        "Gastrointestinal health",
+        "Antibiotic-associated gut disturbances"
+      ],
+      "components": [
+        "Endospore",
+        "Peptidoglycan",
+        "Cell-envelope proteins"
+      ],
+      "mechanism": "Spore survival and effects on community function have been investigated in gastrointestinal probiotic settings; mechanisms differ by strain.",
+      "cargo": "Native bacterial functions; no general engineered-cargo program established.",
+      "delivery": "Oral probiotic products.",
+      "evidence": "Not equivalent to a licensed treatment for systemic inflammatory or oncologic disease.",
+      "companies": null,
+      "sources": [
+        {
+          "label": "Search B. clausii clinical studies",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%22Bacillus%20clausii%22%20clinical%20randomized%20trial",
+          "type": "Literature search lead"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "b_fragilis",
+      "name": "Bacteroides fragilis",
+      "strain": "Selected non-toxigenic research strains",
+      "category": "Microbiome",
+      "gram": "Gram-negative",
+      "modality": "Microbiome-associated immunomodulatory research",
+      "stage": "Preclinical mechanistic research",
+      "indications": [
+        "Intestinal immune homeostasis",
+        "Mucosal immune signaling"
+      ],
+      "components": [
+        "Outer membrane and LPS variants",
+        "Capsular polysaccharide A",
+        "Cell-surface glycans"
+      ],
+      "mechanism": "Capsular polysaccharide A has been studied for host immune regulation in experimental systems. Strain variation and pathogenic potential matter.",
+      "cargo": "Native polysaccharides; not an approved therapeutic bacterial product.",
+      "delivery": "Experimental intestinal research only.",
+      "evidence": "Do not generalize from non-toxigenic research strains to pathogenic or enterotoxigenic strains.",
+      "companies": null,
+      "sources": [
+        {
+          "label": "Bacteroides fragilis polysaccharide A immunoregulation review search",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%22Bacteroides%20fragilis%22%20polysaccharide%20A%20immune%20regulation",
+          "type": "Literature search lead"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "vowst",
+      "name": "Defined bacterial-spore community",
+      "strain": "VOWST (fecal microbiota spores, live-brpk)",
+      "category": "Microbiome",
+      "gram": "Mixed / community",
+      "modality": "Oral microbiota-based product",
+      "stage": "FDA approved for recurrent CDI prevention",
+      "indications": [
+        "Prevention of recurrent Clostridioides difficile infection following antibiotic treatment"
+      ],
+      "components": [
+        "Spore-forming bacterial community",
+        "Microbial ecosystem functions",
+        "Colonization resistance"
+      ],
+      "mechanism": "Defined administration of a bacterial-spore community aims to restore colonization resistance after microbiome disruption.",
+      "cargo": "Community composition; not a single engineered bacterial strain.",
+      "delivery": "Oral FDA-authorized product.",
+      "evidence": "FDA approved for prevention of recurrent CDI in qualifying adults; not approved to treat active CDI or unrelated diseases.",
+      "companies": null,
+      "sources": [
+        {
+          "label": "FDA VOWST",
+          "url": "https://www.fda.gov/vaccines-blood-biologics/vowst",
+          "type": "FDA licensed product"
+        }
+      ],
+      "notes": "A community product is not a single named bacterial species."
+    },
+    {
+      "id": "rebyota",
+      "name": "Microbiota community therapy",
+      "strain": "REBYOTA (fecal microbiota, live-jslm)",
+      "category": "Microbiome",
+      "gram": "Mixed / community",
+      "modality": "Donor-derived microbiota product",
+      "stage": "FDA approved for recurrent CDI prevention",
+      "indications": [
+        "Prevention of recurrent Clostridioides difficile infection after antibiotic treatment"
+      ],
+      "components": [
+        "Diverse bacterial community",
+        "Community-level metabolic functions",
+        "Colonization resistance"
+      ],
+      "mechanism": "Microbiota restoration and ecological competition are proposed contributors to reduced recurrence risk.",
+      "cargo": "Live donor-derived bacterial microbiota, not a single engineered strain.",
+      "delivery": "Rectal FDA-authorized administration.",
+      "evidence": "FDA approved for prevention of recurrent CDI in qualifying adults; not approved for oncology or cardiometabolic disease.",
+      "companies": null,
+      "sources": [
+        {
+          "label": "FDA REBYOTA",
+          "url": "https://www.fda.gov/vaccines-blood-biologics/vaccines/rebyota",
+          "type": "FDA licensed product"
+        }
+      ],
+      "notes": "Contains multiple bacterial taxa; it is not a species-level product."
+    }
+  ]
+}
