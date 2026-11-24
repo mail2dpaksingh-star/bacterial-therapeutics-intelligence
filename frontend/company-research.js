@@ -36,6 +36,16 @@ function sourceList(parent,sources){
   if(row.note)add(item,'p',row.note);
  }
 }
+function featuredPublications(parent,p){
+ const ids=p.featured_publication_ids||[];
+ if(!ids.length)return;
+ const index=sourceIndex(p);
+ const selected=ids.map(id=>index[id]).filter(Boolean);
+ if(!selected.length)return;
+ const section=add(parent,'section',undefined,'company-profile-section');
+ add(section,'h5','Selected publications & AACR abstracts');
+ sourceList(section,selected);
+}
 function listPrograms(parent,p,view){
  const section=add(parent,'section',undefined,'company-profile-section');
  add(section,'h5',view==='clinical'?'Clinical development and reported outcomes':'Programs and latest documented status');
@@ -122,6 +132,7 @@ function render(){
  const focus=by('reviewLens')?.value||'overview',area=by('reviewArea')?.value||'All';
  header(target,p,area);
  if(focus==='overview'){
+  featuredPublications(target,p);
   listPrograms(target,p,'overview');
   safetySection(target,p);
   explanation(target,'Biological mechanism',p.mechanism);
