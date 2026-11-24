@@ -1,8 +1,8 @@
 {
-  "version": "1.0",
+  "version": "1.1",
   "snapshot_date": "2026-11-23",
-  "scope": "Curated public-source profiles as of November 23, 2026; status may have changed after document date.",
-  "method": "Program-specific dated-source summaries. Company statements, trial registrations, peer-reviewed publications and patents are distinct evidence types. Search leads are not legal FTO assessments.",
+  "scope": "Source-linked public profiles as of November 23, 2026; mixed company stages are represented by individual program, not company-wide phase.",
+  "method": "Stage is assessed per program, and some early adjacent modalities (bacteria-targeting vaccines, peptidoglycan antibodies, metabolic supplements, postbiotics) are distinguished from actual therapeutic bacterial-cell delivery. Patent links are leads, not FTO opinions. Source-level scientific verification and new disclosure checks are ongoing.",
   "companies": [
     {
       "id": "indaptus",
@@ -658,6 +658,713 @@
           "title": "FDA: durvalumab with BCG for high-risk NMIBC",
           "url": "https://www.fda.gov/drugs/cancer-approvals/fda-approves-durvalumab-combination-bacillus-calmette-guerin-high-risk-non-muscle-invasive-bladder",
           "note": "Separate approved combination indication; not evidence for new bacterial programs."
+        }
+      ]
+    },
+    {
+      "id": "aurexo",
+      "name": "Aurexo Therapeutics",
+      "focus": [
+        "Oncology"
+      ],
+      "platform": "AeBEV-001 engineered Lactobacillus-derived extracellular vesicles",
+      "classification": "Engineered bacterial extracellular vesicles · preclinical",
+      "technology_group": "Bacterial vesicles",
+      "preclinical_focus": true,
+      "programs": [
+        {
+          "name": "AeBEV-001",
+          "indication": "Triple-negative breast cancer",
+          "phase": "Preclinical in vitro / animal models",
+          "status": "Preclinical development",
+          "status_reason": "Company describes lead asset as preclinical.",
+          "outcome": "Company reports in vitro and animal-model work with engineered Lactobacillus-derived extracellular vesicles. No human trial outcome or regulatory authorization verified.",
+          "latest_report": "2026-11-23",
+          "source_ids": [
+            "aurexoSite"
+          ]
+        }
+      ],
+      "mechanism": "Engineered probiotic-derived extracellular vesicles intended as tumor-directed biological platforms; exposure, targeting specificity, and efficacy remain experimental.",
+      "clinical": "Preclinical research only in reviewed disclosures. Public company claims about safety or tumor selectivity have not been independently confirmed in human studies.",
+      "publication": "Company platform and research partnership disclosures; an independently published efficacy dataset was not verified for this snapshot.",
+      "patent": "Assess vesicle composition, engineering, payload or surface claims and destination jurisdictions separately; public searching does not establish FTO.",
+      "patent_links": [
+        {
+          "kind": "Patent search lead",
+          "date": "2026-11-23",
+          "title": "Explore public patent applications for Aurexo Therapeutics Lactobacillus extracellular vesicles",
+          "url": "https://patents.google.com/?q=Aurexo%20Therapeutics%20Lactobacillus%20extracellular%20vesicles",
+          "note": "Search lead only; no claim scope, ownership, family validity, or FTO determination."
+        }
+      ],
+      "sources": [
+        {
+          "id": "aurexoSite",
+          "kind": "Company development and platform page",
+          "date": "2026-11-23",
+          "title": "Aurexo engineered bacterial extracellular vesicle platform",
+          "url": "https://aurexotherapeutics.com/",
+          "note": "Company explicitly identifies preclinical E-BEV oncology programs, including AeBEV-001."
+        }
+      ]
+    },
+    {
+      "id": "aurealis",
+      "name": "Aurealis Therapeutics",
+      "focus": [
+        "Oncology"
+      ],
+      "platform": "AUP-55 · engineered Lactococcus cremoris therapeutic-protein delivery",
+      "classification": "Engineered live bacterial protein delivery · program preclinical",
+      "technology_group": "Engineered live bacteria",
+      "preclinical_focus": true,
+      "programs": [
+        {
+          "name": "AUP-55",
+          "indication": "Ovarian and intraperitoneal cancer; additional cancer settings exploratory",
+          "phase": "Preclinical oncology",
+          "status": "Preclinical development",
+          "status_reason": "Company pipeline labels AUP-55 as a preclinical oncology asset.",
+          "outcome": "Company describes mouse-model tumor-control findings from its engineered Lactococcus cremoris platform; no clinical cancer trial efficacy reported.",
+          "latest_report": "2026-11-23",
+          "source_ids": [
+            "aurealisCancer",
+            "aurealisPipeline"
+          ]
+        },
+        {
+          "name": "AUP-60",
+          "indication": "Inflammatory diseases",
+          "phase": "Discovery",
+          "status": "Discovery stage",
+          "status_reason": "Pipeline places inflammation programs in discovery.",
+          "outcome": "Company describes a discovery-stage inflammation pipeline concept; no candidate-level efficacy or clinical results were verified.",
+          "latest_report": "2026-11-23",
+          "source_ids": [
+            "aurealisPipeline"
+          ]
+        }
+      ],
+      "mechanism": "Engineered nonpathogenic lactic-acid bacteria as local producers of therapeutic protein combinations, conceptually modulating tissue immunity and repair.",
+      "clinical": "The company also has a separate clinical-stage wound-healing product AUP-16; this record follows its preclinical oncology and inflammation candidates only.",
+      "publication": "Company describes preclinical model data, conference presentations and a separate completed Phase 2 trial for AUP-16 (not evidence for AUP-55).",
+      "patent": "Examine Lactococcus chassis, therapeutic payload, formulation and method-of-use patent families by asset and jurisdiction.",
+      "patent_links": [
+        {
+          "kind": "Patent search lead",
+          "date": "2026-11-23",
+          "title": "Explore public patent applications for Aurealis Therapeutics AUP55 Lactococcus cremoris",
+          "url": "https://patents.google.com/?q=Aurealis%20Therapeutics%20AUP55%20Lactococcus%20cremoris",
+          "note": "Search lead only; no claim scope, ownership, family validity, or FTO determination."
+        }
+      ],
+      "sources": [
+        {
+          "id": "aurealisCancer",
+          "kind": "Company oncology program page",
+          "date": "2026-11-23",
+          "title": "Aurealis AUP-55 cancer program",
+          "url": "https://aurealistherapeutics.com/cancer/",
+          "note": "Explicitly describes preclinical AUP-55 and mouse-model findings."
+        },
+        {
+          "id": "aurealisPipeline",
+          "kind": "Company pipeline",
+          "date": "2026-11-23",
+          "title": "Aurealis therapeutic pipeline and science",
+          "url": "https://aurealistherapeutics.com/pipeline-and-science/",
+          "note": "Places AUP-55 in preclinical oncology and inflammation programs in discovery."
+        }
+      ]
+    },
+    {
+      "id": "mulberry",
+      "name": "Mulberry Biotherapeutics",
+      "focus": [
+        "Oncology"
+      ],
+      "platform": "MUL001 · attenuated bacterial intratumoral immunotherapy",
+      "classification": "Attenuated live bacterial therapy · preclinical",
+      "technology_group": "Engineered/attenuated live bacteria",
+      "preclinical_focus": true,
+      "programs": [
+        {
+          "name": "MUL001",
+          "indication": "NF2-related schwannomatosis and associated nerve-sheath tumors",
+          "phase": "Preclinical / clinical preparation",
+          "status": "Preclinical development",
+          "status_reason": "Company website describes animal-model proof of concept and translation planning.",
+          "outcome": "Company describes tumor microenvironment immune effects in preclinical models, including myeloid and T-cell changes. The same strain has historical safety experience in other programs, not an efficacy finding for MUL001.",
+          "latest_report": "2026-11-23",
+          "source_ids": [
+            "mulberrySite",
+            "mulberryAcquisition"
+          ]
+        }
+      ],
+      "mechanism": "An attenuated Salmonella-derived intratumoral approach intended to alter immune-suppressive macrophage and T-cell responses around slow-growing tumors.",
+      "clinical": "No MUL001 human therapeutic efficacy verified. October 2025 acquisition by an entity affiliated with Neopharm is relevant to company ownership, not evidence of program discontinuation.",
+      "publication": "Company cites peer-reviewed animal-model bacteriotherapy studies; human results for this target indication have not been verified.",
+      "patent": "Review attenuated strain, intratumoral delivery and target-indication claims, including ownership following 2025 acquisition.",
+      "patent_links": [
+        {
+          "kind": "Patent search lead",
+          "date": "2026-11-23",
+          "title": "Explore public patent applications for Mulberry Biotherapeutics MUL001 attenuated Salmonella",
+          "url": "https://patents.google.com/?q=Mulberry%20Biotherapeutics%20MUL001%20attenuated%20Salmonella",
+          "note": "Search lead only; no claim scope, ownership, family validity, or FTO determination."
+        }
+      ],
+      "sources": [
+        {
+          "id": "mulberrySite",
+          "kind": "Company platform and research page",
+          "date": "2026-11-23",
+          "title": "Mulberry Biotherapeutics MUL001 NF2 program",
+          "url": "https://www.mulberrybio.com/",
+          "note": "Describes animal data, product concept and clinical-transition ambitions."
+        },
+        {
+          "id": "mulberryAcquisition",
+          "kind": "Company acquisition announcement",
+          "date": "2025-10-01",
+          "title": "Mulberry Biotherapeutics acquisition announcement",
+          "url": "https://www.mulberrybio.com/_files/ugd/30da88_3383fb487b7c4e19a48e79a3ba8f4aca.pdf",
+          "note": "Corporate ownership transaction; science program described as moving toward clinical work."
+        }
+      ]
+    },
+    {
+      "id": "biomvis",
+      "name": "BiOMViS",
+      "focus": [
+        "Oncology",
+        "Microbiome"
+      ],
+      "platform": "Engineered bacterial outer-membrane vesicle vaccine and immunotherapy platform",
+      "classification": "Bacterial outer-membrane vesicles (OMV) · preclinical",
+      "technology_group": "Bacterial vesicles/cell envelope",
+      "preclinical_focus": true,
+      "programs": [
+        {
+          "name": "Engineered OMV immunotherapy platform",
+          "indication": "Cancer immunotherapy and infectious disease vaccines",
+          "phase": "Preclinical research / platform development",
+          "status": "Preclinical platform development",
+          "status_reason": "Company profile and supporting publications emphasize preclinical OMV work.",
+          "outcome": "Company is developing engineered bacterial outer-membrane vesicles incorporating antigens for immunotherapy and vaccine applications. No asset-specific human efficacy study was confirmed.",
+          "latest_report": "2026-10-15",
+          "source_ids": [
+            "biomvisHome",
+            "biomvisScience"
+          ]
+        }
+      ],
+      "mechanism": "Bacterial outer-membrane vesicles present microbial membrane components and antigens to host innate and adaptive immunity, supporting vaccine and immunotherapy concepts.",
+      "clinical": "Research-stage platform and vaccine studies in publicly reviewed sources; no broad clinical efficacy claim should be inferred.",
+      "publication": "Company provides a 2026 bibliography including primary OMV engineering and vaccine-platform publications.",
+      "patent": "Review OMV strain engineering, antigen display and production claims, plus specific cancer antigen licensing and ownership.",
+      "patent_links": [
+        {
+          "kind": "Patent search lead",
+          "date": "2026-11-23",
+          "title": "Explore public patent applications for BiOMViS outer membrane vesicles vaccine",
+          "url": "https://patents.google.com/?q=BiOMViS%20outer%20membrane%20vesicles%20vaccine",
+          "note": "Search lead only; no claim scope, ownership, family validity, or FTO determination."
+        }
+      ],
+      "sources": [
+        {
+          "id": "biomvisHome",
+          "kind": "Company website",
+          "date": "2026-11-23",
+          "title": "BiOMViS OMV vaccine and immunotherapy platform",
+          "url": "https://www.biomvis.com/",
+          "note": "Describes OMV prophylactic and immunotherapeutic programs."
+        },
+        {
+          "id": "biomvisScience",
+          "kind": "Company publications listing",
+          "date": "2026-10-15",
+          "title": "BiOMViS relevant OMV research publications",
+          "url": "https://www.biomvis.com/2026/10/15/relevant-publications-2026/",
+          "note": "Publications include engineered bacterial membrane vesicle vaccine studies."
+        },
+        {
+          "id": "biomvisInnovation",
+          "kind": "Company scientific platform",
+          "date": "2026-11-23",
+          "title": "BiOMViS OMV engineering platform",
+          "url": "https://www.biomvis.com/the-biomvis-innovation/",
+          "note": "Describes engineered OMV vaccine platform concepts."
+        }
+      ]
+    },
+    {
+      "id": "bactheravax",
+      "name": "Bactheravax",
+      "focus": [
+        "Oncology"
+      ],
+      "platform": "Therapeutic vaccine targeting tumor-associated bacteria",
+      "classification": "Bacteria-targeting cancer immunotherapy · adjacent category",
+      "technology_group": "Tumor microbiota targeting (adjacent)",
+      "preclinical_focus": true,
+      "programs": [
+        {
+          "name": "Tumor-associated bacterial-antigen immunotherapy",
+          "indication": "Colorectal cancer; other solid tumors exploratory",
+          "phase": "Preclinical immunotherapy",
+          "status": "Preclinical development",
+          "status_reason": "Company explicitly states preclinical development.",
+          "outcome": "Company is investigating therapeutic vaccination against tumor-associated bacteria such as Fusobacterium nucleatum, with the goal of modifying immune suppression and treatment resistance. No patient efficacy demonstrated.",
+          "latest_report": "2026-10",
+          "source_ids": [
+            "bactheravaxSite"
+          ]
+        }
+      ],
+      "mechanism": "Immune targeting of tumor-resident bacterial antigens; this is a vaccine targeting bacteria rather than administration of a therapeutic bacterial chassis.",
+      "clinical": "Preclinical only as described publicly. The approach is adjacent to bacteria-delivered medicines and must be categorized separately.",
+      "publication": "Company reports preclinical work and institutional collaborations; product-specific clinical efficacy data were not verified.",
+      "patent": "Assess vaccine composition, bacterial epitopes and disease-method claims; no FTO conclusion.",
+      "patent_links": [
+        {
+          "kind": "Patent search lead",
+          "date": "2026-11-23",
+          "title": "Explore public patent applications for Bactheravax Fusobacterium vaccine",
+          "url": "https://patents.google.com/?q=Bactheravax%20Fusobacterium%20vaccine",
+          "note": "Search lead only; no claim scope, ownership, family validity, or FTO determination."
+        }
+      ],
+      "sources": [
+        {
+          "id": "bactheravaxSite",
+          "kind": "Company program and updates",
+          "date": "2026-10",
+          "title": "Bactheravax cancer therapeutic vaccine platform",
+          "url": "https://bactheravax.com/",
+          "note": "Describes Fusobacterium-targeting research and explicitly calls program preclinical."
+        }
+      ]
+    },
+    {
+      "id": "seres",
+      "name": "Seres Therapeutics",
+      "focus": [
+        "Microbiome",
+        "Oncology"
+      ],
+      "platform": "SER-428, SER-603 and SER-147 cultivated bacterial consortia",
+      "classification": "Live bacterial consortia · preclinical programs at clinical-stage company",
+      "technology_group": "Defined live bacterial consortia",
+      "preclinical_focus": true,
+      "programs": [
+        {
+          "name": "SER-428",
+          "indication": "Prevention of bloodstream infections after sepsis / ICU antibiotic exposure",
+          "phase": "Preclinical / IND-enabling",
+          "status": "Preclinical development",
+          "status_reason": "November 2026 regulatory filing says preclinical and IND-enabling work ongoing.",
+          "outcome": "Company presented 2026 preclinical results for an oral-liquid live biotherapeutic based on SER-155-associated strains; no completed human SER-428 efficacy trial established.",
+          "latest_report": "2026-11-04",
+          "source_ids": [
+            "seresQuarter",
+            "seres428"
+          ]
+        },
+        {
+          "name": "SER-603",
+          "indication": "Inflammatory bowel disease",
+          "phase": "Preclinical",
+          "status": "Preclinical development",
+          "status_reason": "Company identifies SER-603 as preclinical.",
+          "outcome": "Company presented preclinical work on a designed bacterial consortium aimed at host epithelial and immune homeostasis; no clinical outcome shown for this candidate.",
+          "latest_report": "2026-05",
+          "source_ids": [
+            "seres603"
+          ]
+        },
+        {
+          "name": "SER-147",
+          "indication": "Chronic liver disease",
+          "phase": "Preclinical",
+          "status": "Preclinical development",
+          "status_reason": "Company program chart labels SER-147 preclinical.",
+          "outcome": "Company program page identifies SER-147 as preclinical; no human disease-outcome evidence confirmed.",
+          "latest_report": "2026-11-23",
+          "source_ids": [
+            "seresProgram"
+          ]
+        }
+      ],
+      "mechanism": "Designed oral commensal bacterial consortia intended to restore colonization resistance, epithelial barrier function and host immune homeostasis.",
+      "clinical": "Seres' separate SER-155 asset has Phase 1b clinical evidence. The three programs listed here are preclinical; clinical results for SER-155 cannot be transferred to them.",
+      "publication": "SER-428 and SER-603 preclinical congress data; status confirmed in Seres corporate disclosures.",
+      "patent": "Distinguish strains, consortia and manufacturing claims between SER-155 and later programs; composition-level FTO not confirmed.",
+      "patent_links": [
+        {
+          "kind": "Patent search lead",
+          "date": "2026-11-23",
+          "title": "Explore public patent applications for Seres Therapeutics SER428 SER603 SER147",
+          "url": "https://patents.google.com/?q=Seres%20Therapeutics%20SER428%20SER603%20SER147",
+          "note": "Search lead only; no claim scope, ownership, family validity, or FTO determination."
+        }
+      ],
+      "sources": [
+        {
+          "id": "seresQuarter",
+          "kind": "SEC quarterly regulatory filing",
+          "date": "2026-11-04",
+          "title": "Seres Q3 2026 10-Q",
+          "url": "https://ir.serestherapeutics.com/static-files/ecba937b-bc47-41fa-a679-e61d9a1dbe51",
+          "note": "SER-428 preclinical and IND-enabling stage described."
+        },
+        {
+          "id": "seres428",
+          "kind": "Company research news",
+          "date": "2026-10",
+          "title": "Seres SER-428 preclinical IDWeek data",
+          "url": "https://ir.serestherapeutics.com/news-releases/news-release-details/seres-therapeutics-present-preclinical-data-ser-428",
+          "note": "Preclinical proof-of-concept and formulation information."
+        },
+        {
+          "id": "seres603",
+          "kind": "Company scientific presentation news",
+          "date": "2026-05",
+          "title": "Seres SER-603 preclinical IBD data",
+          "url": "https://ir.serestherapeutics.com/news-releases/news-release-details/seres-therapeutics-presents-preclinical-data-digestive-disease",
+          "note": "Preclinical inflammatory-bowel-disease consortium."
+        },
+        {
+          "id": "seresProgram",
+          "kind": "Company pipeline",
+          "date": "2026-11-23",
+          "title": "Seres therapeutic programs",
+          "url": "https://www.serestherapeutics.com/our-programs/",
+          "note": "Lists SER-147 as preclinical and other programs."
+        }
+      ]
+    },
+    {
+      "id": "medosome",
+      "name": "Medosome Biotec",
+      "focus": [
+        "Cardiometabolic"
+      ],
+      "platform": "Engineered Lactobacillus delivering GLP-1-related proteins",
+      "classification": "Engineered probiotic protein delivery · preclinical grant-funded",
+      "technology_group": "Engineered live bacteria",
+      "preclinical_focus": true,
+      "programs": [
+        {
+          "name": "GLP-1-producing engineered probiotics",
+          "indication": "Type 2 diabetes / metabolic disorders",
+          "phase": "NIH-funded preclinical animal research",
+          "status": "Preclinical research",
+          "status_reason": "NIH proposal and company pipeline describe preclinical work.",
+          "outcome": "A 2026 NIH award supports engineering probiotics to deliver GLP-1-related therapeutic protein and testing in animal models. This is not an approved diabetes treatment or evidence of efficacy in humans.",
+          "latest_report": "2026-07-14",
+          "source_ids": [
+            "medosomeNIH",
+            "medosomePipeline"
+          ]
+        }
+      ],
+      "mechanism": "Engineered Lactobacillus strains as gastrointestinal biological-protein delivery platforms for metabolic signals.",
+      "clinical": "No clinical outcomes for the GLP-1-producing bacteria program were verified. The company has separate programs at different development stages.",
+      "publication": "NIH project summary and company program disclosures support research status; published human GLP-1 program outcomes not identified.",
+      "patent": "Review bacterial vector, expressed protein, delivery and disease-use claims, plus any licensed IP.",
+      "patent_links": [
+        {
+          "kind": "Patent search lead",
+          "date": "2026-11-23",
+          "title": "Explore public patent applications for Medosome Biotec Lactobacillus GLP1",
+          "url": "https://patents.google.com/?q=Medosome%20Biotec%20Lactobacillus%20GLP1",
+          "note": "Search lead only; no claim scope, ownership, family validity, or FTO determination."
+        }
+      ],
+      "sources": [
+        {
+          "id": "medosomeNIH",
+          "kind": "NIH/HHS grant award",
+          "date": "2026-07-14",
+          "title": "HHS TAGGS GLP-1 engineered probiotic project R43DK146558",
+          "url": "https://taggs.hhs.gov/Detail/AwardDetail?arg_AwardNum=R43DK146558&arg_ProgOfficeCode=119",
+          "note": "Grant describes a metabolic-disease animal proof-of-concept project."
+        },
+        {
+          "id": "medosomePipeline",
+          "kind": "Company pipeline",
+          "date": "2026-11-23",
+          "title": "Medosome Biotec pipeline",
+          "url": "https://mdbiotec.com/pipeline/",
+          "note": "Describes proposed probiotics-based GLP-1 delivery program."
+        }
+      ]
+    },
+    {
+      "id": "mrm",
+      "name": "MRM Health",
+      "focus": [
+        "Microbiome",
+        "Oncology",
+        "Cardiometabolic"
+      ],
+      "platform": "CORAL optimized bacterial consortia for immuno-oncology and liver research",
+      "classification": "Defined live bacterial consortia · preclinical programs at clinical-stage company",
+      "technology_group": "Defined live bacterial consortia",
+      "preclinical_focus": true,
+      "programs": [
+        {
+          "name": "CORAL immune-oncology consortium programs",
+          "indication": "Cancer immunotherapy support",
+          "phase": "Preclinical research",
+          "status": "Preclinical development",
+          "status_reason": "Company lists preclinical immune-oncology platform programs.",
+          "outcome": "Company describes preclinical immune-oncology programs and academic collaborations; patient-level outcomes for these specific programs have not been reported.",
+          "latest_report": "2026-11-23",
+          "source_ids": [
+            "mrmSite",
+            "mrmPipeline"
+          ]
+        },
+        {
+          "name": "CORAL liver / metabolic programs",
+          "indication": "Chronic liver / metabolic disorders",
+          "phase": "Preclinical research",
+          "status": "Preclinical development",
+          "status_reason": "Non-MH002 pipeline work is described as preclinical.",
+          "outcome": "Company reports research on disease-focused microbial consortia in liver and metabolic diseases; candidate-level human outcomes not independently verified.",
+          "latest_report": "2026-11-23",
+          "source_ids": [
+            "mrmPipeline",
+            "mrmNews"
+          ]
+        }
+      ],
+      "mechanism": "Rationally optimized bacterial consortia intended to change microbial ecosystem functions linked to inflammatory, metabolic and immunotherapy responses.",
+      "clinical": "MRM's separate MH002 IBD asset has completed Phase 2a and advanced clinically; that status must not be assigned to these preclinical research programs.",
+      "publication": "Company academic collaboration and pipeline disclosures; clinical MH002 data do not confirm the preclinical programs.",
+      "patent": "CORAL design, multi-strain combinations and manufacturing IP require separate search and claim analysis.",
+      "patent_links": [
+        {
+          "kind": "Patent search lead",
+          "date": "2026-11-23",
+          "title": "Explore public patent applications for MRM Health CORAL consortia patents",
+          "url": "https://patents.google.com/?q=MRM%20Health%20CORAL%20consortia%20patents",
+          "note": "Search lead only; no claim scope, ownership, family validity, or FTO determination."
+        }
+      ],
+      "sources": [
+        {
+          "id": "mrmSite",
+          "kind": "Company platform overview",
+          "date": "2026-11-23",
+          "title": "MRM Health microbiome therapeutics",
+          "url": "https://mrmhealth.com/",
+          "note": "Explicitly mentions preclinical immune-oncology and inflammatory programs."
+        },
+        {
+          "id": "mrmPipeline",
+          "kind": "Company pipeline",
+          "date": "2026-11-23",
+          "title": "MRM Health pipeline",
+          "url": "https://mrmhealth.com/pipeline.html",
+          "note": "Separates advanced MH002 clinical studies and preclinical programs."
+        },
+        {
+          "id": "mrmNews",
+          "kind": "Company research announcements",
+          "date": "2026",
+          "title": "MRM Health research news",
+          "url": "https://mrmhealth.com/news.html",
+          "note": "Includes preclinical liver-disease bacterial consortium research."
+        }
+      ]
+    },
+    {
+      "id": "firstbiome",
+      "name": "1stBiome",
+      "focus": [
+        "Cardiometabolic"
+      ],
+      "platform": "Engineered beneficial probiotics for metabolic health",
+      "classification": "Engineered probiotics · exploratory nutritional health products",
+      "technology_group": "Engineered probiotics (nutritional/adjacent)",
+      "preclinical_focus": true,
+      "programs": [
+        {
+          "name": "Engineered probiotic metabolic-health platform",
+          "indication": "Weight management, metabolic health and low-grade inflammation",
+          "phase": "Early preclinical / product R&D",
+          "status": "Preclinical research",
+          "status_reason": "Company and incubator sources identify early product R&D.",
+          "outcome": "Company is developing engineered beneficial microorganisms for metabolic-health applications. Public early-stage sources describe preclinical research; this is not an investigational drug trial or approved medical treatment.",
+          "latest_report": "2026-09",
+          "source_ids": [
+            "firstbiomeMVA",
+            "firstbiomeProfile"
+          ]
+        }
+      ],
+      "mechanism": "Engineering beneficial microbes to influence metabolic and inflammatory host signaling; consumer-health versus drug-development regulatory pathways must remain distinct.",
+      "clinical": "Early nutraceutical or nutritional-product positioning; no clinical drug efficacy or regulatory approval established.",
+      "publication": "Industry and incubator profiles, with preclinical data described secondarily; full peer-reviewed efficacy series not verified.",
+      "patent": "Any engineered probiotic composition, metabolic use and genetic stability claims require separate diligence.",
+      "patent_links": [
+        {
+          "kind": "Patent search lead",
+          "date": "2026-11-23",
+          "title": "Explore public patent applications for 1stBiome engineered probiotic metabolic health",
+          "url": "https://patents.google.com/?q=1stBiome%20engineered%20probiotic%20metabolic%20health",
+          "note": "Search lead only; no claim scope, ownership, family validity, or FTO determination."
+        }
+      ],
+      "sources": [
+        {
+          "id": "firstbiomeMVA",
+          "kind": "Life-sciences cluster member profile",
+          "date": "2026-04",
+          "title": "1stBiome platform description",
+          "url": "https://mva.org/mva_members/1stbiome/",
+          "note": "Engineered beneficial microbes to address low-grade inflammation and metabolic health."
+        },
+        {
+          "id": "firstbiomeProfile",
+          "kind": "Startup research profile",
+          "date": "2026-09",
+          "title": "1stBiome early-stage engineered probiotic research",
+          "url": "https://dealbio.vc/startups/1stbiome",
+          "note": "Early metabolic-health proof-of-concept and commercialization positioning."
+        }
+      ]
+    },
+    {
+      "id": "longhorn",
+      "name": "Longhorn Vaccines & Diagnostics",
+      "focus": [
+        "Microbiome"
+      ],
+      "platform": "LHNVD-501 antibody targeting bacterial peptidoglycan",
+      "classification": "Bacterial cell-wall targeting antibody · adjacent modality",
+      "technology_group": "Bacterial cell-wall targeting (adjacent)",
+      "preclinical_focus": true,
+      "programs": [
+        {
+          "name": "LHNVD-501",
+          "indication": "Bacterial infection/sepsis; related systemic inflammatory hypotheses",
+          "phase": "Preclinical / IND-enabling",
+          "status": "Preclinical development",
+          "status_reason": "2026 company release specifically describes preclinical data.",
+          "outcome": "Company reported preclinical characterization of a half-life-extended antibody binding peptidoglycan. It targets a bacterial cell-wall component; it does not deliver engineered bacteria or bacterial cell walls as the therapy.",
+          "latest_report": "2026-03-31",
+          "source_ids": [
+            "longhornRelease",
+            "longhornPatent"
+          ]
+        }
+      ],
+      "mechanism": "Antibody binding to peptidoglycan, a structural bacterial-cell-wall component, investigated as a means to alter pathogenic microbial component exposure.",
+      "clinical": "No verified human efficacy trial for LHNVD-501. Related disease indications described as mechanistic hypotheses require direct outcome evidence.",
+      "publication": "Preclinical conference/press-release data; published patent claims do not establish clinical efficacy.",
+      "patent": "A U.S. published application addresses bacterial-associated inflammatory targets; no patent family or clearance determination has been made.",
+      "patent_links": [
+        {
+          "kind": "Published patent application",
+          "date": "2026-04-16",
+          "title": "US20260102478A1 — bacterial components and inflammation",
+          "url": "https://patents.google.com/patent/US20260102478A1/en",
+          "note": "Claims must be independently reviewed; published application is not a granted worldwide right."
+        }
+      ],
+      "sources": [
+        {
+          "id": "longhornRelease",
+          "kind": "Company preclinical research release",
+          "date": "2026-03-31",
+          "title": "LHNVD-501 peptidoglycan-targeted antibody data",
+          "url": "https://www.lhnvd.com/news/longhorn-vaccines-and-diagnostics-presents-new-preclinical-data-on-broad-spectrum-anti-bacterial-monoclonal-antibody-lhnvd-501",
+          "note": "Explicit preclinical-stage data for peptidoglycan antibody."
+        },
+        {
+          "id": "longhornPatent",
+          "kind": "Patent application publication",
+          "date": "2026-04-16",
+          "title": "Published application US20260102478A1",
+          "url": "https://patents.google.com/patent/US20260102478A1/en",
+          "note": "Related cell-wall antigen/antibody claims, not clinical benefit."
+        }
+      ]
+    },
+    {
+      "id": "timeless",
+      "name": "Timeless Biosciences",
+      "focus": [
+        "Oncology",
+        "Microbiome"
+      ],
+      "platform": "TB-001 postbiotic molecule targeting colorectal cancer drug resistance",
+      "classification": "Microbiome-derived small-molecule therapeutics · adjacent modality",
+      "technology_group": "Microbiome-derived metabolite (adjacent)",
+      "preclinical_focus": true,
+      "programs": [
+        {
+          "name": "TB-001",
+          "indication": "Colorectal cancer; chemotherapy resistance and GI mucositis",
+          "phase": "Preclinical / lead optimization",
+          "status": "Preclinical lead optimization",
+          "status_reason": "Company website labels TB-001 lead-optimization/preclinical.",
+          "outcome": "Company presents a microbiome-derived small-molecule approach to reduce microbiota-associated treatment resistance and gastrointestinal toxicity. No human product outcome established.",
+          "latest_report": "2026-11-23",
+          "source_ids": [
+            "timelessHome",
+            "timelessScience"
+          ]
+        },
+        {
+          "name": "TB-002",
+          "indication": "Colorectal cancer (additional regimens)",
+          "phase": "Discovery",
+          "status": "Discovery stage",
+          "status_reason": "Company identifies TB-002 as discovery.",
+          "outcome": "Second-generation research program described on company pipeline, with no candidate-specific clinical results.",
+          "latest_report": "2026-11-23",
+          "source_ids": [
+            "timelessScience"
+          ]
+        }
+      ],
+      "mechanism": "Investigation of microbiota-mediated chemoresistance and microbial enzyme effects on chemotherapy handling; product is a microbial-pathway-targeted molecule, not a bacterial chassis.",
+      "clinical": "Company-stage preclinical status, with company assertions requiring peer-reviewed program-specific validation. Not a live microbial medicine.",
+      "publication": "Company research narrative and cited underlying microbiome studies; asset-specific clinical efficacy was not found.",
+      "patent": "Assess microbial targets, molecular composition and methods of use. Do not infer proprietary rights or FTO from concept descriptions.",
+      "patent_links": [
+        {
+          "kind": "Patent search lead",
+          "date": "2026-11-23",
+          "title": "Explore public patent applications for Timeless Biosciences TB001 postbiotic colorectal cancer",
+          "url": "https://patents.google.com/?q=Timeless%20Biosciences%20TB001%20postbiotic%20colorectal%20cancer",
+          "note": "Search lead only; no claim scope, ownership, family validity, or FTO determination."
+        }
+      ],
+      "sources": [
+        {
+          "id": "timelessHome",
+          "kind": "Company profile / pipeline",
+          "date": "2026-11-23",
+          "title": "Timeless Biosciences preclinical TB-001 overview",
+          "url": "https://timelessbiosciences.com/",
+          "note": "Describes preclinical status and indications."
+        },
+        {
+          "id": "timelessScience",
+          "kind": "Company scientific rationale / pipeline",
+          "date": "2026-11-23",
+          "title": "Timeless TB-001 and TB-002 programs",
+          "url": "https://timelessbiosciences.com/science",
+          "note": "Lead optimization and discovery pipeline with microbiota-associated mechanisms."
         }
       ]
     }
