@@ -292,6 +292,28 @@ html{scroll-behavior:smooth}#btiHomeHero,#btiMechanismFeature,#homeResearchExplo
 .atlas-preclinical{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:800;color:#1b6b76;padding:9px 12px;border:1px solid #c8e0e4;border-radius:10px;background:#f1faf9;cursor:pointer}.atlas-preclinical input{min-width:auto;width:17px;height:17px;margin:0;accent-color:#19868a}
 
 .company-selection-filter{margin:12px 0 5px;padding:10px 12px;border:1px solid #cce5e6;border-radius:10px;background:#f1f9f9}.company-selection-filter label{display:flex;align-items:center;gap:9px;font-weight:800;font-size:12px;color:#1e6877;cursor:pointer}.company-selection-filter input{width:16px;height:16px;margin:0;accent-color:#19868a}
+
+/* Public-source research update monitor within the existing company dossier workspace. */
+.company-updates{border:1px solid #c8e4e7;background:linear-gradient(125deg,#f8fcfd,#f0f9fa);border-radius:14px;padding:17px 18px;margin-top:14px}
+.company-updates-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.company-updates-head h4{font-size:19px;color:#163c52;letter-spacing:-.025em;margin:6px 0 7px}
+.company-updates-head p{max-width:720px;color:#557784;font-size:12px;line-height:1.65;margin:0}
+.company-monitor-state{display:inline-block;font-size:11px;font-weight:800;color:#367484;border:1px solid #bedbe0;border-radius:24px;padding:8px 11px;background:#fff}
+.company-updates-toolbar{display:flex;align-items:flex-end;gap:10px;flex-wrap:wrap;margin:16px 0 10px}
+.company-updates-toolbar label{font-size:12px;font-weight:750;color:#2c5b6b;display:flex;flex-direction:column;gap:5px}
+.company-updates-toolbar select{font-size:12px;min-height:40px;min-width:190px;background:#fff}
+.company-updates-toolbar .btn{font-size:12px;min-height:40px}
+.company-monitor-workflow{font-size:11px;font-weight:800;color:#087983;text-decoration:none;align-self:center}
+.company-monitor-meta{color:#668692;font-size:11px;line-height:1.6;margin:10px 0}
+.company-update-feed{display:grid;gap:9px}.company-update-record{padding:13px 14px;background:#fff;border:1px solid #d5e8eb;border-radius:11px}
+.company-update-row{display:flex;align-items:center;flex-wrap:wrap;gap:8px;font-size:10px;font-weight:750;color:#678897}
+.company-update-source{background:#e9f7f4;color:#1c7879;border-radius:20px;padding:5px 9px}
+.company-update-record a{font-size:12px;line-height:1.6;font-weight:850;color:#0a7580;text-decoration:none;display:inline-block;margin:8px 0 4px}
+.company-update-record a:hover{text-decoration:underline}
+.company-update-record p{margin:3px 0;color:#668390;font-size:11px;line-height:1.55}
+.company-updates-empty{border:1px dashed #b9d7db;border-radius:10px;color:#607f8c;background:#fff;padding:15px;font-size:12px;line-height:1.55}
+.company-monitor-disclaimer{color:#6f8996;font-size:10px;line-height:1.6;margin:12px 0 0}
+@media(max-width:700px){.company-updates{padding:13px}.company-updates-toolbar label,.company-updates-toolbar select{width:100%}.company-updates-toolbar .btn{width:100%}.company-monitor-workflow{width:100%;text-align:center;padding:7px}}
 </style><script>window.btiSnapshotPromise=null;window.btiGet=async function(url){if(!window.btiSnapshotPromise){window.btiSnapshotPromise=fetch('pathway_snapshot.json').then(r=>{if(!r.ok)throw Error('Curated pathway dataset unavailable');return r.json()}).catch(e=>{window.btiSnapshotPromise=null;throw e})}const snap=await window.btiSnapshotPromise;if(url.endsWith('/overview'))return snap.overview;const id=decodeURIComponent(url.substring(url.lastIndexOf('/')+1));if(snap.details&&snap.details[id])return snap.details[id];throw Error('No curated pathway found for '+id)};</script><script>
 /* Website public-mode configuration. No client-side API keys or token popups. */
 window.BTI_PUBLIC_STATIC_MODE=true;
@@ -491,6 +513,22 @@ window.notify=function(message){const x=document.getElementById('reviewStatus');
 </select>
 </div>
 <div id="companyDossier" aria-live="polite" class="company-dossier"><p>Loading public research profiles…</p></div>
+<section class="company-updates" id="companySourceUpdates" aria-labelledby="companyUpdateTitle">
+  <div class="company-updates-head">
+    <div><span class="home-eyebrow">SCHEDULED PUBLIC-DATABASE MONITORING</span><h4 id="companyUpdateTitle">Latest company research updates</h4><p>New clinical-trial and publication records discovered from public databases. All leads require review before changing a therapeutic program's reported status.</p></div>
+    <span id="companyMonitorState" class="company-monitor-state">Awaiting first source scan</span>
+  </div>
+  <div class="company-updates-toolbar">
+    <label for="companyUpdateScope">Show updates for
+      <select id="companyUpdateScope"><option value="selected">Selected company</option><option value="all">All monitored companies</option></select>
+    </label>
+    <button class="btn" type="button" id="companyUpdatesReload">Reload published updates</button>
+    <a class="company-monitor-workflow" href="https://github.com/mail2dpaksingh-star/bacterial-therapeutics-intelligence/actions/workflows/company-source-monitor.yml" target="_blank" rel="noopener noreferrer">Run source scan on GitHub ↗</a>
+  </div>
+  <p class="company-monitor-meta" id="companyUpdateMeta" role="status" aria-live="polite">Monitoring is configured. The first scheduled scan has not yet completed.</p>
+  <div id="companyUpdateFeed" class="company-update-feed" aria-live="polite"><p>Waiting for the first published data scan.</p></div>
+  <p class="company-monitor-disclaimer">A newly found record is a literature or trial-registry search lead, not a confirmed company announcement, treatment success, or patent freedom-to-operate conclusion. The curated company summary above is reviewed separately.</p>
+</section>
 <div class="company-intel-actions">
   <button id="companyAddNotes" type="button" class="btn">Insert selected public findings into my notes</button>
   <button id="companyExportDossier" type="button" class="btn">Export company research JSON</button>
@@ -894,4 +932,4 @@ document.addEventListener('DOMContentLoaded',()=>{
   });
  });
 });
-</script><script src="company-research.js" defer></script><script src="scientific-question.js" defer></script><script src="community.js" defer></script></body></html>
+</script><script src="company-research.js" defer></script><script src="company-updates.js" defer></script><script src="scientific-question.js" defer></script><script src="community.js" defer></script></body></html>
