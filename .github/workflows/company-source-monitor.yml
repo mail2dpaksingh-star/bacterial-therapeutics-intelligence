@@ -2,13 +2,6 @@ name: Company research source updates
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - 'scripts/update_company_sources.mjs'
-      - 'scripts/company_monitor_config.json'
-      - 'frontend/company_dossiers.json'
-      - '.github/workflows/company-source-monitor.yml'
   schedule:
     # First day of each month at 08:17 UTC (00:17 Pacific Standard Time, 01:17 PDT).
     # GitHub scheduled jobs may run late.
