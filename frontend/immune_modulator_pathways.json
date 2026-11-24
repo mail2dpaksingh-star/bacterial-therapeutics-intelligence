@@ -1,0 +1,211 @@
+{
+  "version": 1,
+  "reviewed_on": "2026-11-23",
+  "about": "Educational source-linked immune-pathway crosswalk. A native bacterial ligand, a synthetic agonist, a microbial delivery platform and a recombinant host cytokine are not interchangeable. Clinical adverse-event attribution is product-specific.",
+  "entries": [
+    {
+      "key": "TLR1/2",
+      "group": "Toll-like receptors",
+      "ligand": "Bacterial triacylated lipoproteins and lipopeptides",
+      "natural": "Well-established bacterial cell-envelope lipoprotein ligands.",
+      "engineered": "Engineered bacteria may alter or display immunostimulatory lipoproteins; evidence and safety are strain-, formulation-, and expression-context-specific. Do not infer clinical success from receptor engagement.",
+      "engineer_level": "Research concept / preclinical",
+      "synthetic": "Synthetic triacylated-lipopeptide mimics, including Amplivant conjugates.",
+      "signal": "Primarily MyD88-dependent NF-κB / inflammatory pathways; TLR2 pairs with TLR1 for triacylated ligands.",
+      "companies": [
+        "isa_pharma",
+        "indaptus"
+      ],
+      "safety": "Excess inflammatory stimulation, fever and local reactogenicity; read product-level clinical safety.",
+      "sources": [
+        {
+          "label": "TLR bacterial ligand review",
+          "url": "https://journals.asm.org/doi/10.1128/cmr.00046-08"
+        },
+        {
+          "label": "Amplivant Phase I clinical study",
+          "url": "https://jitc.bmj.com/content/10/10/e005016"
+        }
+      ]
+    },
+    {
+      "key": "TLR3",
+      "group": "Toll-like receptors",
+      "ligand": "Double-stranded RNA (dsRNA)",
+      "natural": "TLR3 is classically associated with viral dsRNA; bacterial RNA involvement is context-dependent and not a universal native bacterial TLR3 ligand.",
+      "engineered": "Research may explore delivery of dsRNA or RNA-like immunostimulatory payloads via microbial systems. Direct clinical safety and receptor-specific attribution have not been established for bacteria-engineered TLR3 agonist delivery.",
+      "engineer_level": "Conceptual / experimental evidence varies",
+      "synthetic": "Poly(I:C), poly-ICLC (Hiltonol), BO-112 and rintatolimod (Ampligen); different sensor specificity.",
+      "signal": "TRIF–TBK1–IRF3 and NF-κB; poly(I:C) can also engage MDA5 and other RNA sensors.",
+      "companies": [
+        "oncovir",
+        "highlight",
+        "aimimmunotech"
+      ],
+      "safety": "Potential flu-like symptoms, thrombocytopenia, inflammatory toxicity and regimen-specific serious events; use individual studies.",
+      "sources": [
+        {
+          "label": "Nucleic acid-sensing TLR review",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8283745/"
+        },
+        {
+          "label": "Human poly(I:C) safety discussion",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33055241/"
+        }
+      ]
+    },
+    {
+      "key": "TLR4",
+      "group": "Toll-like receptors",
+      "ligand": "Gram-negative bacterial LPS / lipid A; monophosphoryl lipid A (MPL)",
+      "natural": "A well-established receptor for bacterial LPS through the TLR4–MD2 complex; lipid A chemistry strongly affects activity.",
+      "engineered": "Bacteria may be modified to alter their LPS/lipid A immune-stimulation profile. Such changes require product-specific inflammatory safety evaluation and should not be assumed clinically safe.",
+      "engineer_level": "Established research platform, clinical relevance formulation-specific",
+      "synthetic": "MPL and synthetic lipid A analogues used in vaccine adjuvant research; SHINGRIX contains bacterial-derived MPL.",
+      "signal": "TLR4 activates both MyD88 and TRIF pathways, potentially inflammatory cytokines and type I interferon responses.",
+      "companies": [
+        "gsk_mpl",
+        "indaptus"
+      ],
+      "safety": "Local/systemic reactogenicity and potentially excessive inflammatory signaling; whole-vaccine and whole-bacteria safety are distinct.",
+      "sources": [
+        {
+          "label": "SHINGRIX MPL-containing adjuvant label",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=0280849d-5c78-4a9d-8941-4eab429f6bd8"
+        },
+        {
+          "label": "Bacterial TLR ligands",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6698371/"
+        }
+      ]
+    },
+    {
+      "key": "TLR7",
+      "group": "Toll-like receptors",
+      "ligand": "Single-stranded RNA (ssRNA) and certain synthetic small-molecule agonists",
+      "natural": "TLR7 is an endosomal RNA sensor; some bacterial RNAs may activate related RNA sensing systems under specific delivery conditions.",
+      "engineered": "Bacterial production or delivery of RNA-derived immune cues is an experimental delivery concept. It is not equivalent to approved TLR7 small-molecule agonist therapy.",
+      "engineer_level": "Conceptual / platform-dependent",
+      "synthetic": "Imiquimod and investigational vesatolimod (GS-9620).",
+      "signal": "MyD88–IRF7 and NF-κB; can induce type I interferons, including IFN-α.",
+      "companies": [
+        "gilead_tlr7"
+      ],
+      "safety": "Flu-like inflammatory effects and adverse events depend on dose, route and co-therapies.",
+      "sources": [
+        {
+          "label": "NIH vesatolimod safety overview",
+          "url": "https://clinicalinfo.hiv.gov/en/drugs/vesatolimod/health-professional"
+        },
+        {
+          "label": "TLR7 nucleic-acid specificity",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8283745/"
+        }
+      ]
+    },
+    {
+      "key": "TLR9",
+      "group": "Toll-like receptors",
+      "ligand": "Bacterial CpG-rich DNA, and synthetic CpG oligodeoxynucleotides",
+      "natural": "Bacterial DNA with immunostimulatory CpG motifs is a canonical microbial TLR9 signal; cellular localization determines access.",
+      "engineered": "Bacterial systems can be investigated as sources or carriers of immunostimulatory DNA; altered nucleic-acid presentation does not imply clinical benefit or component-specific safety.",
+      "engineer_level": "Bacterial CpG is native; engineered delivery clinical evidence limited",
+      "synthetic": "CpG 1018 adjuvant in HEPLISAV-B, and research CpG oligonucleotides.",
+      "signal": "MyD88-mediated pathways and plasmacytoid dendritic-cell IFN-α responses, varying by CpG class.",
+      "companies": [
+        "sanofi_dynavax",
+        "indaptus"
+      ],
+      "safety": "Vaccine-level serious events/deaths must be distinguished from CpG-adjuvant causality.",
+      "sources": [
+        {
+          "label": "HEPLISAV-B label and safety results",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d61c7f99-438b-4cac-ae10-997ff4c0fd1f"
+        },
+        {
+          "label": "TLR9 and CpG overview",
+          "url": "https://jci.org/articles/view/31414"
+        }
+      ]
+    },
+    {
+      "key": "IFN-α",
+      "group": "Interferon signaling",
+      "ligand": "Host cytokine; type I interferon (not a TLR agonist)",
+      "natural": "Host immune cells produce IFN-α after certain innate sensing events, including some TLR responses. It is not naturally a bacterial TLR ligand.",
+      "engineered": "Interferon proteins can be manufactured using recombinant expression systems. Engineering live bacteria to deliver bioactive IFN-α in vivo is a separate research question and cannot be assumed clinically validated.",
+      "engineer_level": "Biomanufacture established; live bacterial delivery not clinically established here",
+      "synthetic": "PEGASYS (peginterferon alfa-2a) is an exogenous interferon therapy.",
+      "signal": "IFNAR1/IFNAR2 → JAK1/TYK2 → STAT1/STAT2/IRF9 signaling.",
+      "companies": [
+        "pharmaand_ifna",
+        "gilead_tlr7"
+      ],
+      "safety": "Interferon-alfa drugs carry potentially fatal neuropsychiatric, autoimmune, ischemic and infectious risk warnings.",
+      "sources": [
+        {
+          "label": "PEGASYS safety label",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d9290e5b-6d40-2318-e053-2995a90a9916"
+        },
+        {
+          "label": "TLR-induced type I IFN signaling",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6781272/"
+        }
+      ]
+    },
+    {
+      "key": "IFN-β",
+      "group": "Interferon signaling",
+      "ligand": "Host cytokine; type I interferon (not a TLR agonist)",
+      "natural": "IFN-β is produced by host cells downstream of innate immune sensors such as TLR3/TRIF; bacteria are not its natural cellular source.",
+      "engineered": "Recombinant protein manufacture and experimental microbial cytokine-delivery concepts are distinct. No live-bacteria-delivered IFN-β human efficacy/safety claim is made here.",
+      "engineer_level": "Biomanufacture established; live bacterial delivery investigational",
+      "synthetic": "AVONEX (interferon beta-1a) as a clinically administered interferon product.",
+      "signal": "IFNAR1/IFNAR2 → JAK/STAT interferon-stimulated gene programs.",
+      "companies": [
+        "biogen_ifnb",
+        "aimimmunotech"
+      ],
+      "safety": "Interferon-beta labels warn of psychiatric, hepatic and hematologic adverse events and other severe complications.",
+      "sources": [
+        {
+          "label": "AVONEX safety label",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d70a39cc-de15-4c12-a1ec-8063b69ea0e1"
+        },
+        {
+          "label": "Type I IFN via bacterial sensing",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6781272/"
+        }
+      ]
+    },
+    {
+      "key": "IFN-γ",
+      "group": "Interferon signaling",
+      "ligand": "Host cytokine; type II interferon (not a TLR agonist)",
+      "natural": "IFN-γ is produced mainly by activated T and NK cells; it is not a naturally occurring bacterial TLR agonist.",
+      "engineered": "Engineered probiotic bacteria have delivered IFN-γ locally in published mouse tumor models, including work paired with anti-PD-1. This is preclinical and distinct from recombinant systemic treatment.",
+      "engineer_level": "Demonstrated in preclinical animal models; not clinical proof",
+      "synthetic": "ACTIMMUNE (interferon gamma-1b) is a licensed recombinant host-cytokine therapy for specified noncancer indications.",
+      "signal": "IFNGR1/IFNGR2 → JAK1/JAK2 → STAT1; influences antigen presentation and immunity.",
+      "companies": [
+        "amgen_ifng",
+        "actym"
+      ],
+      "safety": "Systemic IFN-γ can have dose-limiting inflammatory effects; live bacterial delivery additionally needs shedding, biodistribution, containment and product-specific risk assessment.",
+      "sources": [
+        {
+          "label": "Engineered probiotic IFN-γ antitumor delivery, preclinical",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11984541/"
+        },
+        {
+          "label": "Triggered bacterial IFN-γ expression, mouse tumors",
+          "url": "https://www.nature.com/articles/s41467-022-31932-x"
+        },
+        {
+          "label": "ACTIMMUNE label",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5d0b1256-1981-4519-94f4-a4a2f98bd8a3"
+        }
+      ]
+    }
+  ]
+}
