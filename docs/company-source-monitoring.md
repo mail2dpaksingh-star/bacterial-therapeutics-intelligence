@@ -17,11 +17,11 @@ No OpenAI API key, website token, or private health data is required.
 
 ## When it checks
 `.github/workflows/company-source-monitor.yml` uses a scheduled GitHub Actions
-workflow at 00:17, 06:17, 12:17, and 18:17 UTC, plus an on-demand **Run workflow**
+workflow on the first day of every month at 08:17 UTC, plus an on-demand **Run workflow**
 control in GitHub Actions.
 
 GitHub scheduled workflows can be delayed, skipped under load, or disabled after
-60 days of inactivity in public repositories. This is **near-real-time / periodic
+60 days of inactivity in public repositories. This is **periodic monthly
 monitoring**, not guaranteed continuous coverage.
 
 ## How to start the first scan
