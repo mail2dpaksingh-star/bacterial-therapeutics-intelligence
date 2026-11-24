@@ -64,8 +64,39 @@
           "title": "Indaptus Form 10-Q for June 2026",
           "url": "https://www.sec.gov/Archives/edgar/data/1857044/000149315226037579/form10-q.htm",
           "note": "Documents the Q2 2026 wind-down of the Decoy20 program."
+        },
+        {
+          "id": "bti_safety_ind_asco",
+          "kind": "ASCO 2024 scientific poster",
+          "date": "2024-06-01",
+          "title": "Decoy20 Phase 1 preliminary results — safety and grade 5 event",
+          "url": "https://indaptusrx.com/wp-content/uploads/2024/06/Indaptus-ASCO-2024-Poster.pdf",
+          "note": "11-participant interim results; grade 5 fatal hypotension event assessed unrelated."
+        },
+        {
+          "id": "bti_safety_ind_10k",
+          "kind": "SEC annual filing",
+          "date": "2026-03-01",
+          "title": "Indaptus 2025 Form 10-K — cytokine-release and dose-limiting toxicity disclosures",
+          "url": "https://www.sec.gov/Archives/edgar/data/1857044/000149315226010585/form10-k.htm",
+          "note": "Reports grade 3 bradycardia, ALT elevation and CRS in six participants."
         }
-      ]
+      ],
+      "clinical_safety": {
+        "status": "Documented serious/fatal event — not attributed to study drug",
+        "trial": "Decoy20 Phase 1, NCT05651022",
+        "cohort": "ASCO 2024 analysis: 11 treated participants; later trial data may differ",
+        "adverse_events": "Reported grade 3 bradycardia and transaminase elevations; cytokine-release syndrome reported in six participants in a later SEC filing. Common related events in the 11-patient 2024 analysis included lymphopenia, AST/ALT elevations, fatigue, hypotension, chills and vomiting.",
+        "serious_events": "A grade 5 hypotension adverse event was reported in the 2024 safety analysis.",
+        "deaths": "One grade 5 fatal hypotension event was reported in a participant with disease progression and acute renal failure.",
+        "attribution": "Investigators reported this fatal event as not related to Decoy20. Grade 5 signifies death associated with an adverse event, not by itself treatment causation.",
+        "limitations": "The fatal-event report came from an early 11-participant interim analysis; do not treat it as a complete final trial safety dataset. Later dose schedules and combinations may differ.",
+        "source_ids": [
+          "bti_safety_ind_asco",
+          "bti_safety_ind_10k"
+        ],
+        "reviewed_on": "2026-11-23"
+      }
     },
     {
       "id": "actym",
@@ -127,8 +158,30 @@
           "title": "ACTM-838 IND clearance announcement",
           "url": "https://www.actymthera.com/news/actym-therapeutics-announces-ind-clearance-for-phase-1-clinical-trial-investigating-lead-program-actm-838-in-patients-with-solid-tumors",
           "note": "Historical milestone, not a clinical outcome."
+        },
+        {
+          "id": "bti_safety_actym_trial",
+          "kind": "NCI trial registry listing",
+          "date": "2025-01-01",
+          "title": "ACTM-838 advanced solid tumors Phase 1a/1b",
+          "url": "https://www.cancer.gov/research/participate/clinical-trials-search/v?id=NCI-2025-00373",
+          "note": "Study design includes tolerability and safety assessment; numeric AE results not provided."
         }
-      ]
+      ],
+      "clinical_safety": {
+        "status": "Clinical trial registered; quantified public safety results not verified",
+        "trial": "ACTM-838 Phase 1a/1b advanced solid tumors",
+        "cohort": "Early-phase clinical research",
+        "adverse_events": "The trial is designed to evaluate safety and tolerability, but no reliable numerical adverse-event table was verified in the public sources reviewed.",
+        "serious_events": "Not established from sources reviewed.",
+        "deaths": "Not established from sources reviewed.",
+        "attribution": "No-data-found is not the same as no adverse events, no deaths, or no treatment-related harm.",
+        "limitations": "Check trial results, sponsor disclosures and new publications when available.",
+        "source_ids": [
+          "bti_safety_actym_trial"
+        ],
+        "reviewed_on": "2026-11-23"
+      }
     },
     {
       "id": "synthetica",
@@ -183,7 +236,18 @@
           "url": "https://patents.google.com/patent/EP4464773A1/en",
           "note": "Public patent disclosure; specific patent claims must be examined."
         }
-      ]
+      ],
+      "clinical_safety": {
+        "status": "Preclinical or no mature clinical safety assessment",
+        "trial": "Oncolytic bacterial therapeutic platform",
+        "adverse_events": "No source-verified numerical human trial safety dataset is included in this focused review.",
+        "serious_events": "Not established from sources reviewed.",
+        "deaths": "Not established from sources reviewed.",
+        "attribution": "Not documented does not mean zero events or zero treatment-related deaths.",
+        "limitations": "Search public trial registries and published sponsor reports for this program before making conclusions.",
+        "source_ids": [],
+        "reviewed_on": "2026-11-23"
+      }
     },
     {
       "id": "prokarium",
@@ -245,8 +309,30 @@
           "title": "Prokarium EAU and AUA interim data presentation announcement",
           "url": "https://www.prokarium.com/news/prokarium-announces-upcoming-oral-presentations-of-interim-clinical-data-at-the-eau-and-aua-2026-annual-meetings",
           "note": "Conference results context."
+        },
+        {
+          "id": "bti_safety_prokarium",
+          "kind": "Sponsor Phase 1/1b interim disclosure",
+          "date": "2026-05-18",
+          "title": "Prokarium PARADIGM-1 ZH9 interim safety report",
+          "url": "https://www.prokarium.com/news/prokarium-reports-positive-interim-data-from-phase-1-1b-paradigm-1-trial-of-zh9-",
+          "note": "No grade >=3 toxicity, DLT or drug-related SAE in interim cohort."
         }
-      ]
+      ],
+      "clinical_safety": {
+        "status": "Interim sponsor safety summary — limited reporting",
+        "trial": "ZH9 PARADIGM-1 Phase 1/1b trial, non-muscle-invasive bladder cancer",
+        "cohort": "Interim May 18, 2026 report; full trial safety dataset not independently verified",
+        "adverse_events": "The company reported no grade 3 or higher toxicities, dose-limiting toxicities, or drug-related serious adverse events in the interim analysis.",
+        "serious_events": "No drug-related serious adverse events reported in the specified interim analysis.",
+        "deaths": "The cited interim summary does not establish a complete all-cause death count.",
+        "attribution": "No drug-related SAEs reported for this interim dataset. Do not interpret this as proof of zero serious events or deaths over the entire trial.",
+        "limitations": "Sponsor interim results, not final independent safety tables.",
+        "source_ids": [
+          "bti_safety_prokarium"
+        ],
+        "reviewed_on": "2026-11-23"
+      }
     },
     {
       "id": "baccine",
@@ -301,7 +387,18 @@
           "url": "https://patents.google.com/patent/US20260048107A1/en",
           "note": "Published invention, not clinical outcome."
         }
-      ]
+      ],
+      "clinical_safety": {
+        "status": "Preclinical or no mature clinical safety assessment",
+        "trial": "Baccine engineered bacterial immunotherapy",
+        "adverse_events": "No source-verified numerical human trial safety dataset is included in this focused review.",
+        "serious_events": "Not established from sources reviewed.",
+        "deaths": "Not established from sources reviewed.",
+        "attribution": "Not documented does not mean zero events or zero treatment-related deaths.",
+        "limitations": "Search public trial registries and published sponsor reports for this program before making conclusions.",
+        "source_ids": [],
+        "reviewed_on": "2026-11-23"
+      }
     },
     {
       "id": "neobe",
@@ -356,7 +453,18 @@
           "url": "https://www.neobetherapeutics.com/our-technology",
           "note": "Describes pipeline entering preclinical development."
         }
-      ]
+      ],
+      "clinical_safety": {
+        "status": "Preclinical or no mature clinical safety assessment",
+        "trial": "NEO22",
+        "adverse_events": "No source-verified numerical human trial safety dataset is included in this focused review.",
+        "serious_events": "Not established from sources reviewed.",
+        "deaths": "Not established from sources reviewed.",
+        "attribution": "Not documented does not mean zero events or zero treatment-related deaths.",
+        "limitations": "Search public trial registries and published sponsor reports for this program before making conclusions.",
+        "source_ids": [],
+        "reviewed_on": "2026-11-23"
+      }
     },
     {
       "id": "enterome",
@@ -451,8 +559,39 @@
           "title": "Enterome clinical trials",
           "url": "https://www.enterome.com/clinical-trials/",
           "note": "SIDNEY and ROSALIE descriptions."
+        },
+        {
+          "id": "bti_safety_enterome_pr",
+          "kind": "Sponsor Phase 1/2 clinical data announcement",
+          "date": "2026-10-23",
+          "title": "Enterome EO4010 AUDREY — 2026 safety disclosure",
+          "url": "https://www.enterome.com/news-events/enterome-phase-1-2-data-show-oncomimics-eo4010-induced-cd8-t-cell-expansion-was-associated-with-longer-survival-in-patients-with-colorectal-cancer/",
+          "note": "Injection site reactions reported in 84% of patients."
+        },
+        {
+          "id": "bti_safety_enterome_registry",
+          "kind": "Clinical trial registry",
+          "date": "2026-10-19",
+          "title": "ClinicalTrials.gov NCT05589597 — EO4010 posted results",
+          "url": "https://clinicaltrials.gov/study/NCT05589597",
+          "note": "Refer to clinical registry for posted results and safety tables."
         }
-      ]
+      ],
+      "clinical_safety": {
+        "status": "Adverse events reported; complete death attribution not established here",
+        "trial": "EO4010 AUDREY Phase 1/2 (NCT05589597)",
+        "cohort": "October 2026 sponsor report of 25 participants with previously treated metastatic colorectal cancer",
+        "adverse_events": "The most common treatment-related event was an injection-site reaction, reported in 84% of patients.",
+        "serious_events": "The cited sponsor summary does not provide a complete independently verified breakdown of all serious events. Consult posted ClinicalTrials.gov results for updated arm-level safety.",
+        "deaths": "The reported company summary does not provide a complete, verified all-cause mortality and treatment-attribution table in this review.",
+        "attribution": "No claim is made that no patients died or that all events were unrelated to treatment.",
+        "limitations": "Combination treatment with nivolumab, with or without bevacizumab, complicates attribution; this is a microbiome-derived peptide therapy, not an administered live bacterial product.",
+        "source_ids": [
+          "bti_safety_enterome_pr",
+          "bti_safety_enterome_registry"
+        ],
+        "reviewed_on": "2026-11-23"
+      }
     },
     {
       "id": "vedanta",
@@ -514,8 +653,30 @@
           "title": "VE303 development overview",
           "url": "https://www.vedantabio.com/pipeline-programs/ve303/",
           "note": "Product design and Phase 3 program."
+        },
+        {
+          "id": "bti_safety_vedanta_jama",
+          "kind": "Peer-reviewed randomized clinical study",
+          "date": "2023-04-11",
+          "title": "VE303 trial safety — JAMA report",
+          "url": "https://jamanetwork.com/journals/jama/fullarticle/2803996",
+          "note": "Seven participants experienced 11 serious TEAEs across study groups; none judged related."
         }
-      ]
+      ],
+      "clinical_safety": {
+        "status": "Serious adverse events documented — none assessed treatment-related in cited trial",
+        "trial": "VE303 Phase 2 randomized study for recurrent C. difficile (JAMA 2023)",
+        "cohort": "79 participants across high-dose VE303, low-dose VE303 and placebo groups",
+        "adverse_events": "The publication describes several serious events, including transfusion reaction, CDI, COPD exacerbation, cerebrovascular accident, and E. coli bacteremia/pyelonephritis, across study arms.",
+        "serious_events": "Seven participants (8.9%) experienced a total of eleven serious treatment-emergent adverse events across study arms; investigators and sponsor's medical monitor assessed none as treatment-related.",
+        "deaths": "No verified trial death count was extracted from the cited JAMA report in this review.",
+        "attribution": "No treatment-related serious adverse events were reported in this publication; this is not evidence of zero deaths or no harm.",
+        "limitations": "The record covers the Phase 2 VE303 trial; it does not substitute for the ongoing/pivotal program's final safety results.",
+        "source_ids": [
+          "bti_safety_vedanta_jama"
+        ],
+        "reviewed_on": "2026-11-23"
+      }
     },
     {
       "id": "maat",
@@ -603,8 +764,39 @@
           "title": "MaaT Pharma pipeline overview",
           "url": "https://www.maatpharma.com/pipeline/",
           "note": "Program status and clinical strategies."
+        },
+        {
+          "id": "bti_safety_maat_ash",
+          "kind": "ASH 2025 investigator scientific presentation",
+          "date": "2025-12-01",
+          "title": "ARES Phase 3 — 26 fatal AEs and one investigator-attributed treatment-related septic-shock death",
+          "url": "https://www.maatpharma.com/wp-content/uploads/2026/03/ASH2025_Pr-Malard_ARES-Phase3-Trial_MaaT013_Final.pdf",
+          "note": "Earlier study safety cut: 26 fatal AEs; one treatment-related per investigator."
+        },
+        {
+          "id": "bti_safety_maat_ebmt",
+          "kind": "EBMT 2026 scientific presentation",
+          "date": "2026-03-01",
+          "title": "ARES Phase 3 updated follow-up — deaths, serious adverse events, causes of death",
+          "url": "https://www.maatpharma.com/wp-content/uploads/2026/03/EBMT-2026_MaaT013_Malard.pdf",
+          "note": "29 of 66 patients died; 80% experienced SAEs in later follow-up."
         }
-      ]
+      ],
+      "clinical_safety": {
+        "status": "Investigator-attributed treatment-related death reported",
+        "trial": "MaaT013 ARES Phase 3, NCT04769895",
+        "cohort": "66 treated participants with severe refractory gastrointestinal acute graft-versus-host disease",
+        "adverse_events": "2026 follow-up reported 36 treatment-related treatment-emergent adverse events in 19/66 (29%). Sepsis, bacteremia, septic shock and gastrointestinal events were documented in an especially vulnerable patient population.",
+        "serious_events": "2026 presentation: serious adverse events in 53/66 (80%); investigators considered eight serious events in seven patients treatment-related. Earlier ASH 2025 analysis reported 157 serious treatment-emergent events in 50/66 (76%).",
+        "deaths": "2026 follow-up: 29/66 (44%) patients died during the study, including 13 deaths attributed to severe infections, five to GvHD progression and other causes. Earlier ASH 2025 analysis documented 26 fatal adverse events.",
+        "attribution": "In the earlier ASH 2025 analysis, investigators deemed one fatal septic-shock event treatment-related. A death during the trial is not automatically caused by the microbiota treatment.",
+        "limitations": "The 26 fatal adverse events and 29 deaths are from different data cuts, not figures to be added. The single-arm high-risk population prevents causal interpretation of all-cause mortality without comparator/context.",
+        "source_ids": [
+          "bti_safety_maat_ash",
+          "bti_safety_maat_ebmt"
+        ],
+        "reviewed_on": "2026-11-23"
+      }
     },
     {
       "id": "bcg",
@@ -659,7 +851,18 @@
           "url": "https://www.fda.gov/drugs/cancer-approvals/fda-approves-durvalumab-combination-bacillus-calmette-guerin-high-risk-non-muscle-invasive-bladder",
           "note": "Separate approved combination indication; not evidence for new bacterial programs."
         }
-      ]
+      ],
+      "clinical_safety": {
+        "status": "No quantified clinical safety review included",
+        "trial": "TICE BCG",
+        "adverse_events": "No source-verified numerical human trial safety dataset is included in this focused review.",
+        "serious_events": "Not established from sources reviewed.",
+        "deaths": "Not established from sources reviewed.",
+        "attribution": "Not documented does not mean zero events or zero treatment-related deaths.",
+        "limitations": "Search public trial registries and published sponsor reports for this program before making conclusions.",
+        "source_ids": [],
+        "reviewed_on": "2026-11-23"
+      }
     },
     {
       "id": "aurexo",
@@ -707,7 +910,18 @@
           "url": "https://aurexotherapeutics.com/",
           "note": "Company explicitly identifies preclinical E-BEV oncology programs, including AeBEV-001."
         }
-      ]
+      ],
+      "clinical_safety": {
+        "status": "Preclinical or no mature clinical safety assessment",
+        "trial": "AeBEV-001",
+        "adverse_events": "No source-verified numerical human trial safety dataset is included in this focused review.",
+        "serious_events": "Not established from sources reviewed.",
+        "deaths": "Not established from sources reviewed.",
+        "attribution": "Not documented does not mean zero events or zero treatment-related deaths.",
+        "limitations": "Search public trial registries and published sponsor reports for this program before making conclusions.",
+        "source_ids": [],
+        "reviewed_on": "2026-11-23"
+      }
     },
     {
       "id": "aurealis",
@@ -776,7 +990,18 @@
           "url": "https://aurealistherapeutics.com/pipeline-and-science/",
           "note": "Places AUP-55 in preclinical oncology and inflammation programs in discovery."
         }
-      ]
+      ],
+      "clinical_safety": {
+        "status": "Preclinical or no mature clinical safety assessment",
+        "trial": "AUP-55; AUP-60",
+        "adverse_events": "No source-verified numerical human trial safety dataset is included in this focused review.",
+        "serious_events": "Not established from sources reviewed.",
+        "deaths": "Not established from sources reviewed.",
+        "attribution": "Not documented does not mean zero events or zero treatment-related deaths.",
+        "limitations": "Search public trial registries and published sponsor reports for this program before making conclusions.",
+        "source_ids": [],
+        "reviewed_on": "2026-11-23"
+      }
     },
     {
       "id": "mulberry",
@@ -833,7 +1058,18 @@
           "url": "https://www.mulberrybio.com/_files/ugd/30da88_3383fb487b7c4e19a48e79a3ba8f4aca.pdf",
           "note": "Corporate ownership transaction; science program described as moving toward clinical work."
         }
-      ]
+      ],
+      "clinical_safety": {
+        "status": "Preclinical or no mature clinical safety assessment",
+        "trial": "MUL001",
+        "adverse_events": "No source-verified numerical human trial safety dataset is included in this focused review.",
+        "serious_events": "Not established from sources reviewed.",
+        "deaths": "Not established from sources reviewed.",
+        "attribution": "Not documented does not mean zero events or zero treatment-related deaths.",
+        "limitations": "Search public trial registries and published sponsor reports for this program before making conclusions.",
+        "source_ids": [],
+        "reviewed_on": "2026-11-23"
+      }
     },
     {
       "id": "biomvis",
@@ -899,7 +1135,18 @@
           "url": "https://www.biomvis.com/the-biomvis-innovation/",
           "note": "Describes engineered OMV vaccine platform concepts."
         }
-      ]
+      ],
+      "clinical_safety": {
+        "status": "Preclinical or no mature clinical safety assessment",
+        "trial": "Engineered OMV immunotherapy platform",
+        "adverse_events": "No source-verified numerical human trial safety dataset is included in this focused review.",
+        "serious_events": "Not established from sources reviewed.",
+        "deaths": "Not established from sources reviewed.",
+        "attribution": "Not documented does not mean zero events or zero treatment-related deaths.",
+        "limitations": "Search public trial registries and published sponsor reports for this program before making conclusions.",
+        "source_ids": [],
+        "reviewed_on": "2026-11-23"
+      }
     },
     {
       "id": "bactheravax",
@@ -947,7 +1194,18 @@
           "url": "https://bactheravax.com/",
           "note": "Describes Fusobacterium-targeting research and explicitly calls program preclinical."
         }
-      ]
+      ],
+      "clinical_safety": {
+        "status": "Preclinical or no mature clinical safety assessment",
+        "trial": "Tumor-associated bacterial-antigen immunotherapy",
+        "adverse_events": "No source-verified numerical human trial safety dataset is included in this focused review.",
+        "serious_events": "Not established from sources reviewed.",
+        "deaths": "Not established from sources reviewed.",
+        "attribution": "Not documented does not mean zero events or zero treatment-related deaths.",
+        "limitations": "Search public trial registries and published sponsor reports for this program before making conclusions.",
+        "source_ids": [],
+        "reviewed_on": "2026-11-23"
+      }
     },
     {
       "id": "seres",
@@ -1045,8 +1303,39 @@
           "title": "Seres therapeutic programs",
           "url": "https://www.serestherapeutics.com/our-programs/",
           "note": "Lists SER-147 as preclinical and other programs."
+        },
+        {
+          "id": "bti_safety_seres_sec",
+          "kind": "SEC sponsor safety presentation",
+          "date": "2023-04-27",
+          "title": "ECOSPOR III / ECOSPOR IV — treatment-emergent SAEs and deaths",
+          "url": "https://www.sec.gov/Archives/edgar/data/1609809/000119312523120045/d200991dex991.htm",
+          "note": "ECOSPOR III: 3 deaths in SER-109 arm; investigators assessed none as product-related."
+        },
+        {
+          "id": "bti_safety_seres_nejm",
+          "kind": "Peer-reviewed Phase 3 trial",
+          "date": "2022-01-20",
+          "title": "SER-109, an Oral Microbiome Therapy for Recurrent C. difficile Infection (NEJM)",
+          "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2106516",
+          "note": "Randomized trial safety data and attribution."
         }
-      ]
+      ],
+      "clinical_safety": {
+        "status": "On-study deaths documented — not attributed to study drug",
+        "trial": "Historical SER-109 / VOWST ECOSPOR III (not a current Seres clinical pipeline program)",
+        "cohort": "Randomized trial: SER-109 n=90; placebo n=92",
+        "adverse_events": "SER-109 and placebo arms both had common treatment-emergent adverse events. Reported serious adverse events through week 8 were seven (8%) in the SER-109 arm versus fifteen (16%) in the placebo arm.",
+        "serious_events": "No serious adverse events in either arm were deemed related or possibly related to study product in the sponsor's reported tabulation.",
+        "deaths": "Three deaths occurred in the SER-109 treatment group; two had onset of fatal adverse events within the first eight weeks and the third later.",
+        "attribution": "Investigators considered none of the three deaths related to SER-109.",
+        "limitations": "Historical results for a previously developed product; the current company dossier lists different preclinical programs. Do not extrapolate the ECOSPOR III outcomes to those candidates.",
+        "source_ids": [
+          "bti_safety_seres_sec",
+          "bti_safety_seres_nejm"
+        ],
+        "reviewed_on": "2026-11-23"
+      }
     },
     {
       "id": "medosome",
@@ -1103,7 +1392,18 @@
           "url": "https://mdbiotec.com/pipeline/",
           "note": "Describes proposed probiotics-based GLP-1 delivery program."
         }
-      ]
+      ],
+      "clinical_safety": {
+        "status": "Preclinical or no mature clinical safety assessment",
+        "trial": "GLP-1-producing engineered probiotics",
+        "adverse_events": "No source-verified numerical human trial safety dataset is included in this focused review.",
+        "serious_events": "Not established from sources reviewed.",
+        "deaths": "Not established from sources reviewed.",
+        "attribution": "Not documented does not mean zero events or zero treatment-related deaths.",
+        "limitations": "Search public trial registries and published sponsor reports for this program before making conclusions.",
+        "source_ids": [],
+        "reviewed_on": "2026-11-23"
+      }
     },
     {
       "id": "mrm",
@@ -1183,7 +1483,18 @@
           "url": "https://mrmhealth.com/news.html",
           "note": "Includes preclinical liver-disease bacterial consortium research."
         }
-      ]
+      ],
+      "clinical_safety": {
+        "status": "Preclinical or no mature clinical safety assessment",
+        "trial": "CORAL immune-oncology consortium programs; CORAL liver / metabolic programs",
+        "adverse_events": "No source-verified numerical human trial safety dataset is included in this focused review.",
+        "serious_events": "Not established from sources reviewed.",
+        "deaths": "Not established from sources reviewed.",
+        "attribution": "Not documented does not mean zero events or zero treatment-related deaths.",
+        "limitations": "Search public trial registries and published sponsor reports for this program before making conclusions.",
+        "source_ids": [],
+        "reviewed_on": "2026-11-23"
+      }
     },
     {
       "id": "firstbiome",
@@ -1240,7 +1551,18 @@
           "url": "https://dealbio.vc/startups/1stbiome",
           "note": "Early metabolic-health proof-of-concept and commercialization positioning."
         }
-      ]
+      ],
+      "clinical_safety": {
+        "status": "Preclinical or no mature clinical safety assessment",
+        "trial": "Engineered probiotic metabolic-health platform",
+        "adverse_events": "No source-verified numerical human trial safety dataset is included in this focused review.",
+        "serious_events": "Not established from sources reviewed.",
+        "deaths": "Not established from sources reviewed.",
+        "attribution": "Not documented does not mean zero events or zero treatment-related deaths.",
+        "limitations": "Search public trial registries and published sponsor reports for this program before making conclusions.",
+        "source_ids": [],
+        "reviewed_on": "2026-11-23"
+      }
     },
     {
       "id": "longhorn",
@@ -1297,7 +1619,18 @@
           "url": "https://patents.google.com/patent/US20260102478A1/en",
           "note": "Related cell-wall antigen/antibody claims, not clinical benefit."
         }
-      ]
+      ],
+      "clinical_safety": {
+        "status": "Preclinical or no mature clinical safety assessment",
+        "trial": "LHNVD-501",
+        "adverse_events": "No source-verified numerical human trial safety dataset is included in this focused review.",
+        "serious_events": "Not established from sources reviewed.",
+        "deaths": "Not established from sources reviewed.",
+        "attribution": "Not documented does not mean zero events or zero treatment-related deaths.",
+        "limitations": "Search public trial registries and published sponsor reports for this program before making conclusions.",
+        "source_ids": [],
+        "reviewed_on": "2026-11-23"
+      }
     },
     {
       "id": "timeless",
@@ -1367,7 +1700,20 @@
           "url": "https://timelessbiosciences.com/science",
           "note": "Lead optimization and discovery pipeline with microbiota-associated mechanisms."
         }
-      ]
+      ],
+      "clinical_safety": {
+        "status": "Preclinical or no mature clinical safety assessment",
+        "trial": "TB-001; TB-002",
+        "adverse_events": "No source-verified numerical human trial safety dataset is included in this focused review.",
+        "serious_events": "Not established from sources reviewed.",
+        "deaths": "Not established from sources reviewed.",
+        "attribution": "Not documented does not mean zero events or zero treatment-related deaths.",
+        "limitations": "Search public trial registries and published sponsor reports for this program before making conclusions.",
+        "source_ids": [],
+        "reviewed_on": "2026-11-23"
+      }
     }
-  ]
+  ],
+  "safety_review_method": "Focused publicly sourced safety summaries, not comprehensive systematic surveillance. Separate on-study deaths, grade 5/fatal adverse events, and investigator-attributed treatment-related deaths. Counts, data cuts and patient cohorts may differ. No-data-found is not evidence of absence.",
+  "safety_review_date": "2026-11-23"
 }
