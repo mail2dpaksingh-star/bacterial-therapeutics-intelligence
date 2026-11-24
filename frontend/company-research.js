@@ -54,6 +54,30 @@ function listPrograms(parent,p,view){
   if(cited.length){const foot=add(item,'div',undefined,'company-mini-links');for(const row of cited)link(foot,row.title+' ↗',row.url)}
  }
 }
+function safetySection(root,p){
+ const v=p.clinical_safety;
+ if(!v)return;
+ const section=add(root,'section',undefined,'company-profile-section company-safety-section');
+ add(section,'h5','Clinical Safety & Adverse Events');
+ const state=add(section,'p',v.status||'No source-verified safety dataset included','company-safety-status');
+ const evidence=add(section,'div',undefined,'company-safety-body');
+ const line=(name,value)=>{if(!value)return;const paragraph=add(evidence,'p');add(paragraph,'strong',name+': ');add(paragraph,'span',value);};
+ line('Trial / program',v.trial);
+ line('Population / analysis',v.cohort);
+ line('Reported adverse events',v.adverse_events);
+ line('Serious adverse events',v.serious_events);
+ line('Deaths / fatal adverse events',v.deaths);
+ line('Treatment attribution',v.attribution);
+ line('Interpretation limits',v.limitations);
+ const idx=sourceIndex(p);
+ const citations=(v.source_ids||[]).map(id=>idx[id]).filter(Boolean);
+ if(citations.length){
+  const sources=add(section,'div',undefined,'company-mini-links');
+  add(sources,'strong','Primary supporting sources: ');
+  for(const row of citations)link(sources,row.title+' ↗',row.url);
+ }else add(section,'p','No verified program-specific human clinical safety results were added in this review. This is not evidence of zero adverse events.','company-method-note');
+ add(section,'p','Reviewed: '+(v.reviewed_on||'date unavailable')+' · These are public-source findings, not live safety surveillance. A death occurring during a study does not necessarily mean the investigational therapy caused it.','company-method-note');
+}
 function explanation(parent,label,text){
  const section=add(parent,'section',undefined,'company-profile-section');
  add(section,'h5',label);
@@ -99,13 +123,17 @@ function render(){
  header(target,p,area);
  if(focus==='overview'){
   listPrograms(target,p,'overview');
+  safetySection(target,p);
   explanation(target,'Biological mechanism',p.mechanism);
   explanation(target,'Evidence interpretation',p.clinical);
   documentSection(target,p,'clinical');
  }else if(focus==='clinical'){
   listPrograms(target,p,'clinical');
+  safetySection(target,p);
   explanation(target,'Clinical interpretation',p.clinical);
   documentSection(target,p,'clinical');
+ }else if(focus==='safety'){
+  safetySection(target,p);
  }else if(focus==='evidence'){
   explanation(target,'Proposed biological mechanism',p.mechanism);
   explanation(target,'Scientific publications and study evidence',p.publication);
@@ -133,6 +161,7 @@ function insertNotes(){
  if(focus==='patents')lines.push('Patent context: '+p.patent);
  else if(focus==='evidence')lines.push('Scientific context: '+p.publication);
  else lines.push('Clinical context: '+p.clinical);
+ if(p.clinical_safety){lines.push('Safety summary ('+p.clinical_safety.reviewed_on+'): '+p.clinical_safety.status,'Deaths/fatal AEs: '+p.clinical_safety.deaths,'Attribution: '+p.clinical_safety.attribution);}
  for(const row of (p.sources||[]).slice(0,4))lines.push('Source ['+row.date+']: '+row.title+' — '+row.url);
  lines.push('My evaluation: ');
  const result=lines.join('\n');
