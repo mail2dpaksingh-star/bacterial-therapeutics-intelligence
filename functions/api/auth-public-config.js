@@ -8,8 +8,7 @@ const response=(data)=>new Response(JSON.stringify(data),{
   'content-type':'application/json; charset=utf-8',
   'cache-control':'no-store, max-age=0, must-revalidate',
   'x-content-type-options':'nosniff',
-  'referrer-policy':'no-referrer',
-  'access-control-allow-origin':'none'
+  'referrer-policy':'no-referrer'
  }
 });
 export function onRequestGet({env}){
