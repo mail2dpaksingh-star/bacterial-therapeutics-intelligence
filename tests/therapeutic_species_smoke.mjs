@@ -57,6 +57,7 @@ class Element {
  appendChild(child){this.children.push(child);return child}
  replaceChildren(...children){this._text='';this.children=children}
  addEventListener(event,fn){this.listeners[event]=fn}
+ dispatchEvent(event){this.listeners[event.type]?.(event);return true}
  setAttribute(name,value){this.attributes[name]=value}
  focus(){this.focused=true}
  scrollIntoView(){}
