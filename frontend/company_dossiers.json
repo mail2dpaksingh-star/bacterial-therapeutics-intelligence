@@ -1,0 +1,665 @@
+{
+  "version": "1.0",
+  "snapshot_date": "2026-11-23",
+  "scope": "Curated public-source profiles as of November 23, 2026; status may have changed after document date.",
+  "method": "Program-specific dated-source summaries. Company statements, trial registrations, peer-reviewed publications and patents are distinct evidence types. Search leads are not legal FTO assessments.",
+  "companies": [
+    {
+      "id": "indaptus",
+      "name": "Indaptus Therapeutics",
+      "focus": [
+        "Oncology"
+      ],
+      "platform": "Decoy20 / Decoy immunostimulant platform",
+      "classification": "Nonliving bacterial-derived immunostimulant",
+      "programs": [
+        {
+          "name": "Decoy20",
+          "indication": "Advanced solid tumors",
+          "phase": "Phase 1 (historical)",
+          "status": "Discontinued",
+          "status_reason": "No active Decoy20 clinical program",
+          "outcome": "Further enrollment was discontinued during Q2 2026; no participants remained in active clinical studies, and further Decoy20 development activity was substantially reduced. The company continued to evaluate strategic alternatives and scientific uses of the assets.",
+          "latest_report": "2026-11-13",
+          "source_ids": [
+            "indp10q",
+            "indppr"
+          ]
+        }
+      ],
+      "mechanism": "Nonliving bacterial preparations designed to activate broad innate and adaptive antitumor immunity (company-described).",
+      "clinical": "No active clinical development program was reported in the November 2026 filing; this is not evidence that the candidate achieved clinical efficacy.",
+      "publication": "Scientific mechanism and early-phase program disclosures are available, but no current active efficacy trial is established in the cited filings.",
+      "patent": "Decoy platform patent family may be relevant; a search alone does not establish ownership, claim scope, validity, or freedom to operate.",
+      "patent_links": [
+        {
+          "kind": "Patent search lead",
+          "date": "2026-11-23",
+          "title": "Search Indaptus / Decoy patent publications",
+          "url": "https://patents.google.com/?q=Indaptus+Decoy20",
+          "note": "Unreviewed patent-search lead"
+        }
+      ],
+      "sources": [
+        {
+          "id": "indp10q",
+          "kind": "SEC quarterly filing",
+          "date": "2026-11-13",
+          "title": "Indaptus Form 10-Q, period ended September 30, 2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1857044/000149315226051550/form10-q.htm",
+          "note": "Company states enrollment stopped, no ongoing Decoy20 participants, and development reduced."
+        },
+        {
+          "id": "indppr",
+          "kind": "Company press release filed with SEC",
+          "date": "2026-11-13",
+          "title": "Indaptus Q3 2026 corporate update",
+          "url": "https://www.sec.gov/Archives/edgar/data/1857044/000149315226051749/ex99-1.htm",
+          "note": "Discussion of absence of active clinical programs and strategic review."
+        },
+        {
+          "id": "indp10qaug",
+          "kind": "SEC quarterly filing",
+          "date": "2026-08-13",
+          "title": "Indaptus Form 10-Q for June 2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1857044/000149315226037579/form10-q.htm",
+          "note": "Documents the Q2 2026 wind-down of the Decoy20 program."
+        }
+      ]
+    },
+    {
+      "id": "actym",
+      "name": "Actym Therapeutics",
+      "focus": [
+        "Oncology"
+      ],
+      "platform": "STACT / ACTM-838",
+      "classification": "Engineered live bacterial delivery",
+      "programs": [
+        {
+          "name": "ACTM-838",
+          "indication": "Advanced solid tumors",
+          "phase": "Phase 1a/1b",
+          "status": "Clinical evaluation reported",
+          "status_reason": "Company pipeline describes Phase 1a/1b evaluation",
+          "outcome": "ACTM-838 is reported by Actym as being evaluated in Phase 1a/1b; public data cited here do not substantiate a definitive antitumor efficacy outcome.",
+          "latest_report": "2026-11-23",
+          "source_ids": [
+            "actymPipeline",
+            "actymNCI"
+          ]
+        }
+      ],
+      "mechanism": "Investigational STACT bacterial platform seeks localized immune-modulatory payload activity in the tumor microenvironment.",
+      "clinical": "Phase 1a/1b clinical study listed. Up-to-date recruitment should be verified directly in the trial record; company pipeline text is not a final outcome report.",
+      "publication": "Public program and IND disclosures; quantitative efficacy or safety endpoints are not independently summarized from primary clinical results here.",
+      "patent": "Review STACT platform patents and claim families by applicant, jurisdiction and expiry; no FTO clearance given.",
+      "patent_links": [
+        {
+          "kind": "Patent search lead",
+          "date": "2026-11-23",
+          "title": "Search Actym STACT patent publications",
+          "url": "https://patents.google.com/?q=Actym+Therapeutics+STACT",
+          "note": "Unreviewed patent-search lead"
+        }
+      ],
+      "sources": [
+        {
+          "id": "actymPipeline",
+          "kind": "Company pipeline",
+          "date": "2026-11-23",
+          "title": "Actym ACTM-838 clinical pipeline",
+          "url": "https://www.actymthera.com/pipeline",
+          "note": "Company reports ACTM-838 advancing through Phase 1a/b."
+        },
+        {
+          "id": "actymNCI",
+          "kind": "Government trial listing",
+          "date": "2026-11-23",
+          "title": "NCI trial summary: ACTM-838 in advanced solid tumors",
+          "url": "https://www.cancer.gov/research/participate/clinical-trials-search/v?id=NCI-2025-00373&r=1",
+          "note": "A Phase 1a/1b trial; confirm recruitment status at ClinicalTrials.gov."
+        },
+        {
+          "id": "actymIND",
+          "kind": "Company press release",
+          "date": "2024",
+          "title": "ACTM-838 IND clearance announcement",
+          "url": "https://www.actymthera.com/news/actym-therapeutics-announces-ind-clearance-for-phase-1-clinical-trial-investigating-lead-program-actm-838-in-patients-with-solid-tumors",
+          "note": "Historical milestone, not a clinical outcome."
+        }
+      ]
+    },
+    {
+      "id": "synthetica",
+      "name": "Synthetica Pioneering",
+      "focus": [
+        "Oncology"
+      ],
+      "platform": "Engineered oncolytic bacterial program",
+      "classification": "Engineered bacterial oncology research",
+      "programs": [
+        {
+          "name": "Oncolytic bacterial therapeutic platform",
+          "indication": "Solid tumors",
+          "phase": "Preclinical / clinical initiation not verified",
+          "status": "Preclinical or unconfirmed",
+          "status_reason": "No clinical trial results verified from available sources",
+          "outcome": "A 2024 financing announcement described advancement toward clinical development. A published patent application exists, but no current program-level clinical outcome was verified.",
+          "latest_report": "2026-03-18",
+          "source_ids": [
+            "syntheticaPR",
+            "syntheticaPatent"
+          ]
+        }
+      ],
+      "mechanism": "Synthetic-biology approaches to bacterial antitumor activity; specific functions remain dependent on the proprietary program.",
+      "clinical": "Do not infer trial enrollment or successful human outcomes from financing announcements or patents.",
+      "publication": "Public scientific and corporate disclosures are limited in this reviewed set.",
+      "patent": "A published patent family has been identified. Its prosecution history, active claims and jurisdiction require independent legal analysis.",
+      "patent_links": [
+        {
+          "kind": "Published patent application",
+          "date": "2026-03-18",
+          "title": "EP4464773A1 — Modified bacterium with anti-tumor activity",
+          "url": "https://patents.google.com/patent/EP4464773A1/en",
+          "note": "Patent publication; not evidence of regulatory approval or FTO"
+        }
+      ],
+      "sources": [
+        {
+          "id": "syntheticaPR",
+          "kind": "Company financing announcement",
+          "date": "2024-07-30",
+          "title": "Synthetica Pioneering Series A financing",
+          "url": "https://www.prnewswire.com/news-releases/synthetica-pioneering-closes-a-series-a-funding-round-to-support-development-of-oncolytic-bacterial-therapy-for-solid-tumors-302209281.html",
+          "note": "Historical company funding and development aims."
+        },
+        {
+          "id": "syntheticaPatent",
+          "kind": "Patent publication",
+          "date": "2026-03-18",
+          "title": "Published family EP4464773A1",
+          "url": "https://patents.google.com/patent/EP4464773A1/en",
+          "note": "Public patent disclosure; specific patent claims must be examined."
+        }
+      ]
+    },
+    {
+      "id": "prokarium",
+      "name": "Prokarium",
+      "focus": [
+        "Oncology"
+      ],
+      "platform": "ZH9 / PARADIGM-1",
+      "classification": "Investigational live bacterial immunotherapy",
+      "programs": [
+        {
+          "name": "ZH9 — PARADIGM-1",
+          "indication": "Non-muscle-invasive bladder cancer",
+          "phase": "Phase 1/1b",
+          "status": "Ongoing at last company update",
+          "status_reason": "Interim clinical results announced May 2026",
+          "outcome": "The company announced interim safety and preliminary antitumor signals in May 2026. Interim company-reported results are not a completed registrational trial or regulatory approval.",
+          "latest_report": "2026-05-18",
+          "source_ids": [
+            "prokariumInterim",
+            "prokariumTrial"
+          ]
+        }
+      ],
+      "mechanism": "Investigational intravesical bacterial immunotherapy intended to stimulate local antitumor immune responses.",
+      "clinical": "Company reported interim 2026 findings; full study completion and registry status must be verified separately.",
+      "publication": "Conference presentation and press-release disclosures are available; clinical endpoint interpretation requires protocol and full analysis.",
+      "patent": "Patent landscape and FTO for the ZH9 technology require detailed family/jurisdiction review.",
+      "patent_links": [
+        {
+          "kind": "Patent search lead",
+          "date": "2026-11-23",
+          "title": "Search Prokarium ZH9 patent filings",
+          "url": "https://patents.google.com/?q=Prokarium+ZH9",
+          "note": "Unreviewed patent-search lead"
+        }
+      ],
+      "sources": [
+        {
+          "id": "prokariumInterim",
+          "kind": "Company interim clinical disclosure",
+          "date": "2026-05-18",
+          "title": "Prokarium PARADIGM-1 interim findings",
+          "url": "https://www.prokarium.com/news/prokarium-reports-positive-interim-data-from-phase-1-1b-paradigm-1-trial-of-zh9-",
+          "note": "Preliminary reported safety and antitumor evidence; not regulatory authorization."
+        },
+        {
+          "id": "prokariumTrial",
+          "kind": "Clinical trial reference",
+          "date": "2024-02-07",
+          "title": "PARADIGM-1 — NCT06181266",
+          "url": "https://clinicaltrials.gov/study/NCT06181266",
+          "note": "Program-level trial registry; check directly for recruitment changes."
+        },
+        {
+          "id": "prokariumEarly",
+          "kind": "Company press release",
+          "date": "2026-02-16",
+          "title": "Prokarium EAU and AUA interim data presentation announcement",
+          "url": "https://www.prokarium.com/news/prokarium-announces-upcoming-oral-presentations-of-interim-clinical-data-at-the-eau-and-aua-2026-annual-meetings",
+          "note": "Conference results context."
+        }
+      ]
+    },
+    {
+      "id": "baccine",
+      "name": "Baccine",
+      "focus": [
+        "Oncology"
+      ],
+      "platform": "Bacteria-based cancer immunotherapy/vaccines",
+      "classification": "Bacterial vaccine and immunotherapy concept",
+      "programs": [
+        {
+          "name": "Baccine engineered bacterial immunotherapy",
+          "indication": "Oncology",
+          "phase": "Preclinical / public status not established",
+          "status": "Insufficient public evidence",
+          "status_reason": "No confirmed human clinical trial data in reviewed public sources",
+          "outcome": "Public descriptions and published patent materials establish research activity, but do not demonstrate clinical efficacy or an active clinical trial.",
+          "latest_report": "2026-02-19",
+          "source_ids": [
+            "baccineIIA",
+            "baccinePatent"
+          ]
+        }
+      ],
+      "mechanism": "Bacteria-based cancer vaccine concepts for antitumor immune activation; specific product performance has not been independently assessed.",
+      "clinical": "Trial phase and clinical outcomes not confirmed. Avoid describing the program as clinically successful.",
+      "publication": "Public funding profile and patent disclosure; clinical publications were not verified.",
+      "patent": "A published U.S. patent application is associated with Baccine Ltd and Yeda Research and Development Co. Claim scope and legal status require independent review.",
+      "patent_links": [
+        {
+          "kind": "Published patent application",
+          "date": "2026-02-19",
+          "title": "US20260048107A1 — Genetically modified bacteria for generating vaccines",
+          "url": "https://patents.google.com/patent/US20260048107A1/en",
+          "note": "Public patent lead; no FTO conclusion"
+        }
+      ],
+      "sources": [
+        {
+          "id": "baccineIIA",
+          "kind": "Public innovation authority profile",
+          "date": "2026",
+          "title": "Israel Innovation Authority: Baccine",
+          "url": "https://innovationisrael.org.il/en/importWinner/516415379/",
+          "note": "Describes bacteria-based immunotherapy research."
+        },
+        {
+          "id": "baccinePatent",
+          "kind": "Patent publication",
+          "date": "2026-02-19",
+          "title": "Published U.S. application US20260048107A1",
+          "url": "https://patents.google.com/patent/US20260048107A1/en",
+          "note": "Published invention, not clinical outcome."
+        }
+      ]
+    },
+    {
+      "id": "neobe",
+      "name": "Neobe Therapeutics",
+      "focus": [
+        "Oncology"
+      ],
+      "platform": "NEO22 / synthetic biology live therapeutics",
+      "classification": "Engineered live bacterial tumor-remodeling platform",
+      "programs": [
+        {
+          "name": "NEO22",
+          "indication": "Immune-excluded solid tumors",
+          "phase": "Preclinical",
+          "status": "Preclinical development",
+          "status_reason": "Funding announced November 2026 to support preclinical studies",
+          "outcome": "November 2026 financing announcement describes progress toward preclinical development and a planned 2028 IND. Reported preclinical findings do not establish human clinical efficacy.",
+          "latest_report": "2026-11-09",
+          "source_ids": [
+            "neobeFunding",
+            "neobeTech"
+          ]
+        }
+      ],
+      "mechanism": "Engineered bacteria designed to modify extracellular-matrix components of the tumor environment and improve access for immune-based therapies (investigational).",
+      "clinical": "No verified clinical efficacy trial for NEO22; IND filing in 2028 is a company plan, not a completed milestone.",
+      "publication": "A 2026 preclinical study was referenced in institutional coverage; consult the paper directly for assays and limitations.",
+      "patent": "Review relevant bacterial engineering and local tumor-modulation patent families by applicant and jurisdiction; no clearance inferred.",
+      "patent_links": [
+        {
+          "kind": "Patent search lead",
+          "date": "2026-11-23",
+          "title": "Search Neobe Therapeutics patent publications",
+          "url": "https://patents.google.com/?q=Neobe+Therapeutics",
+          "note": "Unreviewed patent-search lead"
+        }
+      ],
+      "sources": [
+        {
+          "id": "neobeFunding",
+          "kind": "Institutional research partner news",
+          "date": "2026-11-09",
+          "title": "Cancer Research Horizons: Neobe raises $6.8m",
+          "url": "https://www.cancerresearchhorizons.com/news-and-events/our-news/neobe-raises-68m-break-down-barriers-stop-cancer-treatments-working",
+          "note": "Preclinical development financing and research context."
+        },
+        {
+          "id": "neobeTech",
+          "kind": "Company technology page",
+          "date": "2026-11-23",
+          "title": "Neobe synthetic-biology therapeutic technology",
+          "url": "https://www.neobetherapeutics.com/our-technology",
+          "note": "Describes pipeline entering preclinical development."
+        }
+      ]
+    },
+    {
+      "id": "enterome",
+      "name": "Enterome",
+      "focus": [
+        "Oncology"
+      ],
+      "platform": "OncoMimics™ microbial-derived peptide immunotherapies",
+      "classification": "Microbial mimicry-derived synthetic peptide immunotherapies; not live bacteria",
+      "programs": [
+        {
+          "name": "EO2463",
+          "indication": "Indolent non-Hodgkin lymphoma",
+          "phase": "Phase 1/2",
+          "status": "Clinical development reported",
+          "status_reason": "SIDNEY study and 2026 interim clinical data",
+          "outcome": "Company reported T-cell expansion and associations with clinical outcomes. No regulatory marketing authorization or definitive efficacy conclusion is established by these disclosures.",
+          "latest_report": "2026-07-17",
+          "source_ids": [
+            "enteromeEO2463",
+            "enteromeTrial"
+          ]
+        },
+        {
+          "name": "EO4010",
+          "indication": "Colorectal cancer",
+          "phase": "Phase 1/2",
+          "status": "Clinical development reported",
+          "status_reason": "2026 ESMO-associated results announced",
+          "outcome": "Company reported CD8 T-cell expansion associated with longer survival in exploratory analyses. Associations do not establish comparative clinical benefit.",
+          "latest_report": "2026-10-23",
+          "source_ids": [
+            "enteromeEO4010"
+          ]
+        },
+        {
+          "name": "EO2401",
+          "indication": "Glioblastoma and adrenal tumors",
+          "phase": "Phase 1/2 completed or reported; follow-up needed",
+          "status": "Results reported; next stage unconfirmed",
+          "status_reason": "Company Phase 2 program disclosures",
+          "outcome": "Clinical outcomes reported by the company; next trial and recruitment state should be confirmed independently.",
+          "latest_report": "2026-11-23",
+          "source_ids": [
+            "enteromePipeline",
+            "enteromeTrial"
+          ]
+        }
+      ],
+      "mechanism": "Synthetic bacterial-mimicry peptides designed to evoke T-cell responses against tumor-associated epitopes; these are derived from microbial discovery, not live microbial delivery.",
+      "clinical": "Multiple investigational peptide programs. Company-reported preliminary data do not equal approved therapy.",
+      "publication": "2026 congress disclosures and clinical descriptions are available, some with immune-correlate analyses.",
+      "patent": "Investigate OncoMimics peptide claims, antigens, method-of-use claims and applicable jurisdictions. Patent lead does not establish FTO.",
+      "patent_links": [
+        {
+          "kind": "Patent search lead",
+          "date": "2026-11-23",
+          "title": "Search Enterome OncoMimics patent publications",
+          "url": "https://patents.google.com/?q=Enterome+OncoMimics",
+          "note": "Unreviewed patent-search lead"
+        }
+      ],
+      "sources": [
+        {
+          "id": "enteromeEO2463",
+          "kind": "Company clinical data announcement",
+          "date": "2026-07-17",
+          "title": "Enterome EO2463 Phase 2 immune-response analysis",
+          "url": "https://www.enterome.com/news-events/enterome-phase-2-data-show-eo2463-induced-cd8-t-cell-expansion-correlates-with-progression-free-survival-in-patients-with-indolent-non-hodgkin-lymphoma-in-the-watch-and-wait-setting/",
+          "note": "Company reports association between T-cell expansion and outcomes."
+        },
+        {
+          "id": "enteromeEO4010",
+          "kind": "Company conference press release",
+          "date": "2026-10-23",
+          "title": "Enterome EO4010 colorectal cancer results",
+          "url": "https://www.enterome.com/news-events/enterome-phase-1-2-data-show-oncomimics-eo4010-induced-cd8-t-cell-expansion-was-associated-with-longer-survival-in-patients-with-colorectal-cancer/",
+          "note": "Clinical exploratory biomarker/outcome associations."
+        },
+        {
+          "id": "enteromePipeline",
+          "kind": "Company pipeline",
+          "date": "2026-11-23",
+          "title": "Enterome therapeutic pipeline",
+          "url": "https://www.enterome.com/pipeline/",
+          "note": "Lead peptide candidates by indication."
+        },
+        {
+          "id": "enteromeTrial",
+          "kind": "Company trial overview",
+          "date": "2026-11-23",
+          "title": "Enterome clinical trials",
+          "url": "https://www.enterome.com/clinical-trials/",
+          "note": "SIDNEY and ROSALIE descriptions."
+        }
+      ]
+    },
+    {
+      "id": "vedanta",
+      "name": "Vedanta Biosciences",
+      "focus": [
+        "Microbiome"
+      ],
+      "platform": "VE303",
+      "classification": "Defined oral bacterial consortium",
+      "programs": [
+        {
+          "name": "VE303 — RESTORATiVE303",
+          "indication": "Prevention of recurrent C. difficile infection",
+          "phase": "Phase 3",
+          "status": "Ongoing at last verified update",
+          "status_reason": "More than 80% enrolled in August 2026",
+          "outcome": "A company update in August 2026 reported over 80% enrollment in its pivotal Phase 3 program. An April 2026 prespecified interim review recommended continuation without modification; these are not final Phase 3 efficacy results.",
+          "latest_report": "2026-08-06",
+          "source_ids": [
+            "vedantaAug",
+            "vedantaApr"
+          ]
+        }
+      ],
+      "mechanism": "Defined microbial consortium aims to restore colonization resistance following microbiome disruption.",
+      "clinical": "Pivotal randomized trial underway per 2026 company disclosure. No Phase 3 primary endpoint result verified in this snapshot.",
+      "publication": "Company Phase 2 data and subsequent Phase 3 disclosures; confirm current trial status before interpreting outcomes.",
+      "patent": "Review defined consortium composition, manufacturing and method-of-use patent claims; no FTO opinion.",
+      "patent_links": [
+        {
+          "kind": "Patent search lead",
+          "date": "2026-11-23",
+          "title": "Search Vedanta VE303 patent publications",
+          "url": "https://patents.google.com/?q=Vedanta+VE303",
+          "note": "Unreviewed patent-search lead"
+        }
+      ],
+      "sources": [
+        {
+          "id": "vedantaAug",
+          "kind": "Company program and financing update",
+          "date": "2026-08-06",
+          "title": "Vedanta RESTORATiVE303 surpasses 80% enrollment",
+          "url": "https://www.vedantabio.com/press-release/vedanta-biosciences-secures-60-million-in-funding-and-strengthens-leadership-team-ahead-of-pivotal-phase-3-data/",
+          "note": "Study enrollment progress; final trial outcome not established."
+        },
+        {
+          "id": "vedantaApr",
+          "kind": "Company interim protocol review",
+          "date": "2026-04-02",
+          "title": "Vedanta DMC recommends Phase 3 continue unchanged",
+          "url": "https://www.vedantabio.com/press-release/vedanta-biosciences-announces-the-phase-3-restorative303-study-of-ve303-for-the-prevention-of-recurrent-c-difficile-infection-will-continue-as-planned-following-protocol-specified-interim-analysis/",
+          "note": "DMC continued trial without modification; not an efficacy readout."
+        },
+        {
+          "id": "vedantaProgram",
+          "kind": "Company pipeline description",
+          "date": "2026-11-23",
+          "title": "VE303 development overview",
+          "url": "https://www.vedantabio.com/pipeline-programs/ve303/",
+          "note": "Product design and Phase 3 program."
+        }
+      ]
+    },
+    {
+      "id": "maat",
+      "name": "MaaT Pharma",
+      "focus": [
+        "Microbiome",
+        "Oncology"
+      ],
+      "platform": "MaaT013 / MaaT034 microbiome ecosystem therapies",
+      "classification": "Microbiome ecosystem therapeutic",
+      "programs": [
+        {
+          "name": "MaaT013 (Xervyteg) — aGvHD",
+          "indication": "Steroid-refractory gastrointestinal acute graft-versus-host disease",
+          "phase": "Pivotal evidence; MAA regulatory review",
+          "status": "Negative regulatory opinion",
+          "status_reason": "CHMP maintained negative opinion after re-examination on September 18, 2026",
+          "outcome": "European conditional marketing authorization was not granted. This does not imply the entire platform or every therapeutic study was discontinued.",
+          "latest_report": "2026-09-18",
+          "source_ids": [
+            "maatNegative",
+            "maatPipeline"
+          ]
+        },
+        {
+          "name": "MaaT013 — PICASSO",
+          "indication": "Metastatic melanoma with immune checkpoint blockade",
+          "phase": "Investigator-sponsored Phase 2a",
+          "status": "Exploratory study update reported",
+          "status_reason": "Preliminary data reported November 2026",
+          "outcome": "Investigator-sponsored preliminary observations were announced. They cannot be interpreted as a definitive clinical benefit or general approval.",
+          "latest_report": "2026-11-06",
+          "source_ids": [
+            "maatMelanoma"
+          ]
+        },
+        {
+          "name": "MaaT034",
+          "indication": "Immuno-oncology (investigational)",
+          "phase": "Development planning",
+          "status": "Early program reported",
+          "status_reason": "Referenced in November 2026 strategy update",
+          "outcome": "Development strategy described; no completed efficacy endpoint confirmed.",
+          "latest_report": "2026-11-06",
+          "source_ids": [
+            "maatMelanoma",
+            "maatPipeline"
+          ]
+        }
+      ],
+      "mechanism": "Microbiome ecosystem therapies intended to influence host immune regulation following disease or treatment-associated microbial disruption.",
+      "clinical": "Program-specific outcomes differ. Negative EMA decision for MaaT013/aGvHD; other clinical and planned research may continue.",
+      "publication": "ARES clinical congress data, CHMP decisions, and 2026 exploratory immuno-oncology updates.",
+      "patent": "Review ecosystem product, processing and disease-specific claims by market; negative CHMP opinion is a regulatory finding, not an IP determination.",
+      "patent_links": [
+        {
+          "kind": "Patent search lead",
+          "date": "2026-11-23",
+          "title": "Search MaaT Pharma patents",
+          "url": "https://patents.google.com/?q=MaaT+Pharma+microbiome",
+          "note": "Unreviewed patent-search lead"
+        }
+      ],
+      "sources": [
+        {
+          "id": "maatNegative",
+          "kind": "Company regulatory update",
+          "date": "2026-09-18",
+          "title": "MaaT013 negative CHMP opinion maintained",
+          "url": "https://www.maatpharma.com/september-18-2026-maat-pharma-provides-update-on-maat013-xervyteg-potential-development-plan-following-chmp-negative-opinion-after-re-examination/",
+          "note": "Negative European review after re-examination."
+        },
+        {
+          "id": "maatMelanoma",
+          "kind": "Company Phase 2a update",
+          "date": "2026-11-06",
+          "title": "MaaT013 PICASSO melanoma preliminary findings",
+          "url": "https://www.maatpharma.com/november-6-2026-maat-pharma-provides-an-update-on-preliminary-findings-from-the-investigator-sponsored-phase-2a-picasso-trial-in-metastatic-melanoma/",
+          "note": "Investigator-sponsored melanoma trial update."
+        },
+        {
+          "id": "maatPipeline",
+          "kind": "Company pipeline",
+          "date": "2026-11-23",
+          "title": "MaaT Pharma pipeline overview",
+          "url": "https://www.maatpharma.com/pipeline/",
+          "note": "Program status and clinical strategies."
+        }
+      ]
+    },
+    {
+      "id": "bcg",
+      "name": "Clinical precedent — intravesical BCG",
+      "focus": [
+        "Oncology"
+      ],
+      "platform": "BCG Live (intravesical use)",
+      "classification": "Historical approved intravesical bacterial immunotherapy; not a company",
+      "programs": [
+        {
+          "name": "TICE BCG",
+          "indication": "Selected non-muscle-invasive bladder cancer indications",
+          "phase": "Licensed biologic",
+          "status": "Approved precedent",
+          "status_reason": "FDA lists TICE BCG as a licensed product for specified bladder indications",
+          "outcome": "Established intravesical therapeutic use in selected bladder cancer indications. This does not validate the efficacy of unrelated engineered bacterial platforms.",
+          "latest_report": "2026-11-23",
+          "source_ids": [
+            "bcgFDA",
+            "bcgCombo"
+          ]
+        }
+      ],
+      "mechanism": "Intravesical live BCG elicits local host immune responses involved in antitumor activity, although the detailed mechanism is incompletely resolved.",
+      "clinical": "This record is a therapeutic precedent rather than a company or single investigational program.",
+      "publication": "Current FDA product and combination-treatment decisions provide regulatory context.",
+      "patent": "Existing use of BCG does not establish FTO for any new bacterial composition or method of use.",
+      "patent_links": [
+        {
+          "kind": "Patent search lead",
+          "date": "2026-11-23",
+          "title": "Search BCG bladder cancer method-of-use patents",
+          "url": "https://patents.google.com/?q=BCG+intravesical+bladder+cancer",
+          "note": "Unreviewed patent-search lead"
+        }
+      ],
+      "sources": [
+        {
+          "id": "bcgFDA",
+          "kind": "FDA licensed biologic",
+          "date": "2026-08",
+          "title": "FDA: TICE BCG",
+          "url": "https://www.fda.gov/vaccines-blood-biologics/vaccines/tice-bcg",
+          "note": "Licensed for specific bladder cancer use."
+        },
+        {
+          "id": "bcgCombo",
+          "kind": "FDA oncology approval",
+          "date": "2026-05-28",
+          "title": "FDA: durvalumab with BCG for high-risk NMIBC",
+          "url": "https://www.fda.gov/drugs/cancer-approvals/fda-approves-durvalumab-combination-bacillus-calmette-guerin-high-risk-non-muscle-invasive-bladder",
+          "note": "Separate approved combination indication; not evidence for new bacterial programs."
+        }
+      ]
+    }
+  ]
+}
