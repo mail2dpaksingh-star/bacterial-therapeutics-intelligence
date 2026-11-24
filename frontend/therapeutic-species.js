@@ -24,12 +24,14 @@
   const area=by('btiSpeciesArea')?.value||'all';
   const gram=by('btiSpeciesGram')?.value||'all';
   const evidence=by('btiSpeciesEvidence')?.value||'all';
+  const platform=by('btiSpeciesPlatform')?.value||'all';
   return entries.filter(e=>{
    if(area!=='all'&&e.category!==area)return false;
+   if(platform!=='all'&&e.platform_class!==platform)return false;
    if(gram!=='all'&&!String(e.gram).toLowerCase().includes(gram.toLowerCase()))return false;
    if(evidence!=='all'&&evidenceType(e)!==evidence)return false;
    if(term){
-    const search=[e.name,e.strain,e.category,e.gram,e.modality,e.stage,...(e.components||[]),...(e.indications||[])].join(' ').toLowerCase();
+    const search=[e.name,e.strain,e.category,e.gram,e.modality,e.platform_class,e.stage,...(e.components||[]),...(e.indications||[])].join(' ').toLowerCase();
     if(!search.includes(term))return false;
    }
    return true;
@@ -46,10 +48,11 @@
   dest.replaceChildren();
   if(!entry){add(dest,'p','No matching species. Adjust the search or filter selections.');return}
   const badges=add(dest,'div',undefined,'bti-species-badges');
-  [entry.category,entry.gram,displayEvidence(evidenceType(entry))].forEach(x=>add(badges,'span',x));
+  [entry.platform_class,entry.category,entry.gram,displayEvidence(evidenceType(entry))].forEach(x=>add(badges,'span',x));
   add(dest,'h3',entry.name);
   add(dest,'p',entry.strain,'bti-species-strain');
   const facts=add(dest,'div',undefined,'bti-species-facts');
+  fact(facts,'Preparation class',entry.platform_class||'Not classified');
   fact(facts,'Therapeutic modality',entry.modality);
   fact(facts,'Clinical development evidence',entry.stage);
   fact(facts,'Disease / research focus',(entry.indications||[]).join(' · '));
@@ -107,7 +110,7 @@
    });
    add(btn,'strong',e.name);
    add(btn,'small',e.strain);
-   add(btn,'em',e.category+' · '+displayEvidence(evidenceType(e)));
+   add(btn,'em',e.platform_class+' · '+e.category+' · '+displayEvidence(evidenceType(e)));
   }
   detail(rows.find(e=>e.id===activeId));
  }
@@ -153,6 +156,6 @@
   hot.addEventListener('click',open);
   alternate?.addEventListener('click',open);
   by('btiCloseSpecies')?.addEventListener('click',()=>{syncOpen(false);hot.focus();by('btiMechanismFeature')?.scrollIntoView({behavior:'smooth',block:'start'})});
-  ['btiSpeciesSearch','btiSpeciesArea','btiSpeciesGram','btiSpeciesEvidence'].forEach(id=>by(id)?.addEventListener(id==='btiSpeciesSearch'?'input':'change',render));
+  ['btiSpeciesSearch','btiSpeciesArea','btiSpeciesGram','btiSpeciesEvidence','btiSpeciesPlatform'].forEach(id=>by(id)?.addEventListener(id==='btiSpeciesSearch'?'input':'change',render));
  });
 })();
