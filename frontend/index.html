@@ -195,7 +195,7 @@ html{scroll-behavior:smooth}#btiHomeHero,#btiMechanismFeature,#homeResearchExplo
 .blog-prompt-grid button{background:#fff;border:1px solid #afcfd8;border-radius:9px;padding:8px 10px;font-size:11px;font-weight:800;color:#157982}
 @media(max-width:950px){.blog-layout{grid-template-columns:1fr}.blog-intro{align-items:flex-start}.blog-prompt-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:650px){.bti-community{padding:12px!important}.blog-intro{padding:18px;flex-direction:column}.blog-intro-actions{width:100%}.blog-filters{grid-template-columns:1fr}.blog-feed-head{align-items:start}.blog-prompt-grid{grid-template-columns:1fr}}
-</style><script>window.btiSnapshotPromise=null;window.btiGet=async function(url){try{const live=await fetch(url,{cache:'no-store'});if(live.ok)return await live.json()}catch(_e){}if(!window.btiSnapshotPromise){window.btiSnapshotPromise=fetch('/pathway_snapshot.json').then(r=>{if(!r.ok)throw Error('Static pathway dataset unavailable');return r.json()})}const snap=await window.btiSnapshotPromise;if(url.endsWith('/overview'))return snap.overview;const id=decodeURIComponent(url.substring(url.lastIndexOf('/')+1));if(snap.details&&snap.details[id])return snap.details[id];throw Error('No curated pathway found for '+id)};</script></head><body><a class="skip-link" href="#workspaceSelect">Skip to workspace navigation</a><main class="shell"><header class="top home-top"><div class="brand"><span aria-hidden="true" class="brand-mark">BT</span><span>BACTERIAL THERAPEUTICS <span class="brand-divider">/</span> INTELLIGENCE</span><span class="brand-edition">SCIENTIFIC RESEARCH PLATFORM</span></div><nav class="bti-public-nav" aria-label="Primary website navigation"><a href="#btiHomeHero">Home</a><a href="#btiMechanismFeature">Mechanisms</a><a href="#homeResearchExplorer">Pathway Explorer</a><a href="#btiResearchMenu">Research Tools</a></nav></header>
+</style><script>window.btiSnapshotPromise=null;window.btiGet=async function(url){try{const live=await fetch(url,{cache:'no-store'});if(live.ok)return await live.json()}catch(_e){}if(!window.btiSnapshotPromise){window.btiSnapshotPromise=fetch('/pathway_snapshot.json').then(r=>{if(!r.ok)throw Error('Static pathway dataset unavailable');return r.json()})}const snap=await window.btiSnapshotPromise;if(url.endsWith('/overview'))return snap.overview;const id=decodeURIComponent(url.substring(url.lastIndexOf('/')+1));if(snap.details&&snap.details[id])return snap.details[id];throw Error('No curated pathway found for '+id)};</script></head><body><a class="skip-link" href="#workspaceSelect">Skip to workspace navigation</a><main class="shell"><header class="top home-top"><div class="brand"><span aria-hidden="true" class="brand-mark">BT</span><span>BACTERIAL THERAPEUTICS <span class="brand-divider">/</span> INTELLIGENCE</span><span class="brand-edition">SCIENTIFIC RESEARCH PLATFORM</span></div><nav class="bti-public-nav" aria-label="Primary website navigation"><a href="#btiHomeHero">Home</a><a href="#btiMechanismFeature">Mechanisms</a><a href="#homeResearchExplorer">Pathway Explorer</a><a href="#btiResearchMenu">Research Tools</a><a href="#btiResearchMenu" data-bti-open-community="true">Community Blog</a></nav></header>
 <section class="bti-hero" id="btiHomeHero" aria-labelledby="btiHeroTitle">
  <div class="bti-hero-copy">
   <div class="bti-hero-kicker"><span class="bti-live-dot"></span> RESEARCH WORKSPACE &nbsp; / &nbsp; ONCOLOGY · CARDIOMETABOLIC · MICROBIOME</div>
@@ -233,7 +233,7 @@ html{scroll-behavior:smooth}#btiHomeHero,#btiMechanismFeature,#homeResearchExplo
     <button class="home-domain" type="button" data-area="Microbiome" aria-pressed="false"><span class="home-domain-icon">⬡</span><span class="home-domain-main"><strong>Microbiome</strong><small>Consortia · Ecology · Host interactions</small></span><span class="home-domain-arrow">↗</span></button>
   </div>
   <div class="home-pipeline"><div class="home-pipeline-top"><span class="home-eyebrow">02 / CONNECTED RESEARCH WORKFLOW</span><span class="home-live-dot"><span class="pulse-dot"></span> Interactive exploration</span></div><div class="home-pipeline-nodes"><div><span>01</span><strong>Disease</strong><small>Indication</small></div><b>→</b><div><span>02</span><strong>Therapy</strong><small>Modality</small></div><b>→</b><div><span>03</span><strong>Mechanism</strong><small>Molecular biology</small></div><b>→</b><div><span>04</span><strong>Evidence</strong><small>Published sources</small></div><b>→</b><div><span>05</span><strong>Translation</strong><small>Trials & IP leads</small></div></div></div>
-  <div class="home-workflow-links"><span>DIRECT ACCESS</span><button type="button" class="home-jump" data-target="library">Scientific literature ↗</button><button type="button" class="home-jump" data-target="moa">Mechanisms ↗</button><button type="button" class="home-jump" data-target="graph">Knowledge graph ↗</button><button type="button" class="home-jump" data-target="community">Five AI agents ↗</button></div>
+  <div class="home-workflow-links"><span>DIRECT ACCESS</span><button type="button" class="home-jump" data-target="library">Scientific literature ↗</button><button type="button" class="home-jump" data-target="moa">Mechanisms ↗</button><button type="button" class="home-jump" data-target="graph">Knowledge graph ↗</button><button type="button" class="home-jump" data-target="community">Community Blog ↗</button></div>
 </section>
 
 <section id="futureTherapeuticStudio" class="future-studio" aria-labelledby="futureStudioTitle">
@@ -800,4 +800,13 @@ document.addEventListener('DOMContentLoaded',()=>{
  hide();
 });
 })();
+</script><script>
+document.addEventListener('DOMContentLoaded',()=>{
+ document.querySelectorAll('[data-bti-open-community]').forEach(link=>{
+  link.addEventListener('click',()=>{
+   const menu=document.getElementById('workspaceSelect');
+   if(menu){menu.value='community';menu.dispatchEvent(new Event('change',{bubbles:true}));}
+  });
+ });
+});
 </script><script src="community.js" defer></script></body></html>
