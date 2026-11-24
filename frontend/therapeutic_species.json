@@ -54,7 +54,7 @@
       "cargo": "Investigational surface/payload engineering; strain-specific, not a single validated cargo.",
       "delivery": "Systemic or local in historic clinical studies; research only.",
       "evidence": "Human phase 1 experience exists for VNP20009; not an approved cancer treatment.",
-      "companies": "mulberry",
+      "companies": null,
       "sources": [
         {
           "label": "Phase I study of attenuated Salmonella VNP20009",
@@ -62,7 +62,7 @@
           "type": "Clinical study"
         }
       ],
-      "notes": ""
+      "notes": "VNP20009 is a historical experimental strain. Other attenuated Salmonella platforms (including MUL001) are separate programs; evidence from one strain should not be transferred to another."
     },
     {
       "id": "listeria",
