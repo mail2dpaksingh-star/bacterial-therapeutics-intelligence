@@ -3,6 +3,7 @@
 const find=id=>document.getElementById(id);
 const node=(tag,text,className)=>{const x=document.createElement(tag);if(text!=null)x.textContent=String(text);if(className)x.className=className;return x;};
 let all=[],selected=null;
+const companyLabels={isa_pharma:'ISA Pharmaceuticals',indaptus:'Indaptus Therapeutics',oncovir:'Oncovir — Hiltonol',highlight:'Highlight — BO-112',aimimmunotech:'AIM ImmunoTech — Ampligen',gsk_mpl:'GSK — MPL/AS01',gilead_tlr7:'Gilead — Vesatolimod',sanofi_dynavax:'Sanofi — CpG 1018',pharmaand_ifna:'pharmaand — IFN-alpha',biogen_ifnb:'Biogen — IFN-beta',amgen_ifng:'Amgen — IFN-gamma'};
 const classType=x=>x.group==="Interferon signaling"?"Interferons":"TLR agonists";
 function openCompany(id){
  const nav=find('workspaceSelect'),company=find('reviewPlatform'),filter=find('reviewPreclinicalOnly'),lens=find('reviewLens');
@@ -21,7 +22,7 @@ function detail(x){
  for(const [name,value] of fields){const box=node('div',null,'immune-fact');box.append(node('strong',name),node('p',value));target.append(box)}
  const c=node('div',null,'immune-company');
  c.append(node('strong','Open company portfolio and adverse-event findings'));
- for(const id of x.companies||[]){const button=node('button',id.replace(/_/g,' '),'immune-company-button');button.type='button';button.dataset.company=id;button.addEventListener('click',()=>openCompany(id));c.append(button);}
+ for(const id of x.companies||[]){const button=node('button',companyLabels[id]||id.replace(/_/g,' '),'immune-company-button');button.type='button';button.dataset.company=id;button.addEventListener('click',()=>openCompany(id));c.append(button);}
  target.append(c);
  const refs=node('div',null,'immune-sources');refs.append(node('strong','Primary sources'));
  for(const source of x.sources||[]){if(!/^https:\/\//.test(source.url))continue;const a=node('a',source.label+' ↗');a.href=source.url;a.target='_blank';a.rel='noopener noreferrer';refs.append(a)}
