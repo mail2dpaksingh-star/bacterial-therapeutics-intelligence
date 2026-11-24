@@ -2,6 +2,13 @@ name: Company research source updates
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/update_company_sources.mjs'
+      - 'scripts/company_monitor_config.json'
+      - 'frontend/company_dossiers.json'
+      - '.github/workflows/company-source-monitor.yml'
   schedule:
     # UTC, four times per day. GitHub scheduled jobs may run late.
     - cron: '17 0,6,12,18 * * *'
