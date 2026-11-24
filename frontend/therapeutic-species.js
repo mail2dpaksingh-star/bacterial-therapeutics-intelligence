@@ -97,7 +97,7 @@
   }
   for(const e of rows){
    const btn=add(dest,'button',undefined);
-   btn.type='button';btn.setAttribute('role','listitem');
+   btn.type='button';
    btn.setAttribute('aria-current',String(e.id===activeId));
    btn.addEventListener('click',()=>{
     activeId=e.id;
