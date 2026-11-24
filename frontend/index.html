@@ -320,7 +320,10 @@ html{scroll-behavior:smooth}#btiHomeHero,#btiMechanismFeature,#homeResearchExplo
 .bti-feature-art .bti-host-graphic img{width:100%;display:block;height:auto;border:0;border-radius:0}
 .bti-feature-copy>.bti-species-link{display:block;background:#edf9f8;color:#11767c;font-size:12px;font-weight:850;border:1px solid #bfe2e0;padding:11px 14px;border-radius:10px;margin-top:11px;cursor:pointer;text-align:left}
 .bti-feature-copy>.bti-species-link:hover{background:#d7f3ee}
+.bti-feature-copy>.bti-species-link{text-decoration:none;width:fit-content;max-width:100%}.bti-feature-copy>.bti-species-link:focus-visible{outline:3px solid #147982;outline-offset:3px}
 .bti-species-explorer[hidden]{display:none!important}
+/* A direct URL fragment still opens the explorer when the interactive script loads late. */
+#btiSpeciesExplorer:target{display:block!important}
 .bti-species-explorer{background:#fff;border:1px solid #cce3e6;border-radius:20px;box-shadow:0 9px 30px #0b384b14;padding:24px;margin:14px 0 20px;scroll-margin-top:12px}
 .bti-species-header{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;padding-bottom:14px;border-bottom:1px solid #e0ebed}
 .bti-species-header h2{font-size:clamp(23px,2.5vw,32px);letter-spacing:-.035em;line-height:1.2;margin:7px 0;color:#12394e}
@@ -426,7 +429,7 @@ window.notify=function(message){const x=document.getElementById('reviewStatus');
  </div>
 </section>
 <section class="bti-featured" id="btiMechanismFeature" aria-labelledby="btiMechanismHeading">
- <div class="bti-feature-copy"><span class="bti-kicker">◈ FEATURED MECHANISM EXPLORER</span><h2 id="btiMechanismHeading">Host–Bacteria<br>Therapeutic Interface</h2><p>See how bacterial platforms may interact with the immune system, tumor environments, microbial ecosystems, and metabolic signaling.</p><div class="bti-feature-points"><span>✓ Connect bacterial features to host mechanisms</span><span>✓ Explore oncology, cardiometabolic and microbiome contexts</span><span>✓ Follow evidence into detailed research</span></div><a href="#homeResearchExplorer" class="bti-primary-cta">Explore Mechanistic Pathways ↗</a><button type="button" class="bti-species-link" id="btiOpenSpeciesFromText" aria-controls="btiSpeciesExplorer" aria-expanded="false">Therapeutic Bacterial Species &amp; Strain Explorer ↗</button></div>
+ <div class="bti-feature-copy"><span class="bti-kicker">◈ FEATURED MECHANISM EXPLORER</span><h2 id="btiMechanismHeading">Host–Bacteria<br>Therapeutic Interface</h2><p>See how bacterial platforms may interact with the immune system, tumor environments, microbial ecosystems, and metabolic signaling.</p><div class="bti-feature-points"><span>✓ Connect bacterial features to host mechanisms</span><span>✓ Explore oncology, cardiometabolic and microbiome contexts</span><span>✓ Follow evidence into detailed research</span></div><a href="#homeResearchExplorer" class="bti-primary-cta">Explore Mechanistic Pathways ↗</a><a class="bti-species-link" id="btiOpenSpeciesFromText" href="#btiSpeciesExplorer" aria-controls="btiSpeciesExplorer" aria-expanded="false">Therapeutic Bacterial Species &amp; Strain Explorer ↗</a></div>
  <figure class="bti-feature-art"><div class="bti-host-graphic"><img src="assets/host-bacteria-interface-clean.svg" loading="eager" width="1200" height="632" alt="Conceptual scientific illustration of bacterial therapeutic platforms interacting with host immune and metabolic biology through six mechanistic pathways"></div><figcaption>Conceptual illustration of host–bacteria interactions across therapeutic mechanisms.</figcaption></figure>
 </section>
 <section class="bti-species-explorer" id="btiSpeciesExplorer" aria-labelledby="btiSpeciesTitle" hidden>
