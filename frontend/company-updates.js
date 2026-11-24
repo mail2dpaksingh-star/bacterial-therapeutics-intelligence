@@ -110,7 +110,6 @@ document.addEventListener('DOMContentLoaded',()=>{
  by('reviewPlatform')?.addEventListener('change',render);
  by('reviewPreclinicalOnly')?.addEventListener('change',()=>Promise.resolve().then(render));
  loadCompanies().finally(()=>loadFeed());
- setInterval(()=>{if(!document.hidden)loadFeed()},10*60*1000);
  document.addEventListener('visibilitychange',()=>{if(!document.hidden)loadFeed()});
 });
 })();
