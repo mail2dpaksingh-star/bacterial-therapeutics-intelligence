@@ -67,6 +67,13 @@ function header(root,p,area){
  const tags=add(h,'div',undefined,'company-profile-tags');
  add(tags,'span',p.classification);
  for(const focus of p.focus||[])add(tags,'span',focus);
+ const primary=(p.programs||[])[0];
+ if(primary){
+  const current=add(root,'div',undefined,'company-current-status');
+  add(current,'strong','Program status · '+primary.name+' · '+primary.phase);
+  const tag=add(current,'span',primary.status,'company-status');tag.dataset.state=statusClass(primary.status);
+  add(current,'small','Last document: '+primary.latest_report+(p.programs.length>1?' · '+p.programs.length+' programs listed':''));
+ }
  const currentArea=area||'All';
  if(currentArea!=='All'&&!(p.focus||[]).includes(currentArea)){
   add(root,'p','No documented '+currentArea.toLowerCase()+' therapeutic program is included for '+p.name+' in the current public-source snapshot. Displaying the company\'s existing programs instead.','company-program-mismatch');
