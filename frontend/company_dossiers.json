@@ -29,7 +29,7 @@
       ],
       "mechanism": "Nonliving bacterial preparations designed to activate broad innate and adaptive antitumor immunity (company-described).",
       "clinical": "No active clinical development program was reported in the November 2026 filing; this is not evidence that the candidate achieved clinical efficacy.",
-      "publication": "Scientific mechanism and early-phase program disclosures are available, but no current active efficacy trial is established in the cited filings.",
+      "publication": "Selected primary sources: Michael J. Newman's peer-reviewed 2024 Frontiers in Immunology original research article on Decoy10/Decoy20, and Michael J. Newman & Deepak Singh's AACR 2024 abstract #6639 on Decoy10 immunological mechanisms in vitro. These documents describe preclinical and mechanistic findings, not demonstrated clinical efficacy; the Decoy20 program is recorded separately as discontinued.",
       "patent": "Decoy platform patent family may be relevant; a search alone does not establish ownership, claim scope, validity, or freedom to operate.",
       "patent_links": [
         {
@@ -41,6 +41,22 @@
         }
       ],
       "sources": [
+        {
+          "id": "indp_newman_frontiers_2024",
+          "kind": "Peer-reviewed original research article",
+          "date": "2024-11-07",
+          "title": "Michael J. Newman (2024) — Invention and characterization of a systemically administered, attenuated and killed bacteria-based multiple immune receptor agonist for anti-tumor immunotherapy",
+          "url": "https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2024.1462221/full",
+          "note": "Frontiers in Immunology 15:1462221; DOI 10.3389/fimmu.2024.1462221. Journal-classified original research (not a review). Reports mechanistic assays and preclinical Decoy10/Decoy20 findings; not proof of human clinical efficacy."
+        },
+        {
+          "id": "indp_newman_singh_aacr_2024",
+          "kind": "AACR 2024 abstract #6639 and official poster",
+          "date": "2024-04-10",
+          "title": "Michael J. Newman and Deepak Singh (AACR 2024, Abstract 6639) — Mechanisms of action of a killed, bacteria-based, multiple immune receptor agonist (Decoy platform)",
+          "url": "https://indaptusrx.com/wp-content/uploads/2024/04/Indaptus-AACR-2024-Poster-6639-FINAL.pdf",
+          "note": "Indaptus-hosted AACR 2024 scientific poster; Cancer Research 84(6 Suppl), Abstract 6639; DOI 10.1158/1538-7445.AM2024-6639. Human PBMC in-vitro mechanism data involving dendritic cells, T cells, NK/NKT cells and tumor-cell killing; not a clinical efficacy report."
+        },
         {
           "id": "indp10q",
           "kind": "SEC quarterly filing",
@@ -96,7 +112,11 @@
           "bti_safety_ind_10k"
         ],
         "reviewed_on": "2026-11-23"
-      }
+      },
+      "featured_publication_ids": [
+        "indp_newman_frontiers_2024",
+        "indp_newman_singh_aacr_2024"
+      ]
     },
     {
       "id": "actym",
