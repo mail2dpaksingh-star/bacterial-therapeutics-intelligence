@@ -314,6 +314,57 @@ html{scroll-behavior:smooth}#btiHomeHero,#btiMechanismFeature,#homeResearchExplo
 .company-updates-empty{border:1px dashed #b9d7db;border-radius:10px;color:#607f8c;background:#fff;padding:15px;font-size:12px;line-height:1.55}
 .company-monitor-disclaimer{color:#6f8996;font-size:10px;line-height:1.6;margin:12px 0 0}
 @media(max-width:700px){.company-updates{padding:13px}.company-updates-toolbar label,.company-updates-toolbar select{width:100%}.company-updates-toolbar .btn{width:100%}.company-monitor-workflow{width:100%;text-align:center;padding:7px}}
+
+/* Interactive central Host–bacteria hotspot and same-page species explorer */
+.bti-host-graphic{position:relative;width:100%;overflow:hidden;border:1px solid #daeaed;border-radius:16px;background:#f5fcfd}
+.bti-feature-art .bti-host-graphic img{width:100%;display:block;height:auto;border:0;border-radius:0}
+.bti-host-hotspot{position:absolute;left:38.25%;top:43.83%;width:22.33%;height:12.34%;display:block;cursor:pointer;border-radius:999px;background:transparent;border:2px solid transparent;padding:0;z-index:1;transition:box-shadow .15s,border-color .15s,background .15s}
+.bti-host-hotspot:hover,.bti-host-hotspot:focus-visible{border-color:#70e4d9;background:#0c5a6921;box-shadow:0 0 0 4px #69d8d744,0 0 15px #51b4bd55;outline:0}
+.bti-host-hotspot[aria-expanded=true]{border-color:#54c5b7;box-shadow:0 0 0 3px #51c9be55}
+.bti-visually-hidden{position:absolute;width:1px;height:1px;clip:rect(0,0,0,0);overflow:hidden;white-space:nowrap}
+.bti-feature-copy>.bti-species-link{display:block;background:#edf9f8;color:#11767c;font-size:12px;font-weight:850;border:1px solid #bfe2e0;padding:11px 14px;border-radius:10px;margin-top:11px;cursor:pointer;text-align:left}
+.bti-feature-copy>.bti-species-link:hover{background:#d7f3ee}
+.bti-species-explorer[hidden]{display:none!important}
+.bti-species-explorer{background:#fff;border:1px solid #cce3e6;border-radius:20px;box-shadow:0 9px 30px #0b384b14;padding:24px;margin:14px 0 20px;scroll-margin-top:12px}
+.bti-species-header{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;padding-bottom:14px;border-bottom:1px solid #e0ebed}
+.bti-species-header h2{font-size:clamp(23px,2.5vw,32px);letter-spacing:-.035em;line-height:1.2;margin:7px 0;color:#12394e}
+.bti-species-header p{font-size:12px;line-height:1.6;max-width:780px;color:#577989;margin:0}
+.bti-species-close{font-size:12px;font-weight:800;color:#1b6f78;background:#f1faf9;border:1px solid #c8e5e4;border-radius:10px;cursor:pointer;padding:10px 13px;white-space:nowrap}
+.bti-species-filters{display:grid;grid-template-columns:minmax(240px,1.4fr) repeat(3,minmax(150px,1fr));gap:10px;margin:17px 0 10px}
+.bti-species-filters label{display:flex;flex-direction:column;font-size:11px;color:#285568;gap:7px;font-weight:800}
+.bti-species-filters input,.bti-species-filters select{min-height:43px;width:100%;font-size:12px;padding:9px 11px;background:#f9fcfd;border:1px solid #c8dee4;border-radius:9px;color:#244a60;min-width:0}
+.bti-species-count{font-size:11px;color:#73929d;margin-bottom:11px}
+.bti-species-layout{display:grid;grid-template-columns:minmax(275px,.92fr) minmax(0,1.65fr);gap:15px;align-items:start}
+.bti-species-list{max-height:640px;overflow:auto;display:grid;gap:8px;align-content:start;padding:3px 5px 3px 2px}
+.bti-species-list button{display:flex;flex-direction:column;align-items:stretch;gap:5px;border:1px solid #d7e8eb;border-radius:11px;padding:12px 13px;background:#f9fcfd;text-align:left;cursor:pointer;color:#18445b}
+.bti-species-list button:hover,.bti-species-list button:focus-visible,.bti-species-list button[aria-current=true]{outline:none;border-color:#4fb1ab;background:#e9f8f6;box-shadow:inset 3px 0 0 #319b9b}
+.bti-species-list strong{font-size:13px;line-height:1.45;font-weight:850}
+.bti-species-list small{font-size:11px;color:#648593;line-height:1.5}
+.bti-species-list em{font-size:10px;color:#167980;font-style:normal;font-weight:800}
+.bti-species-detail{background:#f7fbfc;border:1px solid #d8e8eb;border-radius:14px;padding:21px;min-width:0}
+.bti-species-detail h3{font-size:24px;line-height:1.15;margin:9px 0;color:#173e54;letter-spacing:-.03em}
+.bti-species-detail h4{margin:18px 0 6px;font-size:12px;letter-spacing:.065em;text-transform:uppercase;color:#196b75}
+.bti-species-detail p{font-size:12px;line-height:1.7;color:#496d7f;margin:5px 0 10px}
+.bti-species-detail .bti-species-strain{font-size:14px;color:#385e71;font-weight:750}
+.bti-species-badges{display:flex;flex-wrap:wrap;gap:7px}
+.bti-species-badges span{background:#e5f5f2;color:#247980;border:1px solid #cce8e2;border-radius:20px;font-size:10px;padding:6px 9px;font-weight:800}
+.bti-species-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:15px}
+.bti-species-fact{background:#fff;border:1px solid #dae9ec;border-radius:10px;padding:11px}
+.bti-species-fact strong{display:block;color:#487688;font-size:10px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:5px}
+.bti-species-fact span{font-size:12px;line-height:1.6;color:#2b576c}
+.bti-component-list{display:flex;flex-wrap:wrap;gap:7px;padding:0;list-style:none;margin:9px 0}
+.bti-component-list li{font-size:11px;padding:7px 9px;border-radius:9px;background:#eaf4f6;color:#285d6c}
+.bti-species-sources{list-style:none;margin:9px 0;padding:0;display:grid;gap:8px}
+.bti-species-sources li{padding:10px;border:1px solid #dfebee;background:#fff;border-radius:8px}
+.bti-species-sources a{font-size:12px;font-weight:800;color:#087b83;text-decoration:none}
+.bti-species-sources a:hover{text-decoration:underline}
+.bti-species-sources small{display:block;color:#698998;font-size:10px;margin-top:4px}
+.bti-species-company{margin-top:12px;background:#167e86;color:white;border:none;border-radius:9px;cursor:pointer;padding:10px 13px;font-size:12px;font-weight:800}
+.bti-species-method{color:#708b99;font-size:11px;line-height:1.6;margin:13px 0 0}
+@media(max-width:1080px){.bti-species-filters{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:850px){.bti-species-layout{grid-template-columns:1fr}.bti-species-list{max-height:285px}.bti-species-explorer{padding:15px}.bti-species-header{flex-wrap:wrap}}
+@media(max-width:530px){.bti-species-filters{grid-template-columns:1fr}.bti-species-facts{grid-template-columns:1fr}.bti-species-close{width:100%}}
+@media(prefers-reduced-motion:reduce){.bti-host-hotspot{transition:none}}
 </style><script>window.btiSnapshotPromise=null;window.btiGet=async function(url){if(!window.btiSnapshotPromise){window.btiSnapshotPromise=fetch('pathway_snapshot.json').then(r=>{if(!r.ok)throw Error('Curated pathway dataset unavailable');return r.json()}).catch(e=>{window.btiSnapshotPromise=null;throw e})}const snap=await window.btiSnapshotPromise;if(url.endsWith('/overview'))return snap.overview;const id=decodeURIComponent(url.substring(url.lastIndexOf('/')+1));if(snap.details&&snap.details[id])return snap.details[id];throw Error('No curated pathway found for '+id)};</script><script>
 /* Website public-mode configuration. No client-side API keys or token popups. */
 window.BTI_PUBLIC_STATIC_MODE=true;
@@ -338,8 +389,26 @@ window.notify=function(message){const x=document.getElementById('reviewStatus');
  </div>
 </section>
 <section class="bti-featured" id="btiMechanismFeature" aria-labelledby="btiMechanismHeading">
- <div class="bti-feature-copy"><span class="bti-kicker">◈ FEATURED MECHANISM EXPLORER</span><h2 id="btiMechanismHeading">Host–Bacteria<br>Therapeutic Interface</h2><p>See how bacterial platforms may interact with the immune system, tumor environments, microbial ecosystems, and metabolic signaling.</p><div class="bti-feature-points"><span>✓ Connect bacterial features to host mechanisms</span><span>✓ Explore oncology, cardiometabolic and microbiome contexts</span><span>✓ Follow evidence into detailed research</span></div><a href="#homeResearchExplorer" class="bti-primary-cta">Explore Mechanistic Pathways ↗</a></div>
- <figure class="bti-feature-art"><img src="assets/host-bacteria-interface.svg" loading="eager" width="1200" height="632" alt="Conceptual scientific illustration of bacterial therapeutic platforms interacting with host immune and metabolic biology through six mechanistic pathways"><figcaption>Illustrative mechanism map; interpretation depends on each platform and indication.</figcaption></figure>
+ <div class="bti-feature-copy"><span class="bti-kicker">◈ FEATURED MECHANISM EXPLORER</span><h2 id="btiMechanismHeading">Host–Bacteria<br>Therapeutic Interface</h2><p>See how bacterial platforms may interact with the immune system, tumor environments, microbial ecosystems, and metabolic signaling.</p><div class="bti-feature-points"><span>✓ Connect bacterial features to host mechanisms</span><span>✓ Explore oncology, cardiometabolic and microbiome contexts</span><span>✓ Follow evidence into detailed research</span></div><a href="#homeResearchExplorer" class="bti-primary-cta">Explore Mechanistic Pathways ↗</a><button type="button" class="bti-species-link" id="btiOpenSpeciesFromText" aria-controls="btiSpeciesExplorer" aria-expanded="false">Explore therapeutic bacterial strains ↓</button></div>
+ <figure class="bti-feature-art"><div class="bti-host-graphic"><img src="assets/host-bacteria-interface.svg" loading="eager" width="1200" height="632" alt="Conceptual scientific illustration of bacterial therapeutic platforms interacting with host immune and metabolic biology through six mechanistic pathways; the central Host–bacteria node opens the species and strain explorer"><button type="button" class="bti-host-hotspot" id="btiOpenSpecies" aria-controls="btiSpeciesExplorer" aria-expanded="false" aria-label="Explore therapeutic bacterial species, strains and cell-envelope components from the central Host–bacteria node"><span class="bti-visually-hidden">Explore 18 therapeutic bacterial species, strains and communities</span></button></div><figcaption>Click the central <strong>Host–bacteria</strong> node to explore therapeutic species, strains, and key cell components.</figcaption></figure>
+</section>
+<section class="bti-species-explorer" id="btiSpeciesExplorer" aria-labelledby="btiSpeciesTitle" hidden>
+ <div class="bti-species-header">
+  <div><span class="home-eyebrow">INTERACTIVE BACTERIAL RESEARCH LIBRARY</span><h2 id="btiSpeciesTitle">Therapeutic Bacterial Species &amp; Strain Explorer</h2><p>Select a species or strain to examine its cell wall and envelope, therapeutic modality, proposed mechanism, cargo, delivery context, and linked research. All details appear on this page.</p></div>
+  <button type="button" id="btiCloseSpecies" class="bti-species-close">Close explorer ×</button>
+ </div>
+ <div class="bti-species-filters">
+  <label for="btiSpeciesSearch">Search species or strain<input id="btiSpeciesSearch" type="search" placeholder="Search BCG, E. coli Nissle, Lactococcus, vesicles…" autocomplete="off"></label>
+  <label for="btiSpeciesArea">Therapeutic focus<select id="btiSpeciesArea"><option value="all">All focus areas</option><option value="Oncology">Oncology</option><option value="Cardiometabolic">Cardiometabolic</option><option value="Microbiome">Microbiome / gut health</option></select></label>
+  <label for="btiSpeciesGram">Cell-envelope type<select id="btiSpeciesGram"><option value="all">All envelope types</option><option value="Gram-positive">Gram-positive</option><option value="Gram-negative">Gram-negative</option><option value="Acid-fast">Acid-fast</option><option value="Atypical">Atypical / variable</option><option value="Mixed">Mixed bacterial communities</option></select></label>
+  <label for="btiSpeciesEvidence">Development evidence<select id="btiSpeciesEvidence"><option value="all">All development levels</option><option value="Approved">Approved use</option><option value="Human">Human clinical or probiotic research</option><option value="Preclinical">Preclinical / exploratory</option></select></label>
+ </div>
+ <div class="bti-species-count" id="btiSpeciesCount" aria-live="polite">Loading source-linked bacterial research entries…</div>
+ <div class="bti-species-layout">
+  <div class="bti-species-list" id="btiSpeciesList" role="list" aria-label="Choose a therapeutic bacterial species or strain"></div>
+  <article class="bti-species-detail" id="btiSpeciesDetail" aria-live="polite"><p>Select a bacterial species or strain to view its therapeutic information and supporting sources.</p></article>
+ </div>
+ <p class="bti-species-method">This library distinguishes organisms, strain-specific products, and multi-species preparations. Cell-envelope features and evidence can vary among strains. No genomic engineering instructions or unverified treatment recommendations are provided.</p>
 </section>
 <section class="bti-architecture" aria-labelledby="btiStructureHeading">
  <div class="bti-architecture-intro"><span class="bti-arch-rule"></span><span class="bti-arch-kicker">EXPLORE KEY INSIGHTS</span><h2 id="btiStructureHeading">From Bacterial Structure<br>to Therapeutic Design</h2><p>Explore key bacterial features and the research concepts they inform without leaving this page.</p></div>
@@ -932,4 +1001,4 @@ document.addEventListener('DOMContentLoaded',()=>{
   });
  });
 });
-</script><script src="company-research.js" defer></script><script src="company-updates.js" defer></script><script src="scientific-question.js" defer></script><script src="community.js" defer></script></body></html>
+</script><script src="therapeutic-species.js" defer></script><script src="company-research.js" defer></script><script src="company-updates.js" defer></script><script src="scientific-question.js" defer></script><script src="community.js" defer></script></body></html>
