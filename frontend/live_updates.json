@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "mode": "scheduled_public_source_metadata",
+  "last_checked_at": null,
+  "last_successful_check_at": null,
+  "status": "waiting_first_run",
+  "source_types": [
+    "ClinicalTrials.gov",
+    "Europe PMC"
+  ],
+  "companies_monitored": 0,
+  "checks_successful": 0,
+  "checks_failed": 0,
+  "newly_discovered_in_run": 0,
+  "note": "The first scheduled source scan has not completed. Once GitHub Actions runs successfully, unreviewed clinical-trial and publication search matches will appear here. Curated company status remains unchanged until reviewed.",
+  "items": [],
+  "errors": [],
+  "per_company": {}
+}
