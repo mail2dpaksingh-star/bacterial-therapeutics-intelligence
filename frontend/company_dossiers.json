@@ -840,7 +840,7 @@
       "name": "BiOMViS",
       "focus": [
         "Oncology",
-        "Microbiome"
+        "Infectious diseases"
       ],
       "platform": "Engineered bacterial outer-membrane vesicle vaccine and immunotherapy platform",
       "classification": "Bacterial outer-membrane vesicles (OMV) · preclinical",
@@ -954,6 +954,7 @@
       "name": "Seres Therapeutics",
       "focus": [
         "Microbiome",
+        "Infectious diseases",
         "Oncology"
       ],
       "platform": "SER-428, SER-603 and SER-147 cultivated bacterial consortia",
@@ -1245,7 +1246,7 @@
       "id": "longhorn",
       "name": "Longhorn Vaccines & Diagnostics",
       "focus": [
-        "Microbiome"
+        "Infectious diseases"
       ],
       "platform": "LHNVD-501 antibody targeting bacterial peptidoglycan",
       "classification": "Bacterial cell-wall targeting antibody · adjacent modality",
