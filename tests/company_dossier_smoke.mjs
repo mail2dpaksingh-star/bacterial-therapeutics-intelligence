@@ -71,4 +71,5 @@ test('company selection, focus controls, and related documents render without ba
  assert.match(get('companyDossier').textContent,/patent/i);
  get('reviewPlatform').value='vedanta';get('reviewPlatform').dispatch('change');
  assert.match(get('companyDossier').textContent,/Phase 3/i);
+ assert.match(get('companyDossier').textContent,/ongoing/i);
 });
