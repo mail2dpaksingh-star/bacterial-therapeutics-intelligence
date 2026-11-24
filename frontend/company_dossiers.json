@@ -1913,7 +1913,8 @@
           "latest_report": "2026-11-13",
           "source_ids": [
             "aim_nov2026",
-            "aim_registry"
+            "aim_registry",
+            "aim_2026q3"
           ]
         },
         {
@@ -1961,9 +1962,9 @@
       "sources": [
         {
           "id": "aim_nov2026",
-          "kind": "Company Q3 2026 safety update",
-          "date": "2026-11-13",
-          "title": "DURIPANC interim results — 3 grade 3 immune-related adverse events",
+          "kind": "Company interim clinical safety disclosure",
+          "date": "2026-11-05",
+          "title": "November 5, 2026 Ampligen + durvalumab DURIPANC interim disclosure — three grade 3 immune-related AEs",
           "url": "https://www.globenewswire.com/news-release/2026/11/05/3396566/29489/en/aim-immunotech-highlights-ampligen-opportunity-to-potentially-extend-benefits-of-ras-targeted-therapies-in-pancreatic-cancer.html",
           "note": "Nov 5, 2026 sponsor report; 28 enrolled; grade 3 events in combination with durvalumab."
         },
@@ -1982,6 +1983,14 @@
           "title": "DURIPANC ClinicalTrials.gov NCT05927142",
           "url": "https://clinicaltrials.gov/study/NCT05927142",
           "note": "Rintatolimod + durvalumab trial record."
+        },
+        {
+          "id": "aim_2026q3",
+          "kind": "Company quarterly results release",
+          "date": "2026-11-13",
+          "title": "AIM Q3 2026 corporate update: DURIPANC dosing and 2027 readout plans",
+          "url": "https://www.globenewswire.com/news-release/2026/11/13/3402575/0/en/aim-immunotech-approaches-major-clinical-inflection-point-with-phase-2-pancreatic-cancer-data-expected-q1-2027-reports-third-quarter-2026-financial-results.html",
+          "note": "Program milestone, not independent safety adjudication."
         }
       ]
     }
