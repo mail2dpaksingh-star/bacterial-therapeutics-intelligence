@@ -1,0 +1,134 @@
+{
+  "version": 1,
+  "description": "Exact program/company search leads for public ClinicalTrials.gov and Europe PMC APIs; matches are unreviewed and must not automatically change curated program statuses.",
+  "limit_per_source_per_company": 5,
+  "request_interval_ms": 450,
+  "lookback_years": 3,
+  "monitors": {
+    "indaptus": {
+      "queries": [
+        "Decoy20",
+        "Indaptus Therapeutics"
+      ]
+    },
+    "actym": {
+      "queries": [
+        "ACTM-838",
+        "Actym Therapeutics"
+      ]
+    },
+    "synthetica": {
+      "queries": [
+        "Synthetica Pioneering"
+      ]
+    },
+    "prokarium": {
+      "queries": [
+        "ZH9",
+        "PARADIGM-1",
+        "Prokarium"
+      ]
+    },
+    "baccine": {
+      "queries": [
+        "Baccine Ltd"
+      ]
+    },
+    "neobe": {
+      "queries": [
+        "NEO22",
+        "Neobe Therapeutics"
+      ]
+    },
+    "enterome": {
+      "queries": [
+        "EO2463",
+        "EO4010",
+        "EO2401",
+        "Enterome"
+      ]
+    },
+    "vedanta": {
+      "queries": [
+        "VE303",
+        "Vedanta Biosciences"
+      ]
+    },
+    "maat": {
+      "queries": [
+        "MaaT013",
+        "MaaT034",
+        "MaaT Pharma"
+      ]
+    },
+    "bcg": {
+      "enabled": false,
+      "reason": "Licensed clinical precedent, not a single company program; broad BCG monitoring would generate unrelated records"
+    },
+    "aurexo": {
+      "queries": [
+        "AeBEV-001",
+        "Aurexo Therapeutics"
+      ]
+    },
+    "aurealis": {
+      "queries": [
+        "AUP-55",
+        "AUP-60",
+        "Aurealis Therapeutics"
+      ]
+    },
+    "mulberry": {
+      "queries": [
+        "MUL001",
+        "Mulberry Biotherapeutics"
+      ]
+    },
+    "biomvis": {
+      "queries": [
+        "BiOMViS"
+      ]
+    },
+    "bactheravax": {
+      "queries": [
+        "Bactheravax"
+      ]
+    },
+    "seres": {
+      "queries": [
+        "SER-428",
+        "SER-603",
+        "SER-147",
+        "Seres Therapeutics"
+      ]
+    },
+    "medosome": {
+      "queries": [
+        "Medosome Biotec"
+      ]
+    },
+    "mrm": {
+      "queries": [
+        "MRM Health"
+      ]
+    },
+    "firstbiome": {
+      "queries": [
+        "1stBiome"
+      ]
+    },
+    "longhorn": {
+      "queries": [
+        "LHNVD-501",
+        "Longhorn Vaccines"
+      ]
+    },
+    "timeless": {
+      "queries": [
+        "Timeless Biosciences",
+        "TB-001",
+        "TB-002"
+      ]
+    }
+  }
+}
