@@ -155,6 +155,19 @@ function onCompanyChange(){
  if(p&&by('reviewArea'))by('reviewArea').value=p.focus[0]||'Oncology';
  render();
 }
+function isPreclinicalProfile(p){
+ return p.preclinical_focus===true||(p.programs||[]).some(q=>/preclinical|pre-clinical|discovery|lead optimization/i.test((q.phase||'')+' '+(q.status||'')));
+}
+function fillCompanyMenu(){
+ const menu=by('reviewPlatform');if(!menu||!catalog)return;
+ const preserve=menu.value,only=by('reviewPreclinicalOnly')?.checked===true;
+ const show=catalog.companies.filter(p=>!only||isPreclinicalProfile(p));
+ menu.replaceChildren();
+ for(const p of show){const option=create('option',p.name+' — '+p.platform);option.value=p.id;menu.appendChild(option)}
+ if(show.some(p=>p.id===preserve))menu.value=preserve;
+ else if(show.length)menu.value=show[0].id;
+ onCompanyChange();
+}
 async function initialize(){
  const holder=by('companyDossier');
  if(!holder)return;
@@ -165,15 +178,9 @@ async function initialize(){
   if(!Array.isArray(data.companies)||data.companies.length===0)throw Error('Company profiles are empty');
   catalog=data;
   const menu=by('reviewPlatform');
-  if(menu){
-   const currentId=menu.value;
-   menu.replaceChildren();
-   for(const p of catalog.companies){
-    const option=create('option',p.name+' — '+p.platform);option.value=p.id;menu.appendChild(option);
-   }
-   if(catalog.companies.some(p=>p.id===currentId))menu.value=currentId;
-   menu.addEventListener('change',onCompanyChange);
-  }
+  if(menu)menu.addEventListener('change',onCompanyChange);
+  by('reviewPreclinicalOnly')?.addEventListener('change',fillCompanyMenu);
+  fillCompanyMenu();
   by('reviewArea')?.addEventListener('change',render);
   by('reviewLens')?.addEventListener('change',render);
   by('evidence')?.addEventListener('change',()=>{
@@ -184,7 +191,7 @@ async function initialize(){
   });
   by('companyAddNotes')?.addEventListener('click',insertNotes);
   by('companyExportDossier')?.addEventListener('click',exportProfile);
-  onCompanyChange();
+  render();
  }catch(error){
   holder.replaceChildren();
   add(holder,'p','The company research profiles could not load. Check the Cloudflare deployment or try refreshing the page.');
