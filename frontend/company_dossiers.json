@@ -1,7 +1,7 @@
 {
   "version": "1.1",
   "snapshot_date": "2026-11-23",
-  "scope": "Source-linked public profiles as of November 23, 2026; mixed company stages are represented by individual program, not company-wide phase. Adjacent TLR3/dsRNA immunomodulators are included for safety comparison and explicitly labeled NOT bacterial-derived.",
+  "scope": "Source-linked public profiles as of November 23, 2026; mixed company stages are represented by individual program, not company-wide phase. Adjacent TLR3/dsRNA immunomodulators are included for safety comparison and explicitly labeled NOT bacterial-derived. Includes comparator TLR agonists and type I/II interferon products distinctly classified from bacterial therapies; engineered microbial cytokine delivery is preclinical unless a specified human study supports it.",
   "method": "Stage is assessed per program, and some early adjacent modalities (bacteria-targeting vaccines, peptidoglycan antibodies, metabolic supplements, postbiotics) are distinguished from actual therapeutic bacterial-cell delivery. Patent links are leads, not FTO opinions. Source-level scientific verification and new disclosure checks are ongoing.",
   "companies": [
     {
@@ -1993,6 +1993,385 @@
           "note": "Program milestone, not independent safety adjudication."
         }
       ]
+    },
+    {
+      "id": "isa_pharma",
+      "name": "ISA Pharmaceuticals",
+      "focus": [
+        "Oncology"
+      ],
+      "platform": "Amplivant-conjugated synthetic HPV16 E6 peptides (TLR1/2-adjuvanted ISA201)",
+      "classification": "Adjacent TLR1/2 agonist / bacterial-lipopeptide mimic; not a live bacterium",
+      "programs": [
+        {
+          "name": "ISA201 synthetic E6 peptide–Amplivant vaccine",
+          "indication": "HPV16-positive (pre)malignant lesions",
+          "phase": "Published Phase I",
+          "status": "Early human clinical research",
+          "status_reason": "Public regulatory or clinical sources",
+          "outcome": "Phase I evaluated safety and antigen-specific T-cell immunogenicity; not a licensed tumor therapy.",
+          "latest_report": "2022-10-01",
+          "source_ids": [
+            "isa_jitc"
+          ]
+        }
+      ],
+      "mechanism": "Triacylated lipopeptide analogue stimulates the TLR1/TLR2 heterodimer and antigen-presenting cells; structurally mimics bacterial lipoproteins.",
+      "clinical": "First-in-human published trial found mostly mild to moderate vaccine-related local and flu-like reactions.",
+      "publication": "See linked primary clinical, regulatory, or mechanistic records.",
+      "patent": "Public literature and patent discovery only; no claim-level freedom-to-operate assessment.",
+      "patent_links": [],
+      "sources": [
+        {
+          "id": "isa_jitc",
+          "title": "First-in-human Amplivant-conjugated HPV16 E6 peptide vaccine",
+          "url": "https://jitc.bmj.com/content/10/10/e005016",
+          "kind": "Peer-reviewed Phase I human trial",
+          "date": "2022-10-01"
+        }
+      ],
+      "clinical_safety": {
+        "status": "Mild/moderate vaccine-related reactions reported in Phase I",
+        "trial": "ISA201 synthetic E6 peptide–Amplivant vaccine",
+        "cohort": "First-in-human Phase I trial in 25 patients with HPV16-positive (pre)malignant lesions.",
+        "adverse_events": "Mostly local inflammation, with flu-like symptoms in 3 of 7 participants in the highest-dose group after at least one injection.",
+        "serious_events": "Complete numerical serious adverse-event table not established in this summary.",
+        "deaths": "Complete trial death count not established in this summary; no claim of zero deaths.",
+        "attribution": "Study reported vaccine-related inflammation; receptor-specific causality cannot be separated from the complete conjugate formulation.",
+        "limitations": "Events occurring during a clinical study are not necessarily caused by the study treatment; formulation-specific assessment is required.",
+        "source_ids": [
+          "isa_jitc"
+        ],
+        "reviewed_on": "2026-11-23"
+      }
+    },
+    {
+      "id": "gsk_mpl",
+      "name": "GSK",
+      "focus": [
+        "Vaccines",
+        "Infectious diseases"
+      ],
+      "platform": "SHINGRIX AS01B (MPL derived from Salmonella minnesota + QS-21)",
+      "classification": "Bacterial-derived TLR4 adjuvant / licensed vaccine precedent; not a bacterial oncology therapeutic",
+      "programs": [
+        {
+          "name": "SHINGRIX (AS01B contains MPL)",
+          "indication": "Herpes zoster prevention in label-specified populations",
+          "phase": "Licensed vaccine",
+          "status": "FDA approved indication",
+          "status_reason": "Public regulatory or clinical sources",
+          "outcome": "A licensed vaccine uses MPL-containing AS01B. Clinical safety of the whole vaccine cannot be assigned to MPL alone.",
+          "latest_report": "2026-11-23",
+          "source_ids": [
+            "gsk_label"
+          ]
+        }
+      ],
+      "mechanism": "MPL (monophosphoryl lipid A), a detoxified bacterial LPS derivative, activates TLR4; AS01B also includes QS-21.",
+      "clinical": "Solicited reactogenicity and serious safety outcomes are described in current FDA-regulated prescribing information.",
+      "publication": "See linked primary clinical, regulatory, or mechanistic records.",
+      "patent": "Public literature and patent discovery only; no claim-level freedom-to-operate assessment.",
+      "patent_links": [],
+      "sources": [
+        {
+          "id": "gsk_label",
+          "title": "SHINGRIX current prescribing label — AS01B/MPL and adverse reactions",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=0280849d-5c78-4a9d-8941-4eab429f6bd8",
+          "kind": "Regulatory product label",
+          "date": "2026-11-23"
+        }
+      ],
+      "clinical_safety": {
+        "status": "Vaccine-level reactogenicity and warnings; MPL-specific causality not established",
+        "trial": "SHINGRIX (AS01B contains MPL)",
+        "cohort": "Specific studies and populations documented in sources",
+        "adverse_events": "Injection-site pain, myalgia, fatigue and headache reported in vaccine trials.",
+        "serious_events": "Complete numerical serious adverse-event table not established in this summary.",
+        "deaths": "Refer to complete SHINGRIX product-label tables by population; no reliable MPL-component-attributable mortality count can be inferred.",
+        "attribution": "Vaccine includes antigen, MPL and QS-21; product-level events cannot automatically be attributed to TLR4 or MPL.",
+        "limitations": "Events occurring during a clinical study are not necessarily caused by the study treatment; formulation-specific assessment is required.",
+        "source_ids": [
+          "gsk_label"
+        ],
+        "reviewed_on": "2026-11-23"
+      }
+    },
+    {
+      "id": "gilead_tlr7",
+      "name": "Gilead Sciences",
+      "focus": [
+        "Infectious diseases"
+      ],
+      "platform": "Vesatolimod (GS-9620; investigational oral TLR7 agonist)",
+      "classification": "Synthetic TLR7 agonist / host RNA-sensing comparator; not a bacterial product",
+      "programs": [
+        {
+          "name": "Vesatolimod (GS-9620)",
+          "indication": "Investigational HIV immune modulation and HIV remission studies",
+          "phase": "Clinical early-phase research",
+          "status": "Investigational",
+          "status_reason": "Public regulatory or clinical sources",
+          "outcome": "Human TLR7 agonist studies have published safety and innate immune biomarker analyses; no licensed product approval for the indication.",
+          "latest_report": "2026-11-23",
+          "source_ids": [
+            "gilead_nih",
+            "gilead_registry"
+          ]
+        }
+      ],
+      "mechanism": "Endosomal TLR7 activation by a synthetic small molecule induces innate immunity, potentially including type I interferon signaling; not the same as administering IFN-α.",
+      "clinical": "NIH HIV drug record summarizes program-specific safety; adverse effects differ between combination regimens and study populations.",
+      "publication": "See linked primary clinical, regulatory, or mechanistic records.",
+      "patent": "Public literature and patent discovery only; no claim-level freedom-to-operate assessment.",
+      "patent_links": [],
+      "sources": [
+        {
+          "id": "gilead_nih",
+          "title": "NIH vesatolimod professional research and safety summary",
+          "url": "https://clinicalinfo.hiv.gov/en/drugs/vesatolimod/health-professional",
+          "kind": "NIH clinical research summary",
+          "date": "2026-11-23"
+        },
+        {
+          "id": "gilead_registry",
+          "title": "Vesatolimod Phase Ib NCT02858401",
+          "url": "https://clinicaltrials.gov/study/NCT02858401",
+          "kind": "Trial registry",
+          "date": "2026-11-23"
+        }
+      ],
+      "clinical_safety": {
+        "status": "Early clinical safety reports, including AEs; no broad zero-risk claim",
+        "trial": "Vesatolimod (GS-9620)",
+        "cohort": "Specific studies and populations documented in sources",
+        "adverse_events": "Transient flu-like symptoms and inflammatory effects reported; rates vary by study and combination.",
+        "serious_events": "NIH summarizes at least one clinical study with serious adverse events not related to investigational drugs; consult each trial for detailed counts.",
+        "deaths": "Complete trial death count not established in this summary; no claim of zero deaths.",
+        "attribution": "Combination-study reports do not establish vesatolimod-specific causation for all adverse events.",
+        "limitations": "Events occurring during a clinical study are not necessarily caused by the study treatment; formulation-specific assessment is required.",
+        "source_ids": [
+          "gilead_nih",
+          "gilead_registry"
+        ],
+        "reviewed_on": "2026-11-23"
+      }
+    },
+    {
+      "id": "sanofi_dynavax",
+      "name": "Sanofi (formerly Dynavax)",
+      "focus": [
+        "Vaccines",
+        "Infectious diseases"
+      ],
+      "platform": "HEPLISAV-B with CpG 1018 TLR9 agonist adjuvant",
+      "classification": "Synthetic CpG DNA / TLR9 adjuvant mimicking bacterial CpG patterns; not a live bacterium",
+      "programs": [
+        {
+          "name": "HEPLISAV-B (CpG 1018 adjuvant)",
+          "indication": "Hepatitis B vaccination in eligible adults",
+          "phase": "Licensed vaccine",
+          "status": "FDA approved indication",
+          "status_reason": "Public regulatory or clinical sources",
+          "outcome": "Sanofi acquired Dynavax February 2026; CpG 1018 is a synthetic oligonucleotide adjuvant, not a licensed cancer therapeutic.",
+          "latest_report": "2026-11-23",
+          "source_ids": [
+            "sanofi_sale",
+            "heplisav_label"
+          ]
+        }
+      ],
+      "mechanism": "CpG-containing DNA activates TLR9, reproducing a natural bacterial DNA recognition signal; therapeutic CpG chemistry and delivery are product-specific.",
+      "clinical": "HEPLISAV-B label reports arm-level serious adverse events and deaths during a comparator study; attribution must follow the label.",
+      "publication": "See linked primary clinical, regulatory, or mechanistic records.",
+      "patent": "Public literature and patent discovery only; no claim-level freedom-to-operate assessment.",
+      "patent_links": [],
+      "sources": [
+        {
+          "id": "sanofi_sale",
+          "title": "Sanofi completed Dynavax acquisition February 10, 2026",
+          "url": "https://www.sanofi.com/en/media-room/press-releases/2026/2026-02-10-14-00-56-3235419",
+          "kind": "Company acquisition announcement",
+          "date": "2026-02-10"
+        },
+        {
+          "id": "heplisav_label",
+          "title": "HEPLISAV-B prescribing label — safety and mortality tables",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d61c7f99-438b-4cac-ae10-997ff4c0fd1f",
+          "kind": "Regulatory product label",
+          "date": "2026-11-23"
+        }
+      ],
+      "clinical_safety": {
+        "status": "Deaths occurred during vaccine trial; label does not attribute them to vaccination",
+        "trial": "HEPLISAV-B (CpG 1018 adjuvant)",
+        "cohort": "Specific studies and populations documented in sources",
+        "adverse_events": "Injection site reactions and systemic symptoms were reported in adult registration studies.",
+        "serious_events": "Label reports serious adverse events in 6.2% of HEPLISAV-B participants versus 5.3% of Engerix-B in a specified study.",
+        "deaths": "In the same study, 25 (0.4%) deaths in HEPLISAV-B versus 7 (0.3%) in Engerix-B; the label says none of the deaths were considered related to vaccination.",
+        "attribution": "Neither study-arm events nor deaths can automatically be attributed to CpG 1018 or TLR9 activation.",
+        "limitations": "Events occurring during a clinical study are not necessarily caused by the study treatment; formulation-specific assessment is required.",
+        "source_ids": [
+          "sanofi_sale",
+          "heplisav_label"
+        ],
+        "reviewed_on": "2026-11-23"
+      }
+    },
+    {
+      "id": "pharmaand_ifna",
+      "name": "pharmaand GmbH",
+      "focus": [
+        "Infectious diseases",
+        "Immunology"
+      ],
+      "platform": "PEGASYS (peginterferon alfa-2a; recombinant type I interferon)",
+      "classification": "Exogenous IFN-α → IFNAR1/IFNAR2; not a TLR agonist or bacterial product",
+      "programs": [
+        {
+          "name": "PEGASYS",
+          "indication": "Chronic hepatitis indications per current product label",
+          "phase": "Licensed product",
+          "status": "Licensed indication(s)",
+          "status_reason": "Public regulatory or clinical sources",
+          "outcome": "Product-specific IFN-α exposure has documented safety warnings; not equivalent to bacterially delivered interferon.",
+          "latest_report": "2026-11-23",
+          "source_ids": [
+            "pegasys_label"
+          ]
+        }
+      ],
+      "mechanism": "IFN-α binds host IFNAR1/IFNAR2 and induces JAK–STAT antiviral and inflammatory responses. TLR stimulation may induce IFN-α, but IFN-α is not itself a TLR ligand.",
+      "clinical": "Label includes boxed warning of potentially fatal neuropsychiatric, autoimmune, ischemic and infectious disorders.",
+      "publication": "See linked primary clinical, regulatory, or mechanistic records.",
+      "patent": "Public literature and patent discovery only; no claim-level freedom-to-operate assessment.",
+      "patent_links": [],
+      "sources": [
+        {
+          "id": "pegasys_label",
+          "title": "PEGASYS (peginterferon alfa-2a) prescribing information",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d9290e5b-6d40-2318-e053-2995a90a9916",
+          "kind": "Regulatory product label",
+          "date": "2026-11-23"
+        }
+      ],
+      "clinical_safety": {
+        "status": "Serious and potentially fatal risks described in product boxed warning",
+        "trial": "PEGASYS",
+        "cohort": "Specific studies and populations documented in sources",
+        "adverse_events": "Flu-like symptoms, cytopenias, neuropsychiatric and autoimmune adverse effects reported.",
+        "serious_events": "Label warns of severe neuropsychiatric, autoimmune, ischemic, hepatic and infectious disorders.",
+        "deaths": "Potential fatal outcomes are described in product boxed warnings; a comparable trial death count is not summarized here.",
+        "attribution": "These are product-level risks in defined patient populations and combinations; not bacterial-host-delivery clinical evidence.",
+        "limitations": "Events occurring during a clinical study are not necessarily caused by the study treatment; formulation-specific assessment is required.",
+        "source_ids": [
+          "pegasys_label"
+        ],
+        "reviewed_on": "2026-11-23"
+      }
+    },
+    {
+      "id": "biogen_ifnb",
+      "name": "Biogen",
+      "focus": [
+        "Immunology"
+      ],
+      "platform": "AVONEX (interferon beta-1a)",
+      "classification": "Exogenous IFN-β → IFNAR1/IFNAR2; not a TLR agonist or bacterial product",
+      "programs": [
+        {
+          "name": "AVONEX (interferon beta-1a)",
+          "indication": "Relapsing forms of multiple sclerosis in label-defined populations",
+          "phase": "Licensed product",
+          "status": "FDA approved indication",
+          "status_reason": "Public regulatory or clinical sources",
+          "outcome": "IFN-β product is clinically established in multiple sclerosis but should not be characterized as an engineered bacterium delivering cytokine.",
+          "latest_report": "2026-11-23",
+          "source_ids": [
+            "avonex_label"
+          ]
+        }
+      ],
+      "mechanism": "Exogenous IFN-β activates the type I IFN receptor and host JAK–STAT signaling, unlike direct TLR activation.",
+      "clinical": "Label warnings include depression and suicidality, serious hepatic injury and injection-site necrosis.",
+      "publication": "See linked primary clinical, regulatory, or mechanistic records.",
+      "patent": "Public literature and patent discovery only; no claim-level freedom-to-operate assessment.",
+      "patent_links": [],
+      "sources": [
+        {
+          "id": "avonex_label",
+          "title": "AVONEX full prescribing information",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d70a39cc-de15-4c12-a1ec-8063b69ea0e1",
+          "kind": "Regulatory product label",
+          "date": "2026-11-23"
+        }
+      ],
+      "clinical_safety": {
+        "status": "Label describes serious safety risks; not a bacterial delivery system",
+        "trial": "AVONEX (interferon beta-1a)",
+        "cohort": "Specific studies and populations documented in sources",
+        "adverse_events": "Flu-like symptoms, injection-site reactions, depression and laboratory abnormalities described.",
+        "serious_events": "Serious liver injury, suicidality, injection-site necrosis and other warnings appear in prescribing information.",
+        "deaths": "Label warns that some serious organ effects can be fatal; no single arm-level death rate extracted here.",
+        "attribution": "Label warnings reflect clinical exposure to AVONEX and should not be transferred to engineered bacterial IFN-β delivery platforms.",
+        "limitations": "Events occurring during a clinical study are not necessarily caused by the study treatment; formulation-specific assessment is required.",
+        "source_ids": [
+          "avonex_label"
+        ],
+        "reviewed_on": "2026-11-23"
+      }
+    },
+    {
+      "id": "amgen_ifng",
+      "name": "Amgen / Horizon Therapeutics",
+      "focus": [
+        "Immunology",
+        "Infectious diseases"
+      ],
+      "platform": "ACTIMMUNE (interferon gamma-1b)",
+      "classification": "Exogenous IFN-γ → IFNGR1/IFNGR2; not a TLR agonist or live bacterium",
+      "programs": [
+        {
+          "name": "ACTIMMUNE (interferon gamma-1b)",
+          "indication": "Chronic granulomatous disease and severe malignant osteopetrosis, according to approved label",
+          "phase": "Licensed product",
+          "status": "FDA approved indication",
+          "status_reason": "Public regulatory or clinical sources",
+          "outcome": "IFN-γ product is a useful host-response comparator; experimental bacterial intratumoral IFN-γ delivery is separate preclinical research.",
+          "latest_report": "2026-11-23",
+          "source_ids": [
+            "actimmune_label"
+          ]
+        }
+      ],
+      "mechanism": "IFN-γ binds IFNGR1/IFNGR2 and signals primarily through JAK1/JAK2–STAT1; typically produced by activated T/NK cells.",
+      "clinical": "Fever, headaches, chills, fatigue and GI reactions appear in the product label; warning considerations include bone marrow and neurological effects.",
+      "publication": "See linked primary clinical, regulatory, or mechanistic records.",
+      "patent": "Public literature and patent discovery only; no claim-level freedom-to-operate assessment.",
+      "patent_links": [],
+      "sources": [
+        {
+          "id": "actimmune_label",
+          "title": "ACTIMMUNE full prescribing information",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5d0b1256-1981-4519-94f4-a4a2f98bd8a3",
+          "kind": "Regulatory product label",
+          "date": "2026-11-23"
+        }
+      ],
+      "clinical_safety": {
+        "status": "Product-label adverse reactions and warnings; not proof of bacterial-delivered IFN-γ safety",
+        "trial": "ACTIMMUNE (interferon gamma-1b)",
+        "cohort": "Specific studies and populations documented in sources",
+        "adverse_events": "Fever, headache, chills, fatigue, nausea, rash and injection-site reactions reported.",
+        "serious_events": "Clinically significant serious toxicities require label- and indication-specific review.",
+        "deaths": "No product-specific trial mortality total was compiled in this focused summary.",
+        "attribution": "These are systemically administered recombinant interferon data, not intratumoral engineered-bacteria clinical data.",
+        "limitations": "Events occurring during a clinical study are not necessarily caused by the study treatment; formulation-specific assessment is required.",
+        "source_ids": [
+          "actimmune_label"
+        ],
+        "reviewed_on": "2026-11-23"
+      }
     }
   ],
   "safety_review_method": "Safety is program-, study- and data-cut-specific. Investigators' attribution differs from AE occurrence. Synthetic dsRNA TLR3 agonists are adjacent comparator immunotherapies, not bacterial platforms.",
